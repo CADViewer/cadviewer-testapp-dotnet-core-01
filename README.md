@@ -103,9 +103,10 @@ Use the server traces and browser development console for debugging, alternative
 
 For debugging, the folder:
 <pre style="line-height: 110%">
-c:\VisualStudio
-       └─── cadviewer
-               └── temp_debug
+c:\cadviewer-testapp-dotnet-core-01\cadviewer
+                                       └─── cadviewer
+                                                 └─── wwwroot
+                                                         └── temp_debug
 </pre>
 contains a debug file **callApiConversionHandlerLog.txt** that lists the command line and traces in the communication with the back-end converter AutoXchange 2020. If drawing files does not display, this file will contain useful information to pinpoint the issue.
 
@@ -117,6 +118,6 @@ contains a debug file **callApiConversionHandlerLog.txt** that lists the command
 
 One issue that often appears in installations is that interface icons do not display properly:
 
-![Icons](/cadviewertechdocs/images/missing_icons.png "Icons missing")
+![Icons](https://cadviewer.com/cadviewertechdocs/images/missing_icons.png "Icons missing")
 
 Typically the variable ServerUrl in /cadviewer/app/cv/CADViewer_AshxHandlerSettings.js is not set to reflect the front-end server url or port.
