@@ -12,11 +12,16 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace cadviewer
 {
+
+    
     public class Startup
     {
+       
+    
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -60,4 +65,6 @@ namespace cadviewer
             });
         }
     }
+
+   
 }
