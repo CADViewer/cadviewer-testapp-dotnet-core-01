@@ -6,7 +6,7 @@ CADViewer implementation of dotNet Core controllers
 ### Folder Structure
 
 For a CADViewer dotNetcore installation on Windows, the base file-structure should be as below: 
-CADViewer and AutoXchange is included in this repository, but it can be recreated by downloading the components directly from: [https//cadviewer.com/download](https//cadviewer.com/download)
+CADViewer and AutoXchange is included in this repository, but it can be recreated by downloading the components directly from: [https://cadviewer.com/download](https://cadviewer.com/download)
 
 <pre style="line-height: 110%">
 c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\
