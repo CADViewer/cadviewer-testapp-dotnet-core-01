@@ -6,9 +6,10 @@ CADViewer implementation of dotNet Core controllers
 ### Folder Structure
 
 For a CADViewer dotNetcore installation on Windows, the base file-structure should be as below: 
+CADViewer and AutoXchange is included in this repository, but it can be recreated by downloading the components directly from: [https//cadviewer.com/download](https//cadviewer.com/download)
 
 <pre style="line-height: 110%">
-c:\cadviewer-testapp-dotnet-core-01\cadviewer
+c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\
        └─── wwwroot
                ├── app
                │    ├── cv
@@ -72,8 +73,8 @@ In folder:
 <pre style="line-height: 110%">
 c:\cadviewer-testapp-dotnet-core-01\cadviewer
          └─── cadviewer
-            └─── Controllers
-               └── CADViewerController.cs
+                   └─── Controllers
+                             └── CADViewerController.cs
 
 </pre>
 
@@ -86,18 +87,17 @@ The file **CADViewerController.cs** contains the controllers that CADViewer uses
 In folder:
 
 <pre style="line-height: 110%">
-c:/VisualStudio
-    └─── cadviewer
-            └── html
+c:\cadviewer-testapp-dotnet-core-01\cadviewer
+                                       └─── cadviewer
+                                                └── html
 </pre>
-
 
 
 identify your sample mysample.html file, and ensure that it correctly sets the ServerLocation and ServeUrl parameters
 
 
 
-Open a web-browser pointing to your sample html file:    **http:/localhost:53737/html/mysample.html**
+Open a web-browser pointing to your sample html file:    **http:/localhost:44374/html/mysample.html**
 
 Use the server traces and browser development console for debugging, alternatively contact our [Support](/cadviewertechdocs/support/)  
 
