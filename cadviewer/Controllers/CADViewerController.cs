@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json.Linq;
+using EASendMail;
 
 namespace cadviewer.Controllers
 {
@@ -1181,6 +1182,187 @@ namespace cadviewer.Controllers
 
 
 
+        [HttpPost]
+        public JsonResult MergeEmail(string pdf_file, string pdf_file_name, string from_name, string from_mail, string cc_mail, string replyto, string to_mail, string mail_title, string mail_message)
+        {
+
+
+
+            try
+            {
+                string MailServer = _config.GetValue<string>("CADViewer:MailServer");
+                int MailServerPort = _config.GetValue<int>("CADViewer:MailServerPort");
+                string MailUserName = _config.GetValue<string>("CADViewer:MailUserName");
+                string MailPassword = _config.GetValue<string>("CADViewer:MailPassword");
+
+
+                SmtpMail oMail = new SmtpMail("TryIt");
+
+                // Set sender email address, please change it to yours
+                oMail.From = from_mail;
+                // Set recipient email address, please change it to yours
+                oMail.To = to_mail;
+
+                // Set email subject
+                oMail.Subject = mail_title;
+                // Set Html body
+                oMail.HtmlBody = mail_message;
+
+                // Add attachment from local disk
+                oMail.AddAttachment(pdf_file);
+
+                // Add attachment from remote website
+                //oMail.AddAttachment("http://www.emailarchitect.net/webapp/img/logo.jpg");
+
+                // Your SMTP server address
+                SmtpServer oServer = new SmtpServer(MailServer);
+
+                // User and password for ESMTP authentication
+                oServer.User = MailUserName;
+                oServer.Password = MailPassword;
+
+                // Most mordern SMTP servers require SSL/TLS connection now.
+                // ConnectTryTLS means if server supports SSL/TLS, SSL/TLS will be used automatically.
+                oServer.ConnectType = SmtpConnectType.ConnectTryTLS;
+
+                // If your SMTP server uses 587 port
+                // oServer.Port = 587;
+
+                // If your SMTP server requires SSL/TLS connection on 25/587/465 port
+                 oServer.Port = MailServerPort;                          // 25 or 587 or 465
+                 oServer.ConnectType = SmtpConnectType.ConnectSSLAuto;
+
+                //Console.WriteLine("start to send email with attachment ...");
+
+                SmtpClient oSmtp = new SmtpClient();
+                oSmtp.SendMail(oServer, oMail);
+
+                return Json("email was sent successfully!");
+            }
+            catch (Exception ep)
+            {
+                return Json("failed to send email with the following error:"+ep.Message);
+            }
+
+
+
+
+            /*
+
+                        string mail = to_mail;
+            string title = mail_title;
+            string message = mail_message;
+            string file = pdf_file;
+            byte[] bytes;
+
+            string localPath = "";
+            localPath = new Uri(pdf_file).LocalPath;
+
+            using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
+            {
+                // Read the source file into a byte array.
+                bytes = new byte[fsSource.Length];
+                int numBytesToRead = (int)fsSource.Length;
+                int numBytesRead = 0;
+                while (numBytesToRead > 0)
+                {
+                    // Read may return anything from 0 to numBytesToRead.
+                    int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
+                    // Break when the end of the file is reached.
+                    if (n == 0)
+                        break;
+                    numBytesRead += n;
+                    numBytesToRead -= n;
+                }
+                numBytesToRead = bytes.Length;
+
+            }
+
+            UTF8Encoding temp = new UTF8Encoding(true);
+           
+            //string content = temp.GetString(bytes));
+
+            string contentpre = Convert.ToBase64String(bytes);
+            string content = "";
+
+            int chunkSize = 76;
+            int stringLength = content.Length;
+            for (int i = 0; i < stringLength; i += chunkSize)
+            {
+                if (i + chunkSize > stringLength) chunkSize = stringLength - i;
+                    content+=contentpre.Substring(i, chunkSize)+ "\r\n";
+
+            }
+            //content = chunk_split(base64_encode( content));
+
+            string uid = CreateMD5(GetUniqID()); //md5(uniqid(time()));
+            string name = Path.GetFileName(file);
+
+            string filename = name;
+// header
+            string header = "From: "+from_name+" <"+from_mail+">\r\n";
+            header+= "Cc: "+cc_mail+" \r\n";
+            header+= "Reply-To: "+replyto+"\r\n";
+            header+= "MIME-Version: 1.0\r\n";
+            header+= "Content-Type: multipart/mixed; boundary=\""+uid+"\"\r\n\r\n";
+
+// message & attachment
+            string nmessage = "--"+uid+"\r\n";
+            nmessage+= "Content-type:text/plain; charset=iso-8859-1\r\n";
+            nmessage+= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+            nmessage+= message+"\r\n\r\n";
+            nmessage+= "--"+uid+"\r\n";
+            nmessage+= "Content-Type: application/octet-stream; name=\""+pdf_file_name+"\"\r\n";
+            nmessage+= "Content-Transfer-Encoding: base64\r\n";
+            nmessage+= "Content-Disposition: attachment; filename=\""+pdf_file_name+"\"\r\n\r\n";
+            nmessage+= content+"\r\n\r\n";
+            nmessage+= "--"+uid+"--";
+
+            if (mail(email, title, nmessage, header))
+            {
+                return Json("4: true: mail");
+            }
+            else
+            {
+                return Json( "3: false: mail"´);
+            }
+
+
+
+    */
+        }
+
+
+        public string GetUniqID()
+        {
+            var ts = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0));
+            double t = ts.TotalMilliseconds / 1000;
+
+            int a = (int)Math.Floor(t);
+            int b = (int)((t - Math.Floor(t)) * 1000000);
+
+            return a.ToString("x8") + b.ToString("x5");
+        }
+
+
+
+        public string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
 
         // NOTE-NOTE-NOTE      AUTOGENERATED CONTENT BELOW
 
