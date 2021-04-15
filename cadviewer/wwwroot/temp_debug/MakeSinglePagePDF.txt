@@ -1,0 +1,38 @@
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17_Apr_15_H12_30
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17_Apr_15_H12_30.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17_Apr_15_H12_30.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17_Apr_15_H12_30.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17_Apr_15_H12_30.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2020 V20.05.44
+Copyright (c) 2017, 2018, 2019, 2020, 2021 Tailor Made Software, Ltd.
+                      All Rights Reserved
+
+  Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+============================================================
+
+Thank you for trying this demo of AutoXChange 2020
+Please contact sales@tailormade.com to purchase
+
+
+Elapsed Time: 3.153 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_650
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_650.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_650.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_650.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_650.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2020 V20.05.44
+Copyright (c) 2017, 2018, 2019, 2020, 2021 Tailor Made Software, Ltd.
+                      All Rights Reserved
+
+  Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+============================================================
+
+Thank you for trying this demo of AutoXChange 2020
+Please contact sales@tailormade.com to purchase
+
+
+Elapsed Time: 3.099 seconds
+
+error>>(none)
+ExitCode: 0

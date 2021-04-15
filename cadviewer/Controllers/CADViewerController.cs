@@ -663,8 +663,6 @@ namespace cadviewer.Controllers
 
 
         // LOADFILE   - loading of content to populate CADViewer interface and other stuff such as redlines
-
-
         [HttpPost]
         public JsonResult LoadFile(string file)
         {
@@ -674,7 +672,9 @@ namespace cadviewer.Controllers
 
                 Trace.WriteLine("HELLO  LoadFile:" + file + "XXXX");
 
-                string filePath = file.Trim('/');
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+
                 string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
                 string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
 
@@ -736,6 +736,313 @@ namespace cadviewer.Controllers
         }
 
 
+
+        [HttpPost]
+        public JsonResult LoadRedline(string file)
+        {
+
+            try
+            {
+
+                Trace.WriteLine("HELLO  LoadRedline:" + file + "XXXX");
+
+
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+                /*
+                string ServerLocation = AppSettings.Instance.Get<string>("CADViewer:ServerLocation"); 
+                string ServerUrl = AppSettings.Instance.Get<string>("CADViewer:ServerUrl");  
+                */
+                if (filePath.IndexOf(ServerUrl) == 0)
+                {
+
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
+
+                }
+
+                string localPath = "";
+
+                if (System.IO.File.Exists(filePath))
+                {
+                    localPath = new Uri(filePath).LocalPath;
+                }
+                else
+                {
+                    return Json("file does not exist");
+                }
+
+                using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
+                {
+
+                    // Read the source file into a byte array.
+                    byte[] bytes = new byte[fsSource.Length];
+                    int numBytesToRead = (int)fsSource.Length;
+                    int numBytesRead = 0;
+                    while (numBytesToRead > 0)
+                    {
+                        // Read may return anything from 0 to numBytesToRead.
+                        int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
+
+                        // Break when the end of the file is reached.
+                        if (n == 0)
+                            break;
+
+                        numBytesRead += n;
+                        numBytesToRead -= n;
+                    }
+                    numBytesToRead = bytes.Length;
+
+                    UTF8Encoding temp = new UTF8Encoding(true);
+
+                    //context.Response.Write(temp.GetString(bytes));
+
+                    return Json(temp.GetString(bytes));
+                }
+
+            }
+            catch (FileNotFoundException ioEx)
+            {
+                return Json("LoadFile: " + ioEx);
+            }
+
+        }
+
+
+
+
+
+        // SAVEFILE   - loading of content to populate CADViewer interface and other stuff such as redlines
+        [HttpPost]
+        public JsonResult SaveFile(string file, string file_content, string custom_content)
+        {
+
+            try
+            {
+                Trace.WriteLine("HELLO  SaveFile:" + file + "XXXX");
+
+
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+
+                string fileContent = file_content;
+                string customContent = custom_content;
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+                if (filePath.IndexOf(ServerUrl) == 0)
+                {
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
+                }
+
+                string folder = filePath.Substring(0, filePath.LastIndexOf("/"));
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                string localPath = filePath;
+
+                try
+                {
+                    localPath = new Uri(filePath).LocalPath;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                try
+                {
+                    System.IO.File.WriteAllText(localPath, fileContent);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                return Json("Success");
+        
+            }
+            catch (FileNotFoundException ioEx)
+            {
+                return Json("SaveFile: " + ioEx);
+            }
+
+        }
+
+
+
+        [HttpPost]
+        public JsonResult SaveRedline(string file, string file_content, string custom_content)
+        {
+
+            try
+            {
+                Trace.WriteLine("HELLO  SaveRedline:" + file + "XXXX");
+
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+                string fileContent = file_content;
+                string customContent = custom_content;
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+                if (filePath.IndexOf(ServerUrl) == 0)
+                {
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
+                }
+
+                string folder = filePath.Substring(0, filePath.LastIndexOf("/"));
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                string localPath = filePath;
+
+                try
+                {
+                    localPath = new Uri(filePath).LocalPath;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                try
+                {
+                    System.IO.File.WriteAllText(localPath, fileContent);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                return Json("Success");
+
+            }
+            catch (FileNotFoundException ioEx)
+            {
+                return Json("SaveFile: " + ioEx);
+            }
+
+        }
+
+
+
+        [HttpPost]
+        public JsonResult AppendFile(string file, string file_content, string custom_content)
+        {
+
+            try
+            {
+                Trace.WriteLine("HELLO  AppenFile:" + file + "XXXX");
+
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+                string fileContent = file_content;
+                string customContent = custom_content;
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+                if (filePath.IndexOf(ServerUrl) == 0)
+                {
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
+                }
+
+                string folder = filePath.Substring(0, filePath.LastIndexOf("/"));
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                string localPath = filePath;
+
+                try
+                {
+                    localPath = new Uri(filePath).LocalPath;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                try
+                {
+                    System.IO.File.AppendAllText(localPath, fileContent);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+
+                return Json("Success");
+
+            }
+            catch (FileNotFoundException ioEx)
+            {
+                return Json("SaveFile: " + ioEx);
+            }
+
+        }
+
+
+        [HttpPost]
+        public JsonResult ReturnPDFParams()
+        {
+
+            string fileLocation = _config.GetValue<string>("CADViewer:fileLocation");
+            string fileLocationUrl = _config.GetValue<string>("CADViewer:fileLocationUrl");
+
+            string returnString = fileLocation + "|" + fileLocationUrl;
+
+            return Json(returnString);
+        }
+
+
+
+        [HttpPost]
+        public JsonResult ListDirectoryContent(string directory)
+        {
+
+            string filePath = directory.Trim('/');
+
+            string returnString = filePath;
+
+            string[] fileArray = Directory.GetFiles(filePath);
+
+            if (fileArray.Length == 0)
+            {
+                returnString = returnString + "The directory is empty";
+            }
+            else
+            {
+                for (var i = 0; i < fileArray.Length; i++)
+                {
+
+                    if (!(fileArray[i].IndexOf(".rw") > 0))
+                        returnString = returnString + "<br>" + fileArray[i].Substring(fileArray[i].LastIndexOf("\\") + 1); ;
+                }
+            }
+
+            return Json(returnString);
+        }
+
+        
+
         private static string DecodeUrlString(string url)
         {
             string newUrl;
@@ -745,47 +1052,137 @@ namespace cadviewer.Controllers
         }
 
 
-        /*
 
 
         [HttpPost]
-        public JsonResult AjaxMethod(string name)
+        public JsonResult MakeSinglepagePDF(string fileName_0, string rotation_0, string page_format_0)
         {
 
-            Trace.WriteLine("HELLO  LoadFile/AjaxMethod" + name +"XXXX");
-
-
-            PersonModel person = new PersonModel
+            Trace.WriteLine("MakeSinglePage REQUEST:" + fileName_0+ " "+ rotation_0 +" "+ page_format_0+ "XXXX");
+            try
             {
-                Name = name,
-                DateTime = DateTime.Now.ToString()
-            };
 
-            //string jsonString = JsonSerializer.Serialize(person);
-            //return Json(jsonString);
-            return Json(person);
+                string fileName = fileName_0;
+                string rotation = rotation_0;
+                string pageformat = page_format_0;
+
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+                string fileLocation = _config.GetValue<string>("CADViewer:fileLocation");
+                string fileLocationUrl = _config.GetValue<string>("CADViewer:fileLocationUrl");
+                string converterLocation = _config.GetValue<string>("CADViewer:converterLocation");
+                string ax2020_executable = _config.GetValue<string>("CADViewer:ax2020_executable");
+                string licenseLocation = _config.GetValue<string>("CADViewer:licenseLocation");
+                string xpathLocation = _config.GetValue<string>("CADViewer:xpathLocation");
+                string callbackMethod = _config.GetValue<string>("CADViewer:callbackMethod");
+                bool cvjs_debug = _config.GetValue<bool>("CADViewer:cvjs_debug");
+
+                string[] myoutput = new String[1];
+                string absFilePath = "";
+
+
+                if (cvjs_debug == true)
+                {     
+                    string wwwPath = _env.WebRootPath;
+                    string contentPath = _env.ContentRootPath;
+                    string path = Path.Combine(_env.WebRootPath, "temp_debug");
+                    Trace.WriteLine("makesinglepagepdf path:" + path + "  contentPath:  " + contentPath + "  YYY");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    absFilePath = Path.Combine(path, "MakeSinglePagePDF.txt");
+                    Trace.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
+                }
+
+                String base64_file = fileLocation + "/" + fileName + "_base64.png";
+
+                String base64_content = System.IO.File.ReadAllText(base64_file);
+                //strip out bas64
+
+
+                //        myoutput[0] = " base64: "+base64_content+" XXX ";
+                //        File.AppendAllLines(absFilePath, myoutput);
+
+
+                //string imageResult = Regex.Replace(base64_content, "^data:image\/[a-zA-Z]+;base64,", string.empty);
+
+                String[] substrings = base64_content.Split(',');
+
+                string header = substrings[0];
+                string imgData = substrings[1];
+
+
+                myoutput[0] = " header: " + header + " XXX " + ServerLocation + fileName;
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+                byte[] bytes = Convert.FromBase64String(imgData);
+
+                // save image
+                System.IO.File.WriteAllBytes(fileLocation + fileName + ".png", bytes);
+
+                // convert image
+                String arguments = "-i=" + fileLocation + fileName + ".png -o=" + fileLocation + fileName + ".pdf -f=pdf -model -" + rotation + " -" + pageformat;
+
+                myoutput[0] = " arguments: " + arguments;
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
+                myoutput[0] = " arguments: " + arguments + " XXX ";
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
+                ProcessStartInfo ProcessInfo;
+
+                ProcessInfo = new ProcessStartInfo(converterLocation + ax2020_executable, arguments);
+                ProcessInfo.CreateNoWindow = true;
+                ProcessInfo.UseShellExecute = false;
+                ProcessInfo.WorkingDirectory = converterLocation;
+                // *** Redirect the output ***
+                ProcessInfo.RedirectStandardError = true;
+                ProcessInfo.RedirectStandardOutput = true;
+
+                Process myProcess;
+
+                myProcess = Process.Start(ProcessInfo);
+
+                // *** Read the streams ***
+                string output = myProcess.StandardOutput.ReadToEnd();
+                string error = myProcess.StandardError.ReadToEnd();
+
+                myProcess.WaitForExit();
+
+                int exitCode = myProcess.ExitCode;
+
+                myoutput[0] = "output>>" + (String.IsNullOrEmpty(output) ? "(none)" : output);
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+                myoutput[0] = "error>>" + (String.IsNullOrEmpty(error) ? "(none)" : error);
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+                myoutput[0] = "ExitCode: " + exitCode.ToString();
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+                myProcess.Close();
+
+                return Json(fileName + ".pdf");
+            }
+            catch (Exception e)
+            {
+
+                return Json("error:" + e);
+
+            }
+
         }
 
-        [HttpPost]
-        public JsonResult AjaxMethod2(string file)
-        {
-
-            Trace.WriteLine("HELLO  LoadFile/AjaxMethod" + file + "YYY");
 
 
-            PersonModel person2 = new PersonModel
-            {
-                Name = file,
-                DateTime = DateTime.Now.ToString()
-            };
 
-            //string jsonString = JsonSerializer.Serialize(person);
-            //return Json(jsonString);
-            return Json(person2);
-        }
 
-        */
 
+        // NOTE-NOTE-NOTE      AUTOGENERATED CONTENT BELOW
 
         // GET: CADViewer
         public ActionResult Index()
@@ -872,20 +1269,5 @@ namespace cadviewer.Controllers
 }
 
 
-    /*
 
-    public class PersonModel
-    {
-        ///<summary>
-        /// Gets or sets Name.
-        ///</summary>
-        public string Name { get; set; }
-
-        ///<summary>
-        /// Gets or sets DateTime.
-        ///</summary>
-        public string DateTime { get; set; }
-    }
-
-    */
 }
