@@ -9,6 +9,5 @@ Thank you for trying this demo of AutoXChange 2020
 Please contact sales@tailormade.com to purchase
 
 Input File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17.dwg
-PaperSpace is Empty, using ModelSpace instead
 
-Elapsed Time: 0.396 seconds
+Elapsed Time: 0.699 seconds

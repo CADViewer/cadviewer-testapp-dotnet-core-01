@@ -1208,11 +1208,43 @@ namespace cadviewer.Controllers
                 // Set Html body
                 oMail.HtmlBody = mail_message;
 
-                // Add attachment from local disk
-                oMail.AddAttachment(pdf_file);
 
-                // Add attachment from remote website
-                //oMail.AddAttachment("http://www.emailarchitect.net/webapp/img/logo.jpg");
+                string localPath = new Uri(pdf_file).LocalPath;
+                byte[] bytes = new byte[1];  // dummy declaration
+
+                try
+                {
+                    using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
+                    {
+                        bytes = new byte[fsSource.Length];
+                        // Read the source file into a byte array.
+                        int numBytesToRead = (int)fsSource.Length;
+                        int numBytesRead = 0;
+                        while (numBytesToRead > 0)
+                        {
+                            // Read may return anything from 0 to numBytesToRead.
+                            int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
+
+                            // Break when the end of the file is reached.
+                            if (n == 0)
+                                break;
+
+                            numBytesRead += n;
+                            numBytesToRead -= n;
+                        }
+                    }
+                }
+                catch (FileNotFoundException ioEx)
+                {
+                    return Json("failed to send email with the following error:" + ioEx);
+
+                }
+
+                    // Add attachment from local disk
+                    oMail.AddAttachment(pdf_file_name, bytes);
+
+                // Add attachment from local disk
+                //oMail.AddAttachment(pdf_file);
 
                 // Your SMTP server address
                 SmtpServer oServer = new SmtpServer(MailServer);
