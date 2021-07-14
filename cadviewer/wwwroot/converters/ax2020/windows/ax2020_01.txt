@@ -1,4 +1,4 @@
-                 AutoXchange 2020 V20.05.49b
+                 AutoXchange 2020 V20.05.52b
 Copyright (c) 2017, 2018, 2019, 2020, 2021 Tailor Made Software, Ltd.
                       All Rights Reserved
 
@@ -8,7 +8,8 @@ Copyright (c) 2017, 2018, 2019, 2020, 2021 Tailor Made Software, Ltd.
 Thank you for trying this demo of AutoXChange 2020
 Please contact sales@tailormade.com to purchase
 
-Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\content\drawings\dwg\City_skyway_map.dwg
-Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F420859.svg
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17.dwg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F179285.svg
+ViewName: Last Saved View
 
-Elapsed Time: 0.549 seconds
+Elapsed Time: 0.394 seconds
