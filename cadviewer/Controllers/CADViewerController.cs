@@ -83,6 +83,21 @@ namespace cadviewer.Controllers
                 System.IO.File.Delete(localPath);
             }
 
+            
+            if (fileType == "svg")
+            {
+                //HttpContext.Response.Headers.Add("Content-Type", "image/svg+xml");
+            }
+            else
+                if (fileType == "svgz")
+            {
+                HttpContext.Response.Headers.Add("Content-Encoding", "gzip");
+                HttpContext.Response.Headers.Add("Content-Type", "image/svg+xml");
+            }
+            else
+                HttpContext.Response.Headers.Add("Content-Type", "text/plain");
+
+            
             return (temp.GetString(bytes));
 
         }
@@ -120,7 +135,9 @@ namespace cadviewer.Controllers
                 string[] myoutput = new String[1];
                 string absFilePath = "";
 
-
+                bool cvjs_svgz_compress = _config.GetValue<bool>("CADViewer:cvjs_svgz_compress");
+         
+                
 
                 Trace.WriteLine("callApiConversion cvjs_debug:"+cvjs_debug+"  YYY");
 
@@ -405,6 +422,16 @@ namespace cadviewer.Controllers
                     if (param_name[i].IndexOf("f") == 0 && param_name[i].Length == 1)
                     {
                         outputFormat = param_value[i];
+
+       
+                        // 20.05.52a
+                        if ((cvjs_svgz_compress == true) && (outputFormat == "svg"))
+                        {
+                            outputFormat = "svgz";
+                            param_value[i] = "svgz";
+                        }
+
+
                     }
                 }
 
@@ -602,10 +629,10 @@ namespace cadviewer.Controllers
 
                 // compose callback message
 
-                if (outputFormat.ToLower().IndexOf("svg") > -1)
-                {
+                if (outputFormat.ToLower().IndexOf("svg") > -1)  // BOTH svg + svgz   -> return outputFormat !!! note!
+                    {
 
-                    string CVJSresponse = "{\"completedAction\":\"svg_creation\",\"errorCode\":\"E" + exitCode + "\",\"converter\":\"AutoXchange AX2017\",\"version\":\"V1.00\",\"userLabel\":\"fromCADViewerJS\",\"contentLocation\":\"" + contentLocation + "\",\"contentResponse\":\"stream\",\"contentStreamData\":\"" + callbackMethod + "?remainOnServer=0&fileTag=" + tempFileName + "&Type=svg\"}";
+                    string CVJSresponse = "{\"completedAction\":\"svg_creation\",\"errorCode\":\"E" + exitCode + "\",\"converter\":\"AutoXchange AX2017\",\"version\":\"V1.00\",\"userLabel\":\"fromCADViewerJS\",\"contentLocation\":\"" + contentLocation + "\",\"contentResponse\":\"stream\",\"contentStreamData\":\"" + callbackMethod + "?remainOnServer=0&fileTag=" + tempFileName + "&Type=" + outputFormat + "\"}";
 
 
                     myoutput[0] = "SVG response: " + CVJSresponse;
