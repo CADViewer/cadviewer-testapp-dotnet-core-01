@@ -9,7 +9,7 @@ Thank you for trying this demo of AutoXChange 2020
 Please contact sales@tailormade.com to purchase
 
 Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17.dwg
-Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F19795.svg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F191661.svg
 ViewName: Last Saved View
 Typeface: simplex
 Typeface: simplex
@@ -17,4 +17,4 @@ Typeface: simplex
 Typeface: simplex
 Typeface: simplex
 
-Elapsed Time: 0.652 seconds
+Elapsed Time: 0.592 seconds
