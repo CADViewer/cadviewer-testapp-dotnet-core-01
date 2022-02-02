@@ -1,0 +1,192 @@
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17__Feb_2_H09_6
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_6.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_6.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_6.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_6.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\hq17__Feb_2_H09_6.png
+
+Elapsed Time: 2.753 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17__Feb_2_H09_25
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_25.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_25.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_25.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_25.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\hq17__Feb_2_H09_25.png
+
+Elapsed Time: 2.456 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17__Feb_2_H09_29
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_29.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_29.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_29.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_29.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\hq17__Feb_2_H09_29.png
+
+Elapsed Time: 2.74 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17__Feb_2_H09_35
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_35.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_35.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_35.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_35.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\hq17__Feb_2_H09_35.png
+
+Elapsed Time: 2.68 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/hq17__Feb_2_H09_36
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_36.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_36.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_36.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/hq17__Feb_2_H09_36.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\hq17__Feb_2_H09_36.png
+
+Elapsed Time: 2.352 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_881
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_881.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_881.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_881.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_881.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_881.png
+
+Elapsed Time: 2.462 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_526
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_526.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_526.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_526.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_526.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_526.png
+
+Elapsed Time: 3.026 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_462
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_462.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_462.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_462.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_462.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_462.png
+
+Elapsed Time: 2.405 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_757
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_757.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_757.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_757.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_757.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_757.png
+
+Elapsed Time: 2.626 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_137
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_137.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_137.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_137.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_137.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_137.png
+
+Elapsed Time: 2.632 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_158
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_158.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_158.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_158.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_158.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_158.png
+
+Elapsed Time: 2.543 seconds
+
+error>>(none)
+ExitCode: 0
+ header: data:image/png;base64 XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/screendump_769
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_769.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_769.pdf -f=pdf -model -landscape -A4
+ arguments: -i=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_769.png -o=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_769.pdf -f=pdf -model -landscape -A4 XXX 
+output>>Unrecognized Default Unicode Language
+                 AutoXchange 2022 64-bit  V22.12.65
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\screendump_769.png
+
+Elapsed Time: 3.482 seconds
+
+error>>(none)
+ExitCode: 0
