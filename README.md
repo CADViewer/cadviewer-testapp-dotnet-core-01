@@ -26,7 +26,21 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
 
 ## How to Use
 
-Once installed, open cadviewer.sln the HTML samples under /cadviewer/html/ can be run from a web-browser. Use http://localhost:xxxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost).
+1: Install into a folder of choice
+
+2: If different from default install folder, then location ***appsettings.json*** and modify paths and urls to match your server settings. 
+
+3: If different from default install folder and url, in the folder ***cadviewer/wwwroot/html*** update the JavScript variables: 
+
+        var ServerBackEndUrl = "";
+        var ServerUrl = "https://localhost:44374/";
+        var ServerLocation = "";
+
+The variable ***ServerLocation*** is used to set another server path for the installation. This should only be done in testing. It is normally kept empty and settings in ***appsettings.json*** are used.  ***ServerBackEndUrl*** is not used for dotNetCore unless the back-end **CADViewerController.cs** is accessible from a different url/port in which also ***appsettings.json*** needs to be updated.
+
+
+
+4: Once installed, run cadviewer.sln,  the HTML samples under ***/cadviewer/wwwroot/html/*** can be accessed from a web-browser. Use http://localhost:xxxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost:xxxxx).
 
 
 
