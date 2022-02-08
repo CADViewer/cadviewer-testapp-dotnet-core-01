@@ -57,7 +57,7 @@ CADViewer and AutoXchange is included in this repository, but it can be recreate
 
 <pre style="line-height: 110%">
 c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\
-                                            └─── wwwroot
+                                                            └─── wwwroot
                                                     ├── app
                                                     │    ├── cv
                                                     │    │    ├── cv-pro 
