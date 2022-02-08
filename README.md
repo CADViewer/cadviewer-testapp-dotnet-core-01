@@ -28,7 +28,7 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
 
 1: Install into a folder of choice
 
-2: If different from default install folder, then location ***appsettings.json*** and modify paths and urls to match your server settings. 
+2: If different from default install folder, then locate ***appsettings.json*** and modify paths and urls to match your server settings. 
 
 3: If different from default install folder and url, in the folder ***cadviewer/wwwroot/html*** update the JavScript variables: 
 
