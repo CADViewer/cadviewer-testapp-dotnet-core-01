@@ -57,44 +57,44 @@ CADViewer and AutoXchange is included in this repository, but it can be recreate
 
 <pre style="line-height: 110%">
 c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\
-                                                       └─── wwwroot
-                                                    ├── app
-                                                    │    ├── cv
-                                                    │    │    ├── cv-pro 
-                                                    │    │    │   ├── menu_config
-                                                    │    │    │   ├── language_table
-                                                    │    │    │   └── space
-                                                    │    │    │         ├── css 
-                                                    │    │    │         └── html
-                                                    │    │    ├── cv-core
-                                                    │    │    │   ├── menu_config
-                                                    │    │    │   └── language_table
-                                                    │    │    └── cv-custom_commands
-                                                    │    ├── fonts
-                                                    │    ├── images
-                                                    │    ├── js
-                                                    │    ├── css
-                                                    │    └── user_resources	
-                                                    ├── converters
-                                                    │    ├── ax2022
-                                                    │    │     ├── windows 
-                                                    │    │     │      └── fonts
-                                                    │    │     └── linux
-                                                    │    │            └── fonts
-                                                    │    ├── dwgmerge2020
-                                                    │    │         ├── windows 
-                                                    │    │         │      └── fonts
-                                                    │    │         └── linux
-                                                    │    │            └── fonts
-                                                    │    ├── linklist2020
-                                                    │    │         ├── windows 
-                                                    │    │         │     └── fonts
-                                                    │    │         └── linux
-                                                    │    │               └── fonts
-                                                    │    └── files
-                                                    ├── content
-                                                    ├── html
-                                                    └── temp_print
+                                                     └─── wwwroot
+                                                            ├── app
+                                                            │    ├── cv
+                                                            │    │    ├── cv-pro 
+                                                            │    │    │   ├── menu_config
+                                                            │    │    │   ├── language_table
+                                                            │    │    │   └── space
+                                                            │    │    │         ├── css 
+                                                            │    │    │         └── html
+                                                            │    │    ├── cv-core
+                                                            │    │    │   ├── menu_config
+                                                            │    │    │   └── language_table
+                                                            │    │    └── cv-custom_commands
+                                                            │    ├── fonts
+                                                            │    ├── images
+                                                            │    ├── js
+                                                            │    ├── css
+                                                            │    └── user_resources	
+                                                            ├── converters
+                                                            │    ├── ax2022
+                                                            │    │     ├── windows 
+                                                            │    │     │      └── fonts
+                                                            │    │     └── linux
+                                                            │    │            └── fonts
+                                                            │    ├── dwgmerge2022
+                                                            │    │         ├── windows 
+                                                            │    │         │      └── fonts
+                                                            │    │         └── linux
+                                                            │    │            └── fonts
+                                                            │    ├── linklist2022
+                                                            │    │         ├── windows 
+                                                            │    │         │     └── fonts
+                                                            │    │         └── linux
+                                                            │    │               └── fonts
+                                                            │    └── files
+                                                            ├── content
+                                                            ├── html
+                                                            └── temp_print
 </pre>
 
 **Note** that folders for controller configuration are set as part of the dotNet core main project 
