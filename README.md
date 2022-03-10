@@ -32,15 +32,22 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
 
 3: If different from default install folder and url, in the folder ***cadviewer/wwwroot/html*** update the JavScript variables: 
 
-        var ServerBackEndUrl = "";
+        var ServerBackEndUrl = "https://localhost:44374/";
         var ServerUrl = "https://localhost:44374/";
         var ServerLocation = "";
 
 The variable ***ServerLocation*** is used to set another server path for the installation. This should only be done in testing. It is normally kept empty and settings in ***appsettings.json*** are used.  ***ServerBackEndUrl*** is not used for dotNetCore unless the back-end **CADViewerController.cs** is accessible from a different url/port in which also ***appsettings.json*** needs to be updated.
 
 
+4: The method ***cvjs_setAllServerPaths_and_Handlers()*** sets the front-end and back-end combination as well as the controlling paths. Note that the last parameter in this method is the controller name.  If the controller name variable is undefined or "", then the back-end location must be the url of the end-point itself, so: ServerBackEndUrl = "https://localhost:44374/CADViewer" in this case. 
 
-4: Once installed, run cadviewer.sln,  the HTML samples under ***/cadviewer/wwwroot/html/*** can be accessed from a web-browser. Use http://localhost:xxxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost:xxxxx).
+        // Pass over the location of the installation: will update the internal paths, as well as front-end and back-end platforms
+        // last parameter is the controller name  , ServerBackEndUrl+controller = controller path
+        cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "dotNetCore", "JavaScript", "floorPlan", "CADViewer");
+
+
+
+5: Once installed, run cadviewer.sln,  the HTML samples under ***/cadviewer/wwwroot/html/*** can be accessed from a web-browser. Use http://localhost:xxxxx/cadviewer/html/CADViewer_fileloader_670.html as a starting point (assuming that your have installed under http://localhost:xxxxx).
 
 
 
