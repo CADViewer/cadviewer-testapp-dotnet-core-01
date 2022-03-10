@@ -1,12 +1,12 @@
-                 AutoXchange 2022 64-bit  V22.12.69
+                      AutoXchange 2023 64-bit  V23.01.72
 Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
                          All Rights Reserved
 
      Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
 ===========================================================================
 Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17_.dwg
-Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F537645.svg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F688032.svg
 ViewName: Last Saved View
-OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F537645.svg
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F688032.svg
 
-Elapsed Time: 0.317 seconds
+Elapsed Time: 0.665 seconds
