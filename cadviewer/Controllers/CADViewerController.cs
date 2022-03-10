@@ -36,6 +36,17 @@ namespace cadviewer.Controllers
             _env = env;
         }
 
+
+        // Test
+
+        
+        [HttpGet]
+        public JsonResult HelloWorld()
+        {
+            return Json("Hello World!");
+        }
+
+
         // get Drawing
 
         [HttpGet]
