@@ -120,19 +120,21 @@ namespace cadviewer.Controllers
 
 
         // callApiConversion   - main control for conversions to SVG and PDF
-
         [HttpPost]
         public JsonResult callApiConversion(string request)
         {
 
-            Trace.WriteLine("callApiConversion REQUEST:" + request + "XXXX");
-
-            string myRequest = request;
-            //JObject myCADViewerRequestObject = JObject.Parse(myCADViewerRequestString);
-            //myCADViewerRequestObject = JObject.Parse(myCADViewerRequestString);
-
             try
             {
+
+                
+                Trace.WriteLine("callApiConversion REQUEST:" + request + "XXXX");
+
+                string myRequest = request;
+                //JObject myCADViewerRequestObject = JObject.Parse(myCADViewerRequestString);
+                //myCADViewerRequestObject = JObject.Parse(myCADViewerRequestString);
+
+
                 // context.Response.ContentType = "text/plain";
                 // context.Response.AddHeader("Access-Control-Allow-Origin", "*");
 
@@ -162,9 +164,7 @@ namespace cadviewer.Controllers
 
                     string wwwPath = _env.WebRootPath;
                     string contentPath = _env.ContentRootPath;
-
                     string path = Path.Combine(_env.WebRootPath, "temp_debug");
-
 
                     Trace.WriteLine("callApiConversion path:" + path + "  contentPath:  "+ contentPath+ "  YYY");
 
@@ -174,29 +174,13 @@ namespace cadviewer.Controllers
                         Directory.CreateDirectory(path);
                     }
 
-                    absFilePath = Path.Combine(path, "callApiConversionHandlerLog.txt");
-
+                    absFilePath = Path.Combine(path, "callApiConversionLog.txt");
 
                     Trace.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
 
-
-                    //string tmpPrintFolder = HttpContext.Current.Server.MapPath("~\\temp_debug");
-                    //Directory.CreateDirectory(tmpPrintFolder);
-                    //context.Response.Write(absFilePath);
                 }
 
 
-                //                var jsonSerializer = new JavaScriptSerializer();
-                /*
-                                var myRequest = String.Empty;
-
-                                myCADViewerRequestObject.InputStream.Position = 0;
-                                using (var inputStream = new StreamReader(myCADViewerRequestObject.InputStream))
-                                {
-                                    myRequest = inputStream.ReadToEnd();
-                                }
-
-                */
                 myRequest = DecodeUrlString(myRequest);
 
 
@@ -219,6 +203,11 @@ namespace cadviewer.Controllers
 
                 Trace.WriteLine("callApiConversion myrequest paramCount:" + paramCount + "  YYY");
 
+
+                myoutput[0] = "total parameters: " + paramCount;
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
                 string[] param_name = new string[paramCount];
                 string[] param_value = new string[paramCount];
 
@@ -229,55 +218,30 @@ namespace cadviewer.Controllers
 
                     string string1 = parameters.Substring(parameters.IndexOf("paramName") + 12);
 
-                    myoutput[0] = " paramcount: " + paramCount + " XXX " + string1;
+                    myoutput[0] = paramCount + "," + string1;
                     System.IO.File.AppendAllLines(absFilePath, myoutput);
 
-
-                    // if (cvjs_debug){		
-                    //                stringContent = string1+" ";
-                    //                contentInBytes	= stringContent.getBytes();
-                    //                fileOut.write(contentInBytes);
-                    // }
-
-
                     string1 = string1.Substring(0, string1.IndexOf('\"'));
-
-
-                    //if (cvjs_debug){		
-                    //    stringContent = "param "+string1+"XXX"+" \n\r";
-                    //    contentInBytes	= stringContent.getBytes();
-                    //    fileOut.write(contentInBytes);
-                    //}
-
                     param_name[paramCount] = string1;
+
 
                     try
                     {
 
                         string1 = parameters.Substring(parameters.IndexOf("paramValue") + 13);
 
-                        //if (cvjs_debug){		
-                        //    stringContent = "param "+string1+" ";
-                        //    contentInBytes	= stringContent.getBytes();
-                        //    fileOut.write(contentInBytes);
-                        //}
-
                         string1 = string1.Substring(0, string1.IndexOf('\"'));
-
-                        //if (cvjs_debug){
-                        //    stringContent = "param "+string1+"YYY";
-                        //    contentInBytes  = stringContent.getBytes();
-                        //    fileOut.write(contentInBytes);
-                        //}
 
                         param_value[paramCount] = string1;
                         parameters = parameters.Substring(parameters.IndexOf("paramValue") + 13);
 
                         //            context.Response.Write("RUN "+paramCount+" name="+ param_name[paramCount] + " value=" + param_value[paramCount]);
-
                     }
                     catch (Exception e)
                     {
+
+                        Trace.WriteLine("e:" + e);
+
 
                         param_value[paramCount] = "";
                     }
@@ -289,19 +253,8 @@ namespace cadviewer.Controllers
                 Random randomGenerator = new Random();
                 int randomInt = randomGenerator.Next(1000000);
                 string tempFileName = "F" + randomInt;
-                //string writeTemp =  (URLDecoder.decode(contentLocation, "UTF-8")).trim();
-                //StringWriter writer = new StringWriter();
-                //Server.UrlDecode(contentLocation, writer);
-                //string writeTemp = writer.ToString();
 
                 string writeTemp = contentLocation;  // already decoded.... !!!!
-
-
-                //if (cvjs_debug){		
-                //	stringContent = "writeTemp "+writeTemp+" \n\r";
-                //	contentInBytes	= stringContent.getBytes();
-                //	fileOut.write(contentInBytes);
-                //}
 
                 string writeFile = fileLocation + tempFileName + "." + writeTemp.Substring(writeTemp.LastIndexOf(".") + 1);
 
@@ -309,33 +262,29 @@ namespace cadviewer.Controllers
 
                 int localFlag = 0;
 
-
                 Trace.WriteLine("callApiConversion writeFile:" + writeFile + "  YYY");
+
+                myoutput[0] = "WriteFile: " + writeFile;
+                System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
 
                 if (contentLocation.IndexOf("http") == 0)
                 {  // URL
-
 
                     if (contentLocation.IndexOf(ServerUrl) == 0)    // we are on same server, so OK
                     {
                         contentLocation = ServerLocation + contentLocation.Substring(ServerUrl.Length);
                         localFlag = 1;
                         // System.IO.File.Copy(contentLocation, writeFile, true);
-
                     }
                     else
                     {
-
-
                         using (WebClient wc = new WebClient())
                         {
                             wc.DownloadFile(contentLocation, writeFile);
                         }
-
-
                     }
-
-
 
                     string cleaned = "";
                     string pattern = @"[^\u0000-\u0200]+";
@@ -711,16 +660,50 @@ namespace cadviewer.Controllers
         public JsonResult LoadFile(string file, string listtype)
         {
 
+            bool cvjs_debug = false;
+            string[] myoutput = new String[1];
+            string absFilePath = "";
+
             try
             {
-
-                Trace.WriteLine("HELLO  LoadFile:" + file + "XXXX");
+   
+                Trace.WriteLine("LoadFile:" + file + "XXXX");
 
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
 
                 string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
                 string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+            
+                cvjs_debug = _config.GetValue<bool>("CADViewer:cvjs_debug");
+
+                
+
+                if (cvjs_debug == true)
+                {
+
+                    string wwwPath = _env.WebRootPath;
+                    string contentPath = _env.ContentRootPath;
+                    string path = Path.Combine(_env.WebRootPath, "temp_debug");
+
+
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    absFilePath = Path.Combine(path, "LoadFileLog.txt");
+                }
+
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "LoadFile:" + filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+          
 
                 /*
                 string ServerLocation = AppSettings.Instance.Get<string>("CADViewer:ServerLocation"); 
@@ -739,6 +722,15 @@ namespace cadviewer.Controllers
                         }
                         else
                             filePath = ServerLocation + filePath;
+
+
+                            if (cvjs_debug == true)
+                            {
+                                myoutput[0] = "loadtype:" + loadtype + "  updated filePath " + filePath;
+                                System.IO.File.AppendAllLines(absFilePath, myoutput);
+                            }
+
+
                     }
 
                 }
@@ -751,6 +743,15 @@ namespace cadviewer.Controllers
 
                 }
 
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "after ServerUrl match check: filePath: " + filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+
+
                 string localPath = "";
 
                 if (System.IO.File.Exists(filePath)){       
@@ -758,7 +759,15 @@ namespace cadviewer.Controllers
                 }
                 else
                 {
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "Error: file does not exist ";
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+
                     return Json("file does not exist");
+
                 }
 
                 using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
@@ -792,6 +801,15 @@ namespace cadviewer.Controllers
             }
             catch (FileNotFoundException ioEx)
             {
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "FileNotFoundException:"+ ioEx;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+
                 return Json("LoadFile: "+ioEx);
             }
 
@@ -896,9 +914,6 @@ namespace cadviewer.Controllers
         }
 
 
-
-
-
         // SAVEFILE   - loading of content to populate CADViewer interface and other stuff such as redlines
         [HttpPost]
         public JsonResult SaveFile(string file, string file_content, string custom_content, string listtype)
@@ -906,9 +921,7 @@ namespace cadviewer.Controllers
 
             try
             {
-                Trace.WriteLine("HELLO  SaveFile:" + file + "XXXX");
-
-
+              
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
 
@@ -916,6 +929,32 @@ namespace cadviewer.Controllers
                 string customContent = custom_content;
                 string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
                 string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+
+                bool cvjs_debug = _config.GetValue<bool>("CADViewer:cvjs_debug");
+                string[] myoutput = new String[1];
+                string absFilePath = "";
+
+                if (cvjs_debug == true)
+                {
+
+                    string wwwPath = _env.WebRootPath;
+                    string contentPath = _env.ContentRootPath;
+                    string path = Path.Combine(_env.WebRootPath, "temp_debug");
+
+           
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    absFilePath = Path.Combine(path, "SaveFileLog.txt");
+                }
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "Save to:"+filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
 
 
                 if (listtype != null)
@@ -932,8 +971,15 @@ namespace cadviewer.Controllers
                             filePath = ServerLocation + filePath;
                     }
 
-                }
 
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "loadtype:" + loadtype+ "  updated filePath "+filePath;
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+
+
+                }
 
 
                 if (filePath.IndexOf(ServerUrl) == 0)
@@ -942,6 +988,15 @@ namespace cadviewer.Controllers
                 }
 
                 string folder = filePath.Substring(0, filePath.LastIndexOf("/"));
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "after filePath check:" + filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+
 
                 if (!Directory.Exists(folder))
                 {
@@ -957,6 +1012,15 @@ namespace cadviewer.Controllers
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "LocalPath Error:" + e.Message;
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+
+
                 }
 
 
@@ -967,6 +1031,15 @@ namespace cadviewer.Controllers
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "WriteAllText Error:" + e.Message;
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+
+
                 }
 
 
@@ -1508,142 +1581,7 @@ namespace cadviewer.Controllers
 
         }
 
-
-
-
-/*
-        [HttpPost]
-        public JsonResult MergeEmail(string pdf_file, string pdf_file_name, string from_name, string from_mail, string cc_mail, string replyto, string to_mail, string mail_title, string listtype, string mail_message)
-        {
-
-            try
-            {
-                string MailServer = _config.GetValue<string>("CADViewer:MailServer");
-                int MailServerPort = _config.GetValue<int>("CADViewer:MailServerPort");
-                string MailUserName = _config.GetValue<string>("CADViewer:MailUserName");
-                string MailPassword = _config.GetValue<string>("CADViewer:MailPassword");
-
-
-                SmtpMail oMail = new SmtpMail("TryIt");
-
-                // Set sender email address, please change it to yours
-                oMail.From = from_mail;
-                // Set recipient email address, please change it to yours
-                oMail.To = to_mail;
-
-                // Set email subject
-                oMail.Subject = mail_title;
-                // Set Html body
-                oMail.HtmlBody = mail_message;
-
-
-                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
-                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
-
-       
-                if (listtype != null)
-                {
-                    string loadtype = listtype.Trim('/');
-                    if (loadtype.IndexOf("serverfolder") == 0)
-                    {
-
-                        if (pdf_file.IndexOf(ServerUrl) == 0)
-                        {
-                            //do nothing!! - handle below
-                        }
-                        else
-                            pdf_file = ServerLocation + pdf_file;
-                    }
-
-                }
-
-
-         
-                // return Json("pdf_file:" + pdf_file);
-
-
-
-                string localPath = new Uri(pdf_file).LocalPath;
-                byte[] bytes = new byte[1];  // dummy declaration
-
-                try
-                {
-                    using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
-                    {
-                        bytes = new byte[fsSource.Length];
-                        // Read the source file into a byte array.
-                        int numBytesToRead = (int)fsSource.Length;
-                        int numBytesRead = 0;
-                        while (numBytesToRead > 0)
-                        {
-                            // Read may return anything from 0 to numBytesToRead.
-                            int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
-
-                            // Break when the end of the file is reached.
-                            if (n == 0)
-                                break;
-
-                            numBytesRead += n;
-                            numBytesToRead -= n;
-                        }
-                    }
-                }
-                catch (FileNotFoundException ioEx)
-                {
-                    return Json("failed to send email with the following error:" + ioEx);
-
-                }
-
-                    // Add attachment from local disk
-                    oMail.AddAttachment(pdf_file_name, bytes);
-
-                // Add attachment from local disk
-                //oMail.AddAttachment(pdf_file);
-
-                // Your SMTP server address
-                SmtpServer oServer = new SmtpServer(MailServer);
-
-                // User and password for ESMTP authentication
-                oServer.User = MailUserName;
-                oServer.Password = MailPassword;
-
-                // Most mordern SMTP servers require SSL/TLS connection now.
-                // ConnectTryTLS means if server supports SSL/TLS, SSL/TLS will be used automatically.
-                oServer.ConnectType = SmtpConnectType.ConnectTryTLS;
-
-                // If your SMTP server uses 587 port
-                // oServer.Port = 587;
-
-                // If your SMTP server requires SSL/TLS connection on 25/587/465 port
-                 oServer.Port = MailServerPort;                          // 25 or 587 or 465
-                 oServer.ConnectType = SmtpConnectType.ConnectSSLAuto;
-
-                //Console.WriteLine("start to send email with attachment ...");
-
-                SmtpClient oSmtp = new SmtpClient();
-                oSmtp.SendMail(oServer, oMail);
-
-                return Json("email was sent successfully!");
-            }
-            catch (Exception ep)
-            {
-                return Json("failed to send email with the following error:"+ep.Message);
-            }
-
-
-
-
-        }
-
-***/
-
-
-
-
-
-
-
-            public string GetUniqID()
+        public string GetUniqID()
         {
             var ts = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0));
             double t = ts.TotalMilliseconds / 1000;

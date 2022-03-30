@@ -5,8 +5,8 @@ Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
      Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
 ===========================================================================
 Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17_.dwg
-Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F123126.svg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F785729.svg
 ViewName: Last Saved View
-OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F123126.svg
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F785729.svg
 
-Elapsed Time: 0.32 seconds
+Elapsed Time: 0.116 seconds
