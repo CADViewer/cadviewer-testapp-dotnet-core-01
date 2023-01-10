@@ -68,6 +68,13 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
         var ServerLocation = "";
 
 
+**NOTE:** We have in the sample HTML documents simplified, by simply using current URL: 
+
+	// Location of installation folders:  1) update if back-end on different port!  2) make sure / is after port!
+        var ServerBackEndUrl = location.origin+"/";     //"http://localhost:5001/";
+        var ServerUrl =  location.origin+"/";           // http://loalhost:5001/; //
+        var ServerLocation = "";
+
 **NOTE**:  If running from Visual Studio, the default URL is localhost:44374, if running from the command-line with ***dotnet*** command the default URL is localhost:5001 .
 
 
@@ -197,7 +204,7 @@ c:\cadviewer-testapp-dotnet-core-01\cadviewer
 
 identify your sample mysample.html file, and ensure that it correctly sets the ServerLocation and ServeUrl parameters
 
-Open a web-browser pointing to your sample html file:    **http:/localhost:44374/html/mysample.html**
+Open a web-browser pointing to your sample html file:    **http:/localhost:xxxxx/html/mysample.html**
 
 
 
@@ -213,6 +220,15 @@ c:\cadviewer-testapp-dotnet-core-01\cadviewer
                                                          └── temp_debug
 </pre>
 contains a number of debug files. Note that  **callApiConversionHandlerLog_XXXXXX.txt** lists the command line and traces in the communication with the back-end CAD converter AutoXchange 2023. If drawing files does not display, this file will contain useful information to pinpoint the issue.
+
+
+
+## Documentation
+
+**[CADViewer Techdocs](https://cadviewer.com/cadviewertechdocs/)**
+
+**[AutoXchange Parameter Interface](https://tailormade.com/ax2020techdocs/)**
+
 
 
 
