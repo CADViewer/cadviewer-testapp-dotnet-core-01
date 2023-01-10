@@ -1,6 +1,0 @@
-Save to:converters/files/screendump_557_base64.png
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_557_base64.png
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_557_base64.png
-Save to:converters/files/screendump_055_base64.png
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_055_base64.png
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/screendump_055_base64.png

@@ -20,8 +20,6 @@ using MailKit.Net.Smtp;
 using MimeKit;
 
 
-
-
 namespace cadviewer.Controllers
 {
     public class CADViewerController : Controller
@@ -126,9 +124,9 @@ namespace cadviewer.Controllers
 
             try
             {
-
+                Console.WriteLine("1 callApiConversion HELLO!");
                 
-                Trace.WriteLine("callApiConversion REQUEST:" + request + "XXXX");
+                Console.WriteLine("callApiConversion REQUEST:" + request + "XXXX");
 
                 string myRequest = request;
                 //JObject myCADViewerRequestObject = JObject.Parse(myCADViewerRequestString);
@@ -157,7 +155,7 @@ namespace cadviewer.Controllers
          
                 
 
-                Trace.WriteLine("callApiConversion cvjs_debug:"+cvjs_debug+"  YYY");
+                Console.WriteLine("callApiConversion cvjs_debug:"+cvjs_debug+"  YYY");
 
                 if (cvjs_debug == true)
                 {
@@ -166,7 +164,7 @@ namespace cadviewer.Controllers
                     string contentPath = _env.ContentRootPath;
                     string path = Path.Combine(_env.WebRootPath, "temp_debug");
 
-                    Trace.WriteLine("callApiConversion path:" + path + "  contentPath:  "+ contentPath+ "  YYY");
+                    Console.WriteLine("callApiConversion path:" + path + "  contentPath:  "+ contentPath+ "  YYY");
 
                     
                     if (!Directory.Exists(path))
@@ -174,9 +172,9 @@ namespace cadviewer.Controllers
                         Directory.CreateDirectory(path);
                     }
 
-                    absFilePath = Path.Combine(path, "callApiConversionLog.txt");
+                    absFilePath = Path.Combine(path, "callApiConversionLog_"+ Guid.NewGuid().ToString() + ".txt");
 
-                    Trace.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
+                    Console.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
 
                 }
 
@@ -184,7 +182,7 @@ namespace cadviewer.Controllers
                 myRequest = DecodeUrlString(myRequest);
 
 
-                Trace.WriteLine("callApiConversion myrequest decoded:" + myRequest + "  YYY");
+                Console.WriteLine("callApiConversion myrequest decoded:" + myRequest + "  YYY");
 
                 string contentLocation = myRequest.Substring(myRequest.IndexOf("contentLocation") + 18);
                 contentLocation = contentLocation.Substring(0, contentLocation.IndexOf('\"'));
@@ -201,7 +199,7 @@ namespace cadviewer.Controllers
                     paramCount++;
                 }
 
-                Trace.WriteLine("callApiConversion myrequest paramCount:" + paramCount + "  YYY");
+                Console.WriteLine("callApiConversion myrequest paramCount:" + paramCount + "  YYY");
 
 
                 myoutput[0] = "total parameters: " + paramCount;
@@ -240,7 +238,7 @@ namespace cadviewer.Controllers
                     catch (Exception e)
                     {
 
-                        Trace.WriteLine("e:" + e);
+                        Console.WriteLine("e:" + e);
 
 
                         param_value[paramCount] = "";
@@ -262,7 +260,7 @@ namespace cadviewer.Controllers
 
                 int localFlag = 0;
 
-                Trace.WriteLine("callApiConversion writeFile:" + writeFile + "  YYY");
+                Console.WriteLine("callApiConversion writeFile:" + writeFile + "  YYY");
 
                 myoutput[0] = "WriteFile: " + writeFile;
                 System.IO.File.AppendAllLines(absFilePath, myoutput);
@@ -497,7 +495,7 @@ namespace cadviewer.Controllers
 
 
 
-                Trace.WriteLine("callApiConversion before call to conversion: YYY");
+                Console.WriteLine("callApiConversion before call to conversion: YYY");
 
                 try
                 {
@@ -513,7 +511,7 @@ namespace cadviewer.Controllers
                         }
 
                         // move all this processing
-                        arguments = str_arr[0] + " " + arguments;    //NOTE , no .bat processing
+                        //  arguments = str_arr[0] + " " + arguments;    //NOTE , no .bat processing
 
                         myoutput[0] = arguments;
                         System.IO.File.AppendAllLines(absFilePath, myoutput);
@@ -521,12 +519,12 @@ namespace cadviewer.Controllers
                         //context.Response.Write("arguments = " +arguments);
                         if (cvjs_debug == true)
                         {
-                            //                    myoutput[0] = str_arr[0]+"  "+arguments;
-                            myoutput[0] = "New Arguments:  " + arguments;
+                            myoutput[0] = str_arr[0]+"  "+arguments;
+                            //myoutput[0] = "New Arguments:  " + arguments;
                             System.IO.File.AppendAllLines(absFilePath, myoutput);
 
-                            myoutput[0] = "The command:  " + converterLocation + "\\run_ax2020.bat";
-                            //                    myoutput[0] = "New The command:  "+str_arr[0]+" "+arguments;
+                            //myoutput[0] = "The command:  " + converterLocation + "/run_ax2020.bat";
+                            myoutput[0] = "New The command:  "+str_arr[0]+" "+arguments;
                             System.IO.File.AppendAllLines(absFilePath, myoutput);
 
                         }
@@ -534,8 +532,8 @@ namespace cadviewer.Controllers
                         exitCode = 0;
                         ProcessStartInfo ProcessInfo;
 
-                        ProcessInfo = new ProcessStartInfo(converterLocation + "\\run_ax2020.bat", arguments);
-                        //              ProcessInfo = new ProcessStartInfo(str_arr[0], arguments);
+                        //ProcessInfo = new ProcessStartInfo(converterLocation + "/run_ax2020.bat", arguments);
+                        ProcessInfo = new ProcessStartInfo(str_arr[0], arguments);
 
                         ProcessInfo.CreateNoWindow = true;
                         ProcessInfo.UseShellExecute = false;    // false -> true
@@ -573,7 +571,7 @@ namespace cadviewer.Controllers
                 catch (Exception e)
                 {
 
-                    Trace.WriteLine("callApiConversion e: "+e.Message);
+                    Console.WriteLine("callApiConversion e: "+e.Message);
 //                    Console.WriteLine(e.Message);
                 }
 
@@ -607,7 +605,7 @@ namespace cadviewer.Controllers
                     //context.Response.Write(CVJSresponse);
 
 
-                    Trace.WriteLine("callApiConversion SVG CVJSresponse:"+CVJSresponse+"QQQQQQ");
+                    Console.WriteLine("callApiConversion SVG CVJSresponse:"+CVJSresponse+"QQQQQQ");
 
 
                     return Json(CVJSresponse);
@@ -637,7 +635,7 @@ namespace cadviewer.Controllers
 
                         // send callback message and terminate
                         //context.Response.Write(CVJSresponse);
-                        Trace.WriteLine("callApiConversion PDF CVJSresponse:" + CVJSresponse + "QQQQQQ");
+                        Console.WriteLine("callApiConversion PDF CVJSresponse:" + CVJSresponse + "QQQQQQ");
                         return Json(CVJSresponse);
 
                     }
@@ -655,9 +653,11 @@ namespace cadviewer.Controllers
         }
 
 
-        // LOADFILE   - loading of content to populate CADViewer interface and other stuff such as redlines
+        // LOADFILE2  - returning svg & bitmaps   CV 8.5.4
+
+        [HttpGet]
         [HttpPost]
-        public JsonResult LoadFile(string file, string listtype)
+        public ActionResult LoadFile2(string file, string listtype, string loadtype)
         {
 
             bool cvjs_debug = false;
@@ -667,7 +667,236 @@ namespace cadviewer.Controllers
             try
             {
    
-                Trace.WriteLine("LoadFile:" + file + "XXXX");
+                Console.WriteLine("First in LoadFile:" + file + ","+listtype+","+loadtype);
+
+                string filePath = DecodeUrlString(file);
+                filePath = filePath.Trim('/');
+
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+
+            
+                cvjs_debug = _config.GetValue<bool>("CADViewer:cvjs_debug");
+                //cvjs_debug = false;  // multiple load  will overwrite output file and crash execution
+            
+                if (cvjs_debug == true)
+                {
+
+                    string wwwPath = _env.WebRootPath;
+                    string contentPath = _env.ContentRootPath;
+                    string path = Path.Combine(_env.WebRootPath, "temp_debug");
+
+
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    absFilePath = Path.Combine(path, "LoadFile2_Log_"+ Guid.NewGuid().ToString() + ".txt");
+                }
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "First in LoadFile:" + file + ","+listtype+","+loadtype;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "LoadFile:" + filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+          
+
+                /*
+                string ServerLocation = AppSettings.Instance.Get<string>("CADViewer:ServerLocation"); 
+                string ServerUrl = AppSettings.Instance.Get<string>("CADViewer:ServerUrl"); 
+                */
+
+                if (listtype != null)
+                {
+                    string myloadtype = listtype.Trim('/');
+                    if (myloadtype.IndexOf("serverfolder") == 0 )     // CV 8.5.1
+                    {
+
+                        if (filePath.IndexOf(ServerUrl) == 0)
+                        {
+                            //do nothing!! - handle below
+                        }
+                        else
+                            filePath = ServerLocation + filePath;
+
+
+                            if (cvjs_debug == true)
+                            {
+                                myoutput[0] = "loadtype:" + myloadtype + "  updated filePath " + filePath;
+                                System.IO.File.AppendAllLines(absFilePath, myoutput);
+                            }
+
+
+                    }
+
+                }
+
+
+                if (listtype != null  && listtype == "none")
+                {
+                    string myloadtype = loadtype.Trim('/');
+                    if (myloadtype.IndexOf("menufile") == 0 )     // CV 8.5.1
+                    {
+
+                        if (filePath.IndexOf(ServerUrl) == 0)
+                        {
+                            //do nothing!! - handle below
+                        }
+                        else
+                            filePath = ServerLocation + filePath;
+
+                            if (cvjs_debug == true)
+                            {
+                                myoutput[0] = "loadtype:" + myloadtype + "  updated filePath " + filePath;
+                                System.IO.File.AppendAllLines(absFilePath, myoutput);
+                            }
+
+
+                    }
+
+                }
+
+
+
+
+                if (filePath.IndexOf(ServerUrl) == 0)
+                {
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
+                }
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "after ServerUrl match check: filePath: " + filePath;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+                string localPath = "";
+
+                if (System.IO.File.Exists(filePath)){       
+                    localPath = new Uri(filePath).LocalPath;
+                }
+                else
+                {
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "Error: file does not exist ";
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+//                    return Json("file does not exist");
+
+                        byte[] bytes = new byte[100];
+                        return File(bytes, "text/plain");
+
+                }
+
+                using (FileStream fsSource = new FileStream(localPath, FileMode.Open, FileAccess.Read))
+                {
+
+                    // Read the source file into a byte array.
+                    byte[] bytes = new byte[fsSource.Length];
+                    int numBytesToRead = (int)fsSource.Length;
+                    int numBytesRead = 0;
+                    while (numBytesToRead > 0)
+                    {
+                        // Read may return anything from 0 to numBytesToRead.
+                        int n = fsSource.Read(bytes, numBytesRead, numBytesToRead);
+
+                        // Break when the end of the file is reached.
+                        if (n == 0)
+                            break;
+
+                        numBytesRead += n;
+                        numBytesToRead -= n;
+                    }
+                    numBytesToRead = bytes.Length;
+
+                    UTF8Encoding temp = new UTF8Encoding(true);
+                    //return (temp.GetString(bytes));
+
+                    var returnfile = temp.GetString(bytes);
+
+                    if (filePath.IndexOf(".svg")>-1){
+                        myoutput[0] = "returning  svg "+filePath;
+                        if (cvjs_debug) System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+                        return (File(bytes, "image/svg+xml"));
+                    }
+                    else
+                    if (filePath.IndexOf(".png")>-1){
+                        myoutput[0] = "returning  png "+filePath;
+                        if (cvjs_debug) System.IO.File.AppendAllLines(absFilePath, myoutput);
+                        return File(bytes, "image/png");
+                    }
+                    else
+                    if (filePath.IndexOf(".gif")>-1){
+                        myoutput[0] = "returning  gif "+filePath;
+                        if (cvjs_debug) System.IO.File.AppendAllLines(absFilePath, myoutput);
+                        return File(bytes, "image/gif");
+                    }
+                    else
+                    if (filePath.IndexOf(".jpg")>-1){
+                        myoutput[0] = "returning  jpg "+filePath;
+                        if (cvjs_debug) System.IO.File.AppendAllLines(absFilePath, myoutput);
+                        return File(bytes, "image/jpg");
+                    }
+                    else{
+                        myoutput[0] = "returning  plain text "+filePath;
+                        if (cvjs_debug) System.IO.File.AppendAllLines(absFilePath, myoutput);
+                        return File(bytes, "text/plain");
+                    }
+
+                }
+
+                
+            }
+            catch (FileNotFoundException ioEx)
+            {
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "FileNotFoundException:"+ ioEx;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+                        byte[] bytes = new byte[100];
+                        return File(bytes, "text/plain");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+        // LOADFILE   - loading of content to populate CADViewer interface and other stuff such as redlines
+        [HttpGet]
+        [HttpPost]
+        public JsonResult LoadFile(string file, string listtype, string loadtype)
+        {
+
+            bool cvjs_debug = true;
+            string[] myoutput = new String[1];
+            string absFilePath = "";
+
+            try
+            {
+   
+                Console.WriteLine("First in LoadFile:" + file + ","+listtype+","+loadtype);
 
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
@@ -692,7 +921,14 @@ namespace cadviewer.Controllers
                     {
                         Directory.CreateDirectory(path);
                     }
-                    absFilePath = Path.Combine(path, "LoadFileLog.txt");
+                    absFilePath = Path.Combine(path, "LoadFileLog_"+ Guid.NewGuid().ToString() + ".txt");
+                }
+
+
+                if (cvjs_debug == true)
+                {
+                    myoutput[0] = "First in LoadFile:" + file + ","+listtype+","+loadtype;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
                 }
 
 
@@ -712,8 +948,8 @@ namespace cadviewer.Controllers
 
                 if (listtype != null)
                 {
-                    string loadtype = listtype.Trim('/');
-                    if (loadtype.IndexOf("serverfolder") == 0)
+                    string myloadtype = listtype.Trim('/');
+                    if (myloadtype.IndexOf("serverfolder") == 0 )     // CV 8.5.1
                     {
 
                         if (filePath.IndexOf(ServerUrl) == 0)
@@ -726,7 +962,7 @@ namespace cadviewer.Controllers
 
                             if (cvjs_debug == true)
                             {
-                                myoutput[0] = "loadtype:" + loadtype + "  updated filePath " + filePath;
+                                myoutput[0] = "loadtype:" + myloadtype + "  updated filePath " + filePath;
                                 System.IO.File.AppendAllLines(absFilePath, myoutput);
                             }
 
@@ -734,6 +970,33 @@ namespace cadviewer.Controllers
                     }
 
                 }
+
+
+                if (listtype != null  && listtype == "none")
+                {
+                    string myloadtype = loadtype.Trim('/');
+                    if (myloadtype.IndexOf("menufile") == 0 )     // CV 8.5.1
+                    {
+
+                        if (filePath.IndexOf(ServerUrl) == 0)
+                        {
+                            //do nothing!! - handle below
+                        }
+                        else
+                            filePath = ServerLocation + filePath;
+
+                            if (cvjs_debug == true)
+                            {
+                                myoutput[0] = "loadtype:" + myloadtype + "  updated filePath " + filePath;
+                                System.IO.File.AppendAllLines(absFilePath, myoutput);
+                            }
+
+
+                    }
+
+                }
+
+
 
 
                 if (filePath.IndexOf(ServerUrl) == 0)
@@ -794,8 +1057,13 @@ namespace cadviewer.Controllers
                     UTF8Encoding temp = new UTF8Encoding(true);
 
                     //context.Response.Write(temp.GetString(bytes));
-
-                    return Json(temp.GetString(bytes));
+/*
+                    if (filePath.IndexOf(".svg")>-1 || filePath.IndexOf(".png")>-1){
+                        return (temp.GetString(bytes));
+                    }
+                    else
+*/
+                        return Json(temp.GetString(bytes));
                 }
 
             }
@@ -824,7 +1092,7 @@ namespace cadviewer.Controllers
             try
             {
 
-                Trace.WriteLine("HELLO  LoadRedline:" + file + "XXXX");
+                Console.WriteLine("HELLO  LoadRedline:" + file + "XXXX");
 
 
                 string filePath = DecodeUrlString(file);
@@ -947,7 +1215,7 @@ namespace cadviewer.Controllers
                     {
                         Directory.CreateDirectory(path);
                     }
-                    absFilePath = Path.Combine(path, "SaveFileLog.txt");
+                    absFilePath = Path.Combine(path, "SaveFileLog_"+ Guid.NewGuid().ToString() + ".txt");
                 }
 
                 if (cvjs_debug == true)
@@ -1061,7 +1329,7 @@ namespace cadviewer.Controllers
 
             try
             {
-                Trace.WriteLine("HELLO  SaveRedline:" + file + "XXXX");
+                Console.WriteLine("HELLO  SaveRedline:" + file + "XXXX");
 
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
@@ -1141,7 +1409,7 @@ namespace cadviewer.Controllers
 
             try
             {
-                Trace.WriteLine("HELLO  AppenFile:" + file + "XXXX");
+                Console.WriteLine("HELLO  AppenFile:" + file + "XXXX");
 
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
@@ -1232,67 +1500,85 @@ namespace cadviewer.Controllers
         public JsonResult ListDirectoryContent(string directory, string listtype)
         {
 
-            string filePath = directory.Trim('/');
-  
-            string returnString = filePath;
+            try{
+
+                string filePath = directory.Trim('/');
+    
+                string returnString = filePath;
 
 
-            string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
-            string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
+                string ServerLocation = _config.GetValue<string>("CADViewer:ServerLocation");
+                string ServerUrl = _config.GetValue<string>("CADViewer:ServerUrl");
 
 
-            if (listtype != null)
-            {
-                string loadtype = listtype.Trim('/');
-                if (loadtype.IndexOf("serverfolder") == 0)
+                if (listtype != null)
                 {
-
-                    if (filePath.IndexOf(ServerUrl) == 0)
+                    string loadtype = listtype.Trim('/');
+                    if (loadtype.IndexOf("serverfolder") == 0)
                     {
-                        //do nothing!! - handle below
+
+                        if (filePath.IndexOf(ServerUrl) == 0)
+                        {
+                            //do nothing!! - handle below
+                        }
+                        else
+                            filePath = ServerLocation + filePath;
                     }
-                    else
-                        filePath = ServerLocation + filePath;
+
                 }
 
-            }
 
 
-
-            if (filePath.IndexOf(ServerUrl) == 0)
-            {
-                filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
-            }
-
-
-
-            string[] fileArray = Directory.GetFiles(filePath);
-
-            if (fileArray.Length == 0)
-            {
-                returnString = returnString + "The directory is empty";
-            }
-            else
-            {
-                for (var i = 0; i < fileArray.Length; i++)
+                if (filePath.IndexOf(ServerUrl) == 0)
                 {
-
-                    if (!(fileArray[i].IndexOf(".rw") > 0))
-                        returnString = returnString + "<br>" + fileArray[i].Substring(fileArray[i].LastIndexOf("\\") + 1); ;
+                    filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
                 }
+
+
+
+                string[] fileArray = Directory.GetFiles(filePath);
+
+                if (fileArray.Length == 0)
+                {
+                    returnString = returnString + "The directory is empty";
+                }
+                else
+                {
+                    for (var i = 0; i < fileArray.Length; i++)
+                    {
+
+                        if (!(fileArray[i].IndexOf(".rw") > 0))
+                            returnString = returnString + "<br>" + fileArray[i].Substring(fileArray[i].LastIndexOf("\\") + 1); ;
+                    }
+                }
+
+                return Json(returnString);
+
+            }            
+            catch (Exception Ex)
+            {
+                return Json("ListDirectoryContent: " + Ex);
             }
 
-            return Json(returnString);
+
+
         }
 
         
 
         private static string DecodeUrlString(string url)
         {
-            string newUrl;
-            while ((newUrl = Uri.UnescapeDataString(url)) != url)
-                url = newUrl;
-            return newUrl;
+
+            try{
+                string newUrl;
+                while ((newUrl = Uri.UnescapeDataString(url)) != url)
+                    url = newUrl;
+                return newUrl;
+            }
+            catch(Exception ee){
+                return "DecodeUrlString_empty";
+
+            }
         }
 
 
@@ -1302,7 +1588,7 @@ namespace cadviewer.Controllers
         public JsonResult MakeSinglepagePDF(string fileName_0, string rotation_0, string page_format_0)
         {
 
-            Trace.WriteLine("MakeSinglePage REQUEST:" + fileName_0+ " "+ rotation_0 +" "+ page_format_0+ "XXXX");
+            Console.WriteLine("MakeSinglePage REQUEST:" + fileName_0+ " "+ rotation_0 +" "+ page_format_0+ "XXXX");
             try
             {
 
@@ -1331,13 +1617,13 @@ namespace cadviewer.Controllers
                     string wwwPath = _env.WebRootPath;
                     string contentPath = _env.ContentRootPath;
                     string path = Path.Combine(_env.WebRootPath, "temp_debug");
-                    Trace.WriteLine("makesinglepagepdf path:" + path + "  contentPath:  " + contentPath + "  YYY");
+                    Console.WriteLine("makesinglepagepdf path:" + path + "  contentPath:  " + contentPath + "  YYY");
                     if (!Directory.Exists(path))
                     {
                         Directory.CreateDirectory(path);
                     }
-                    absFilePath = Path.Combine(path, "MakeSinglePagePDF.txt");
-                    Trace.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
+                    absFilePath = Path.Combine(path, "MakeSinglePagePDF_"+ Guid.NewGuid().ToString() + ".txt");
+                    Console.WriteLine("callApiConversion absFilePath:" + absFilePath + "  YYY");
                 }
 
                 String base64_file = fileLocation + "/" + fileName + "_base64.png";

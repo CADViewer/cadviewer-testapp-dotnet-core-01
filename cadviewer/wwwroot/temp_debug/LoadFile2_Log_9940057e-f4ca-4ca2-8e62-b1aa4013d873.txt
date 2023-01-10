@@ -1,0 +1,5 @@
+First in LoadFile:/content/customInsertSpaceObjectMenu//images/fire_alarm_call_point.png,none,menufile
+LoadFile:content/customInsertSpaceObjectMenu//images/fire_alarm_call_point.png
+loadtype:menufile  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/fire_alarm_call_point.png
+after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/fire_alarm_call_point.png
+returning  png c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/fire_alarm_call_point.png
