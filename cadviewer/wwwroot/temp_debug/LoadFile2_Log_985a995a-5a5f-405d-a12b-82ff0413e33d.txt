@@ -1,5 +1,0 @@
-First in LoadFile:/content/customInsertSpaceObjectMenu//images/wifi_25.svg,none,menufile
-LoadFile:content/customInsertSpaceObjectMenu//images/wifi_25.svg
-loadtype:menufile  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/wifi_25.svg
-after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/wifi_25.svg
-returning  svg c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/wifi_25.svg

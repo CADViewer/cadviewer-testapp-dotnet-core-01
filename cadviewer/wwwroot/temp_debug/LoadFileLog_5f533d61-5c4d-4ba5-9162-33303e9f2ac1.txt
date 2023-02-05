@@ -1,0 +1,5 @@
+First in LoadFile:/content/redlines/v7/redlines-v7-02.json,,redline
+LoadFile:content/redlines/v7/redlines-v7-02.json
+before check loadtype:redline loadtype.IndexO=0  updated filePath content/redlines/v7/redlines-v7-02.json
+redline loadtype:redline  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/redlines/v7/redlines-v7-02.json
+after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/redlines/v7/redlines-v7-02.json

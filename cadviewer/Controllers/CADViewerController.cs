@@ -766,13 +766,40 @@ namespace cadviewer.Controllers
 
                 }
 
+                if (cvjs_debug == true)
+                {
+                    int mycheck = loadtype.IndexOf("redline");
+                    myoutput[0] = "before check loadtype:" + loadtype + " loadtype.IndexO="+ mycheck +"  "+  "updated filePath " + filePath;
+                    
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
 
+
+
+                if (loadtype != null  && loadtype.IndexOf("redline") == 0){
+
+                    if (filePath.IndexOf(ServerUrl) == 0)
+                    {
+                        //do nothing!! - handle below
+                    }
+                    else
+                        filePath = ServerLocation + filePath;
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "redline loadtype:" + loadtype + "  updated filePath " + filePath;
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+                    
+                }
 
 
                 if (filePath.IndexOf(ServerUrl) == 0)
                 {
                     filePath = ServerLocation + filePath.Substring(ServerUrl.Length);
                 }
+
+
 
                 if (cvjs_debug == true)
                 {
@@ -995,6 +1022,37 @@ namespace cadviewer.Controllers
                     }
 
                 }
+
+
+
+                if (cvjs_debug == true)
+                {
+                    int mycheck = loadtype.IndexOf("redline");
+                    myoutput[0] = "before check loadtype:" + loadtype + " loadtype.IndexO="+ mycheck +"  "+  "updated filePath " + filePath;
+                    
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+                }
+
+
+
+                if (loadtype != null  && loadtype.IndexOf("redline") == 0){
+
+                    if (filePath.IndexOf(ServerUrl) == 0)
+                    {
+                        //do nothing!! - handle below
+                    }
+                    else
+                        filePath = ServerLocation + filePath;
+
+                    if (cvjs_debug == true)
+                    {
+                        myoutput[0] = "redline loadtype:" + loadtype + "  updated filePath " + filePath;
+                        System.IO.File.AppendAllLines(absFilePath, myoutput);
+                    }
+                    
+                }
+
+
 
 
 
