@@ -1,4 +1,0 @@
-First in LoadFile:https://localhost:5001/content/drawings/dwg/filenames.rw,none,serverfilelist
-LoadFile:https://localhost:5001/content/drawings/dwg/filenames.rw
-before check loadtype:serverfilelist loadtype.IndexO=-1  updated filePath https://localhost:5001/content/drawings/dwg/filenames.rw
-after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/filenames.rw

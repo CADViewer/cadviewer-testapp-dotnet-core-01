@@ -1,5 +1,0 @@
-First in LoadFile:/content/redlines/v7///cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg/filenames.rw,none,serverfilelist
-LoadFile:content/redlines/v7///cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg/filenames.rw
-before check loadtype:serverfilelist loadtype.IndexO=-1  updated filePath content/redlines/v7///cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg/filenames.rw
-after ServerUrl match check: filePath: content/redlines/v7///cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg/filenames.rw
-Error: file does not exist 

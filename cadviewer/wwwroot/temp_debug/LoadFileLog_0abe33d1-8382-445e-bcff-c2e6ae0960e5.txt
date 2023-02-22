@@ -1,5 +1,0 @@
-First in LoadFile:/content/redlines/v7/filenames.rw,none,serverfilelist
-LoadFile:content/redlines/v7/filenames.rw
-before check loadtype:serverfilelist loadtype.IndexO=-1  updated filePath content/redlines/v7/filenames.rw
-after ServerUrl match check: filePath: content/redlines/v7/filenames.rw
-Error: file does not exist 

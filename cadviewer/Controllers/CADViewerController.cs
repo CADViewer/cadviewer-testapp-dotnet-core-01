@@ -182,10 +182,13 @@ namespace cadviewer.Controllers
                 myRequest = DecodeUrlString(myRequest);
 
 
-                Console.WriteLine("callApiConversion myrequest decoded:" + myRequest + "  YYY");
+                Console.WriteLine("callApiConversion myrequest decoded:" + myRequest + "<end myrequest>");
 
                 string contentLocation = myRequest.Substring(myRequest.IndexOf("contentLocation") + 18);
                 contentLocation = contentLocation.Substring(0, contentLocation.IndexOf('\"'));
+
+
+                Console.WriteLine("contentLocation:" + contentLocation + "<end contentlocation>");
 
                 string parameters = myRequest.Substring((myRequest.IndexOf("parameters") + 12));
                 parameters = parameters.Substring(0, parameters.IndexOf(']'));
@@ -252,15 +255,27 @@ namespace cadviewer.Controllers
                 int randomInt = randomGenerator.Next(1000000);
                 string tempFileName = "F" + randomInt;
 
-                string writeTemp = contentLocation;  // already decoded.... !!!!
+                string extensionTemp = contentLocation;  // already decoded.... !!!!
 
-                string writeFile = fileLocation + tempFileName + "." + writeTemp.Substring(writeTemp.LastIndexOf(".") + 1);
+                if (extensionTemp.IndexOf("ftype=")>-1){
+                    extensionTemp = extensionTemp.Substring(extensionTemp.LastIndexOf("ftype=") + 6);
+
+                }
+                else{
+                    if (extensionTemp.LastIndexOf(".")>-1)
+                        extensionTemp = extensionTemp.Substring(extensionTemp.LastIndexOf(".") + 1);
+                    else
+                        extensionTemp = "dwg";   // this must be the format in the rest call
+                }
+    
+
+                string writeFile = fileLocation + tempFileName + "." + extensionTemp;
 
                 //context.Response.Write("4 TEST  HELLO!  "+writeFile);
 
                 int localFlag = 0;
 
-                Console.WriteLine("callApiConversion writeFile:" + writeFile + "  YYY");
+                Console.WriteLine("callApiConversion writeFile:" + writeFile + "<writefile>");
 
                 myoutput[0] = "WriteFile: " + writeFile;
                 System.IO.File.AppendAllLines(absFilePath, myoutput);
@@ -270,14 +285,23 @@ namespace cadviewer.Controllers
                 if (contentLocation.IndexOf("http") == 0)
                 {  // URL
 
-                    if (contentLocation.IndexOf(ServerUrl) == 0)    // we are on same server, so OK
+                    if ((contentLocation.IndexOf(ServerUrl) == 0)  && (contentLocation.IndexOf("ftype=")==-1))    // we are on same server, so OK
                     {
                         contentLocation = ServerLocation + contentLocation.Substring(ServerUrl.Length);
                         localFlag = 1;
                         // System.IO.File.Copy(contentLocation, writeFile, true);
+
                     }
                     else
                     {
+                        if (contentLocation.IndexOf("ftype=")>-1){
+                            contentLocation = contentLocation.Substring(0, contentLocation.LastIndexOf("ftype=")-1);
+                        }
+
+
+                        Console.WriteLine("Before download file:" + contentLocation + "<contentLocation>");
+
+
                         using (WebClient wc = new WebClient())
                         {
                             wc.DownloadFile(contentLocation, writeFile);
@@ -364,7 +388,6 @@ namespace cadviewer.Controllers
                     }
 
                 }
-
 
                 // new 2019-04-01
                 if (localFlag == 1) { writeFile = contentLocation; }
@@ -526,6 +549,7 @@ namespace cadviewer.Controllers
                             //myoutput[0] = "The command:  " + converterLocation + "/run_ax2020.bat";
                             myoutput[0] = "New The command:  "+str_arr[0]+" "+arguments;
                             System.IO.File.AppendAllLines(absFilePath, myoutput);
+                            Console.WriteLine("The new command:"+str_arr[0]+" "+arguments);
 
                         }
 
