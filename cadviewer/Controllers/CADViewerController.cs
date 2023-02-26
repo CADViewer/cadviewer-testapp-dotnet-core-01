@@ -293,19 +293,39 @@ namespace cadviewer.Controllers
 
                     }
                     else
-                    {
+                    {    // reading blob  -   with ftype=dwg at the end
                         if (contentLocation.IndexOf("ftype=")>-1){
                             contentLocation = contentLocation.Substring(0, contentLocation.LastIndexOf("ftype=")-1);
+
+
+                            Console.WriteLine("Before download file:" + contentLocation + "<contentLocation>");
+
+
+                            using (WebClient wc = new WebClient())
+                            {
+                                wc.DownloadFile(contentLocation, writeFile);
+                            }
+
+                            Console.WriteLine("converting to binary:" + writeFile + "<writeFile>");
+
+                            // convert from base64 to binary
+                            string b64Str = System.IO.File.ReadAllText(writeFile);
+                            Byte[] bytes = Convert.FromBase64String(b64Str);
+                            System.IO.File.WriteAllBytes(writeFile, bytes);
+
+                        }
+                        else{  // standard loading and save of file , assuming binary
+                            Console.WriteLine("Before download file:" + contentLocation + "<contentLocation>");
+
+                            using (WebClient wc = new WebClient())
+                            {
+                                wc.DownloadFile(contentLocation, writeFile);
+                            }
+
                         }
 
 
-                        Console.WriteLine("Before download file:" + contentLocation + "<contentLocation>");
 
-
-                        using (WebClient wc = new WebClient())
-                        {
-                            wc.DownloadFile(contentLocation, writeFile);
-                        }
                     }
 
                     string cleaned = "";
