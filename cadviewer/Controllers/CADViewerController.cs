@@ -298,8 +298,14 @@ namespace cadviewer.Controllers
                             contentLocation = contentLocation.Substring(0, contentLocation.LastIndexOf("ftype=")-1);
 
 
-                            Console.WriteLine("Before download file:" + contentLocation + "<contentLocation>");
+                            Console.WriteLine("Before download file 1:" + contentLocation + "<contentLocation>");
 
+                            if ((contentLocation.IndexOf(ServerUrl) == 0)  && (contentLocation.IndexOf("ftype=")==-1))    // we are on same server, so OK
+                            {
+                                contentLocation = ServerLocation + contentLocation.Substring(ServerUrl.Length);
+                            }
+
+                            Console.WriteLine("Before download file 2:" + contentLocation + "<contentLocation>");
 
                             using (WebClient wc = new WebClient())
                             {
@@ -310,8 +316,14 @@ namespace cadviewer.Controllers
 
                             // convert from base64 to binary
                             string b64Str = System.IO.File.ReadAllText(writeFile);
+                            b64Str = b64Str.Trim('"');
                             Byte[] bytes = Convert.FromBase64String(b64Str);
                             System.IO.File.WriteAllBytes(writeFile, bytes);
+
+
+                            // 
+
+
 
                         }
                         else{  // standard loading and save of file , assuming binary

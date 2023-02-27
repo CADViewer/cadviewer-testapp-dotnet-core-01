@@ -1,0 +1,25 @@
+total parameters: 2
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""}
+1,last","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F589367.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F589367.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2023_W64_23_10_105.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F589367.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2023_W64_23_10_105.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F589367.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+output>>===========================================================================
+                      AutoXchange 2023 64-bit  V23.10.105
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License Validated
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00
+
+Elapsed Time: 0.019 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00 output format: svgXX
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2017","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00","contentResponse":"stream","contentStreamData":"/CADViewer/getFile?remainOnServer=0&fileTag=F589367&Type=svg"}

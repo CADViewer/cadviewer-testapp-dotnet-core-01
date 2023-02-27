@@ -1,0 +1,4 @@
+total parameters: 2
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""}
+1,last","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F290925.dwg
