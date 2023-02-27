@@ -184,7 +184,7 @@
 }
 
 #cvjs_tool_tip{
-	 position : absolute;
+	 position : absolute;  /* 8.32.2   */
 	 border : 1px solid gray;
 	 background-color : #efefef;
 	 color:#333;
@@ -4595,7 +4595,10 @@ table.compareModalTable td {
     	 left: 75px;
     	 top: 32px;
          min-height: 16px !important; /*7.3.26 */
-        }
+        
+		 cursor: pointer !important;  /*8.27.2 */
+
+}
 
 
 
@@ -4615,7 +4618,10 @@ table.compareModalTable td {
     	 left: 75px;
     	 top: 55px;
          min-height: 16px !important; /*7.3.26 */
-        }
+
+		 cursor: pointer !important;  /*8.27.2 */
+		
+}
 
 
 #cvjs_compare3{
@@ -4633,6 +4639,9 @@ table.compareModalTable td {
 		left: 75px;
 		top: 77px;
         min-height: 16px !important; /*7.3.26 */
+
+		cursor: pointer !important;  /*8.27.2 */
+
 }
 
 
@@ -7393,20 +7402,25 @@ select_file_image\" id=\"select_file
 /* Controls to match new top icon menu 3.3.0   */
 
 .cvjs_controls_min {
-    position: absolute;
-    display: block;
+    /* position: absolute;   8.32.1 */
+    position: relative;  /*8.32.1 */
+	display: block;
     height: 123px ;  /* 123 remove important */   
 	width: 28px ;   /* 7.3.1 */
     z-index: 1000;
     border: 1px #999 solid;
     cursor: pointer;
     background: #f7f7f7; /* 99FF99; */
-	top: 23px;
-	left: 8px;
+	/* top: 23px;   8.28.1
+	left: 8px; */
 }
+
+
 .cvjs_controls_min li:hover {
     background: #d7d7d7;  
 }
+
+
 .cvjs_controls_min li {
     height: 30px ;
     width: 28px ;
@@ -7430,10 +7444,11 @@ select_file_image\" id=\"select_file
 	color: #999;
 }
 
+/*  8.25.3
 .cvjs_controls_min i:hover {
     background: #d7d7d7;  
 }
-
+*/
 
 .cvjs_controls_min li:first-child {
     border-top: none;
