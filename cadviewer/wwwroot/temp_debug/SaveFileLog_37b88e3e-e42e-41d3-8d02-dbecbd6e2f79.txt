@@ -1,0 +1,3 @@
+Save to:converters/files/pdf/813400/Asbestos_drawing_01.html
+loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/pdf/813400/Asbestos_drawing_01.html
+after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/pdf/813400/Asbestos_drawing_01.html

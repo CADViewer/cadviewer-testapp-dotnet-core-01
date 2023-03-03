@@ -307,9 +307,15 @@ namespace cadviewer.Controllers
 
                             Console.WriteLine("Before download file 2:" + contentLocation + "<contentLocation>");
 
-                            using (WebClient wc = new WebClient())
+                            try
                             {
-                                wc.DownloadFile(contentLocation, writeFile);
+                                    using (WebClient wc = new WebClient())
+                                    {
+                                        wc.DownloadFile(contentLocation, writeFile);
+                                    }
+                            }
+                            catch(Exception dlfile){
+                                Console.WriteLine("download file error:" + dlfile);
                             }
 
                             Console.WriteLine("converting to binary:" + writeFile + "<writeFile>");
@@ -320,10 +326,8 @@ namespace cadviewer.Controllers
                             Byte[] bytes = Convert.FromBase64String(b64Str);
                             System.IO.File.WriteAllBytes(writeFile, bytes);
 
-
                             // 
-
-
+                            Console.WriteLine("binary conversion done!");
 
                         }
                         else{  // standard loading and save of file , assuming binary
@@ -335,8 +339,6 @@ namespace cadviewer.Controllers
                             }
 
                         }
-
-
 
                     }
 
@@ -352,6 +354,9 @@ namespace cadviewer.Controllers
 
                     myoutput[0] = "XXX " + contentNoUnicode;
                     System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
+                    Console.WriteLine(myoutput[0]);
 
 
                     if (contentNoUnicode.Length != contentLocation.Length)
@@ -469,6 +474,10 @@ namespace cadviewer.Controllers
 
                 str_arr[0] = converterLocation + ax2020_executable;
 
+
+                // 8.42.1
+                Console.WriteLine("callapiconversion :"+str_arr[0]);
+
                 var fileName = "";
                 var pdfpath = "";
 
@@ -498,8 +507,20 @@ namespace cadviewer.Controllers
                         if (contentLocation.LastIndexOf("/") > -1)
                             fileName = contentLocation.Substring(contentLocation.LastIndexOf("/") + 1);
 
-                        fileName = fileName.Substring(0, fileName.LastIndexOf("."));
+                        // 8.42.1
+                        Console.WriteLine("callapiconversion output format pdf loop fileName:"+fileName);
+                        if (fileName.LastIndexOf(".")>0)
+                            fileName = fileName.Substring(0, fileName.LastIndexOf("."));
+
+                        // 8.42.1
+                        Console.WriteLine("callapiconversion output format pdf fileName:"+fileName);
+
+
                         pdfpath = fileLocation + "pdf\\" + randomInt;
+
+
+
+
                         Directory.CreateDirectory(pdfpath);
 
                         str_arr[2] = "\"-o=\"" + pdfpath + "\\" + fileName + "." + outputFormat + "\"\"";
@@ -511,6 +532,11 @@ namespace cadviewer.Controllers
                 {
 
                 }
+
+
+                // 8.42.1
+                Console.WriteLine("callapiconversion paramcount loop");
+
 
                 for (int i = 0; i < paramCount; i++)
                 {
@@ -1304,6 +1330,10 @@ namespace cadviewer.Controllers
             try
             {
               
+
+                Console.WriteLine("SaveFile:" + file + "XXXX custom_content:"+custom_content+" listtype="+listtype);
+
+
                 string filePath = DecodeUrlString(file);
                 filePath = filePath.Trim('/');
 

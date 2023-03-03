@@ -1,0 +1,3 @@
+Save to:converters/files/print/935613/10.svg
+loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/935613/10.svg
+after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/935613/10.svg

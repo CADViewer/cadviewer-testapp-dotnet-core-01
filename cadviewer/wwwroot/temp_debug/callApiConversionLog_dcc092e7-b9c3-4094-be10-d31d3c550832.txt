@@ -1,0 +1,286 @@
+total parameters: 2
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""}
+1,last","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F938416.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F938416.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2023_W64_23_12_108RC2.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F938416.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2023_W64_23_12_108RC2.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F938416.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last
+output>>===========================================================================
+                      AutoXchange 2023 V23.12.108 RC2  64-bit
+Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022 Tailor Made Software, Ltd.
+                         All Rights Reserved
+
+     Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License experied today
+License Validated
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\Asbestos_drawing_01.dwg
+Default SHX File Not Found: isocp.shx
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F938416.svg
+Entering ViewPort: 0
+
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F938416.svg
+OpenMemoryFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F938416.svg
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : STANDARD   Handle: 
+---End Group : STANDARD
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : SECRETRY   Handle: 
+---End Group : SECRETRY
+---Begin Group : WHB2   Handle: 3F352
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F353
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F354
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F35B
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F35C
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F35D
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F36B
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F36C
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F403
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F404
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F405
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F406
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F407
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F408
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F409
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F40A
+---End Group : WHB2
+---Begin Group : WHB1   Handle: 3F40B
+---End Group : WHB1
+---Begin Group : WHB2   Handle: 3F40E
+---End Group : WHB2
+---Begin Group : SINKRH   Handle: 3F440
+---End Group : SINKRH
+---Begin Group : SINKRH   Handle: 3F4CC
+---End Group : SINKRH
+---Begin Group : WC1   Handle: 3F535
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F536
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F586
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F587
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F609
+---End Group : WHB2
+---Begin Group : WHB2   Handle: 3F60A
+---End Group : WHB2
+---Begin Group : SINKRH   Handle: 3F61B
+---End Group : SINKRH
+---Begin Group : SINKRH   Handle: 3F61C
+---End Group : SINKRH
+---Begin Group : WC1   Handle: 3F62E
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F62F
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F651
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F652
+---End Group : WHB2
+---Begin Group : SINKRH   Handle: 3F65B
+---End Group : SINKRH
+---Begin Group : WHB2   Handle: 3F762
+---End Group : WHB2
+---Begin Group : SINKRH   Handle: 3F767
+---End Group : SINKRH
+---Begin Group : SINKRH   Handle: 3F76B
+---End Group : SINKRH
+---Begin Group : SINKRH   Handle: 3F775
+---End Group : SINKRH
+---Begin Group : WC1   Handle: 3F8B4
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F8B5
+---End Group : WHB2
+---Begin Group : WC1   Handle: 3F8CE
+---End Group : WC1
+---Begin Group : WHB2   Handle: 3F8CF
+---End Group : WHB2
+
+Elapsed Time: 0.22 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg output format: svgXX
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2017","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg","contentResponse":"stream","contentStreamData":"/CADViewer/getFile?remainOnServer=0&fileTag=F938416&Type=svg"}
