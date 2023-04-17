@@ -431,6 +431,16 @@ function cvjs_loadStickyNotesRedlinesUser(){
 
 	function populateMyCustomPopUpBody(rmid, node){
 
+		cvjs_setQtipLocation("bottom center", "top left");
+		cvjs_styleQTip_color(false, '#3DCD5D', '#293133', '#293133', '#293133', '#293133');  // we use standard colors, first parameter is false
+		cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Hello<br>Menu 1<br><i class=\"fa fa-level-down\"></i></div>";
+		cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu2();\">Custom<br>Menu 2<br><i class=\"fa fa-info\"></i></div>";
+		cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"fa fa-search-plus\"></i></div>";
+
+
+		if (true) return;  // see below for custom programming
+
+
 		var rmid_str = rmid.toString();
 
 		var str = " "+rmid;
