@@ -10,1470 +10,1470 @@
     <meta name="description" content="Tailor Made Software  - CADViewer Online Sample Implementation Page - Space Icon Objcts" />
     <meta name="keywords" content="" />
 
-	<link href="../app/css/cvjs-core-styles.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="../app/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="../app/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
-	<link href="../app/css/jquery.qtip.min.css" media="screen" rel="stylesheet" type="text/css" />
-	<link href="../app/css/jquery-ui-1.13.2.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../app/css/cadviewer-core-styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../app/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+    <link href="../app/css/jquery.qtip.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="../app/css/jquery-ui-1.13.2.min.css" media="screen" rel="stylesheet" type="text/css" />
 
-	<link href="../app/css/bootstrap-cadviewer.css" media="screen" rel="stylesheet" type="text/css" />
-	
+    <!--<link href="../app/css/cirrus-all.cssx" media="screen" rel="stylesheet" type="text/css" /> -->
+    <link href="../app/css/cadviewer-bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
 
-	<script src="../app/js/jquery-2.2.3.js" type="text/javascript"></script>
-	<!-- <script src="../app/js/jquery-3.5.1.js" type="text/javascript"></script> -->
-	 <script src="../app/js/jquery.qtip.min.js" type="text/javascript"></script> 
+    <!--<link href="../app/css/bootstrap-cadviewer.css" media="screen" rel="stylesheet" type="text/css" />-->
 
-	<script src="../app/js/popper.js" type="text/javascript"></script>
+    <script src="../app/js/jquery-2.2.3.js" type="text/javascript"></script>
+    <!-- <script src="../app/js/jquery-3.5.1.js" type="text/javascript"></script> -->
+    <script src="../app/js/jquery.qtip.min.js" type="text/javascript"></script>
+    <script src="../app/js/popper.js" type="text/javascript"></script>
+    <script src="../app/js/bootstrap-cadviewer.js" type="text/javascript"></script>
+    <!--<link href="../app/css/bootstrap_accenture.cssx" media="screen" rel="stylesheet" type="text/css" /> -->
 
-	<script src="../app/js/bootstrap-cadviewer.js" type="text/javascript"></script>
-
-	 
-
-	<script src="../app/js/jquery-ui-1.13.2.min.js" type="text/javascript"></script>
-
-	<script src="../app/cv/cv-pro/cadviewer.min.js" type="text/javascript" ></script> 
+    <script src="../app/js/jquery-ui-1.13.2.min.js" type="text/javascript"></script>
 
 
-	<script src="../app/cv/cv-pro/custom_rules_template.js" type="text/javascript" ></script>
-    <script src="../app/cv/cv-custom_commands/CADViewer_custom_commands.js" type="text/javascript" ></script>
+    <!--	<script src="../app/js/snap.svg-min.xxjs" type="text/javascript" ></script> -->
+    <script src="../app/js/eve.js" type="text/javascript"></script>
 
-	<script src="../app/cv/cvlicense.js" type="text/javascript" ></script> 
-	 
-	 
-	<script src="../app/js/bootstrap-multiselect.js" type="text/javascript" ></script>
-	<script src="../app/js/library_js_svg_path.js" type="text/javascript"></script>			
-	<script src="../app/js/snap.svg-min.js" type="text/javascript" ></script>
+    <script src="../app/cv/cv-pro/cadviewer.min.js" type="text/javascript"></script>
 
-	<script src="../app/js/cvjs_api_styles_2_0_26.js" type="text/javascript" ></script>
-	<script src="../app/js/rgbcolor.js"type="text/javascript" ></script>
-	<script src="../app/js/StackBlur.js"type="text/javascript" ></script>
-	<script src="../app/js/canvg.js" type="text/javascript"  ></script>
-	<script src="../app/js/list.js" type="text/javascript"></script>
-	<script src="../app/js/jscolor.js" type="text/javascript" ></script>
-	
-	<script src="../app/js/jstree/jstree.min.js"></script>
-	<script src="../app/js/xml2json.min.js"></script>
-	<script src="../app/js/d3.v3.min.js"></script>  
-	<script src="../app/js/qrcode.min.js" type="text/javascript"></script> 
-
-	
-
-	<script type="text/javascript">
-
-	// Location of installation folders:  1) update if back-end on different port!  2) make sure / is after port!
-    var ServerBackEndUrl = location.origin+"/";     //"http://localhost:5001/";
-    var ServerUrl =  location.origin+"/";           // http://loalhost:5001/; //
-    var ServerLocation = "";
+    <script src="../app/cv/cv-custom_commands/CADViewer_custom_commands.js" type="text/javascript"></script>
 
 
-	// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG	
-	var FileName = ServerUrl + "/content/drawings/dwg/one_of_simple.dwg";	
-    var FileName = ServerUrl + "/content/drawings/dwg/xlbpc-l6-f01.dwg";	
+    <script src="../app/cv/cvlicense.js" type="text/javascript"></script>
 
-    var FileName = ServerUrl + "/content/drawings/dwg/hq17_.dwg";	
-	var FileName = ServerUrl + "/content/drawings/dwg/hq17_2spaces.dwg";	
-	var FileName = ServerUrl + "/content/drawings/dwg/LI_1077929.dwg";	
-	var FileName = ServerUrl + "/content/drawings/dwg/LI_1077929_04.svg";	
+    <script src="../app/js/bootstrap-multiselect.js" type="text/javascript"></script>
 
+    <script src="../app/js/library_js_svg_path.js" type="text/javascript"></script>
 
-	$(document).ready(function()
-		{
+    <script src="../app/js/cvjs_api_styles_2_0_26.js" type="text/javascript"></script>
+    <script src="../app/js/rgbcolor.js" type="text/javascript"></script>
+    <script src="../app/js/StackBlur.js" type="text/javascript"></script>
+    <script src="../app/js/canvg.js" type="text/javascript"></script>
+    <script src="../app/js/list.js" type="text/javascript"></script>
+    <script src="../app/js/jscolor.js" type="text/javascript"></script>
 
-		cvjs_debugMode(true);
-		cvjs_setFileLoadTimeOut("floorPlan", 180);    // 
-
-		// Pass over the location of the installation, will update the internal paths
-		cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "dotNetCore", "JavaScript", "floorPlan", "CADViewer");
-
-
-		// uncomment if you want to use NodeJS cadviewer-conversion-server as backend
-		//cvjs_setHandlers_FrontEnd("NodeJS", "JavaScript", "floorPlan");
-
-		// Set CADViewer with full CADViewer Pro features
-		cvjs_CADViewerPro(true);
-		
-     
-		// IF CADVIEWER IS OPENED WITH A URL  http://localhost/cadviewer/html/CADViewer_sample_610.html?drawing_name=../content/drawings/dwg/hq17.dwg
-		//  or CADViewer_sample_610.html?drawing_name=http://localhost/cadviewer/content/drawings/dwg/hq17.dwg
-		//  this code segment will pass over the drawing_name to FileName for load of drawing
-
-		var myDrawing = cvjs_GetURLParameter("drawing_name");
-		console.log("DRAWING NAME >"+cvjs_GetURLParameter("drawing_name")+"</end>  ");
-		if (myDrawing==""){
-			console.log("no drawing_name parameter!!!");				
-		}
-		else{
-//			console.log("we pass over to FileName to load Drawing");
-			FileName =  myDrawing;
-		}
-		
-		cvjs_jsonLocation = cvjs_GetURLParameter("json_location");
-		console.log("json_location >"+cvjs_GetURLParameter("json_location")+"</end>  ");
-		if (cvjs_jsonLocation==""){
-			console.log("no json_location!");				
-		}
-		else{
-//			window.alert("WE GOT JSON "+cvjs_jsonLocation);
-			console.log("WE GOT JSON "+cvjs_jsonLocation);
-		}
-
-		var print_modal_custom_checkbox = cvjs_GetURLParameter("print_modal_custom_checkbox");
-		console.log("print_modal_custom_checkbox >"+cvjs_GetURLParameter("print_modal_custom_checkbox")+"</end>  ");
-		if (print_modal_custom_checkbox==""){
-			console.log("no print_modal_custom_checkbox!");				
-		}
-		else{
-//			window.alert("WE GOT print_modal_custom_checkbox "+print_modal_custom_checkbox);
-			cvjs_setPrintModalCustomCheckBox(true, print_modal_custom_checkbox);
-		}
+    <script src="../app/js/jstree/jstree.min.js"></script>
+    <script src="../app/js/xml2json.min.js"></script>
+    <script src="../app/js/d3.v3.min.js"></script>
+    <script src="../app/js/qrcode.min.js" type="text/javascript"></script>
 
 
-		// For "Merge DWG" / "Merge PDF" commands, set up the email server to send merged DWG files or merged PDF files with redlines/interactive highlight.
-		// See php / xampp documentation on how to prepare your server
-		cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
-		
-		// CHANGE LANGUAGE - DEFAULT IS ENGLISH
-		cvjs_loadCADViewerLanguage("English"); //	cvjs_loadCADViewerLanguage("English", "/app/cv/cv-pro/language_table/cadviewerProLanguage.xml");
-		// Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Portuguese (Brazil)" ;  "Russian" ; "Malay" ;  "Chinese-Simplified"
-				
-		// Set Icon Menu Interface controls. Users can: 
-		// 1: Disable all icon interfaces
-		//  cvjs_displayAllInterfaceControls(false, "floorPlan");  // disable all icons for user control of interface
-		// 2: Disable either top menu icon menus or navigation menu, or both
-		//	cvjs_displayTopMenuIconBar(false, "floorPlan");  // disable top menu icon bar
-		//	cvjs_displayTopNavigationBar(false, "floorPlan");  // disable top navigation bar
-		// 3: Users can change the number of top menu icon pages and the content of pages, based on a configuration file in folder /cadviewer/app/js/menu_config/
-
-		//	cvjs_setTopMenuXML("floorPlan", "cadviewerjs_menu_viewing_only.xml", "/app/cv/community/menu_config/");		
-		//	cvjs_setTopMenuXML("floorPlan", "cadviewer_space_icon_commands_base_01.xml", "/app/cv/cv-pro/menu_config/");
-		cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml" );  //cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "/app/cv/cv-pro/menu_config/");
-		
-		// Initialize CADViewer  - needs the div name on the svg element on page that contains CADViewerJS and the location of the
-		// main application "app" folder. It can be either absolute or relative
-
-		// THIS IS THE DESIGN OF THE pop-up MODAL WHEN CLICKING ON SPACES
-		var my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Hello!<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
-		my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu2();\">Custom<br>Menu 2<br><i class=\"glyphicon glyphicon-info-sign\"></i></div>";
-		my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
 
 
-		 // SETTINGS OF THE COLORS OF SPACES
-		  cvjsRoomPolygonBaseAttributes = {
-					fill: '#ffd7f4', //'#D3D3D3',   // #FFF   #ffd7f4
-					"fill-opacity": 0.3,    //"0.05",   // 0.1
-					stroke: '#CCC',  
-					'stroke-width': 0.25,
-					'stroke-linejoin': 'round',
-					"opacity": 0.3  
-				};
+    <script type="text/javascript">
 
-                
-        cvjsRoomPolygonBaseAttributes = {
-            fill: '#fff', //'#D3D3D3',   // #FFF   #ffd7f4
-            "fill-opacity": 0.01,    //"0.05",   // 0.1
-            stroke: '#CCC',  
-            'stroke-width': 0.25,
-            'stroke-linejoin': 'round',
-            "opacity": 0.4  
+        // Location of installation folders:  1) update if back-end on different port!  2) make sure / is after port!
+        var ServerBackEndUrl = location.origin + "/";     //"http://localhost:5001/";
+        var ServerUrl = location.origin + "/";           // http://loalhost:5001/; //
+        var ServerLocation = "";
+
+
+        // PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
+        var FileName = ServerUrl + "/content/drawings/dwg/one_of_simple.dwg";
+        var FileName = ServerUrl + "/content/drawings/dwg/xlbpc-l6-f01.dwg";
+
+        var FileName = ServerUrl + "/content/drawings/dwg/hq17_.dwg";
+        var FileName = ServerUrl + "/content/drawings/dwg/hq17_2spaces.dwg";
+        var FileName = ServerUrl + "/content/drawings/dwg/LI_1077929.dwg";
+        var FileName = ServerUrl + "/content/drawings/dwg/LI_1077929_04.svg";
+
+
+        $(document).ready(function () {
+
+            cvjs_debugMode(true);
+            cvjs_setFileLoadTimeOut("floorPlan", 180);    //
+
+            // Pass over the location of the installation, will update the internal paths
+            cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "dotNetCore", "JavaScript", "floorPlan", "CADViewer");
+
+
+            // uncomment if you want to use NodeJS cadviewer-conversion-server as backend
+            //cvjs_setHandlers_FrontEnd("NodeJS", "JavaScript", "floorPlan");
+
+            // Set CADViewer with full CADViewer Pro features
+            cvjs_CADViewerPro(true);
+
+
+            // IF CADVIEWER IS OPENED WITH A URL  http://localhost/cadviewer/html/CADViewer_sample_610.html?drawing_name=../content/drawings/dwg/hq17.dwg
+            //  or CADViewer_sample_610.html?drawing_name=http://localhost/cadviewer/content/drawings/dwg/hq17.dwg
+            //  this code segment will pass over the drawing_name to FileName for load of drawing
+
+            var myDrawing = cvjs_GetURLParameter("drawing_name");
+            console.log("DRAWING NAME >" + cvjs_GetURLParameter("drawing_name") + "</end>  ");
+            if (myDrawing == "") {
+                console.log("no drawing_name parameter!!!");
+            }
+            else {
+                //			console.log("we pass over to FileName to load Drawing");
+                FileName = myDrawing;
+            }
+
+            cvjs_jsonLocation = cvjs_GetURLParameter("json_location");
+            console.log("json_location >" + cvjs_GetURLParameter("json_location") + "</end>  ");
+            if (cvjs_jsonLocation == "") {
+                console.log("no json_location!");
+            }
+            else {
+                //			window.alert("WE GOT JSON "+cvjs_jsonLocation);
+                console.log("WE GOT JSON " + cvjs_jsonLocation);
+            }
+
+            var print_modal_custom_checkbox = cvjs_GetURLParameter("print_modal_custom_checkbox");
+            console.log("print_modal_custom_checkbox >" + cvjs_GetURLParameter("print_modal_custom_checkbox") + "</end>  ");
+            if (print_modal_custom_checkbox == "") {
+                console.log("no print_modal_custom_checkbox!");
+            }
+            else {
+                //			window.alert("WE GOT print_modal_custom_checkbox "+print_modal_custom_checkbox);
+                cvjs_setPrintModalCustomCheckBox(true, print_modal_custom_checkbox);
+            }
+
+
+            // For "Merge DWG" / "Merge PDF" commands, set up the email server to send merged DWG files or merged PDF files with redlines/interactive highlight.
+            // See php / xampp documentation on how to prepare your server
+            cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
+
+            // CHANGE LANGUAGE - DEFAULT IS ENGLISH
+            cvjs_loadCADViewerLanguage("English"); //	cvjs_loadCADViewerLanguage("English", "/app/cv/cv-pro/language_table/cadviewerProLanguage.xml");
+            // Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Portuguese (Brazil)" ;  "Russian" ; "Malay" ;  "Chinese-Simplified"
+
+            // Set Icon Menu Interface controls. Users can:
+            // 1: Disable all icon interfaces
+            //  cvjs_displayAllInterfaceControls(false, "floorPlan");  // disable all icons for user control of interface
+            // 2: Disable either top menu icon menus or navigation menu, or both
+            //	cvjs_displayTopMenuIconBar(false, "floorPlan");  // disable top menu icon bar
+            //	cvjs_displayTopNavigationBar(false, "floorPlan");  // disable top navigation bar
+            // 3: Users can change the number of top menu icon pages and the content of pages, based on a configuration file in folder /cadviewer/app/js/menu_config/
+
+            //	cvjs_setTopMenuXML("floorPlan", "cadviewerjs_menu_viewing_only.xml", "/app/cv/community/menu_config/");
+            //	cvjs_setTopMenuXML("floorPlan", "cadviewer_space_icon_commands_base_01.xml", "/app/cv/cv-pro/menu_config/");
+            cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml");  //cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "/app/cv/cv-pro/menu_config/");
+
+            // Initialize CADViewer  - needs the div name on the svg element on page that contains CADViewerJS and the location of the
+            // main application "app" folder. It can be either absolute or relative
+
+            // THIS IS THE DESIGN OF THE pop-up MODAL WHEN CLICKING ON SPACES
+            var my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Hello!<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
+            my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu2();\">Custom<br>Menu 2<br><i class=\"glyphicon glyphicon-info-sign\"></i></div>";
+            my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
+
+
+            // SETTINGS OF THE COLORS OF SPACES
+            cvjsRoomPolygonBaseAttributes = {
+                fill: '#ffd7f4', //'#D3D3D3',   // #FFF   #ffd7f4
+                "fill-opacity": 0.3,    //"0.05",   // 0.1
+                stroke: '#CCC',
+                'stroke-width': 0.25,
+                'stroke-linejoin': 'round',
+                "opacity": 0.3
+            };
+
+
+            cvjsRoomPolygonBaseAttributes = {
+                fill: '#fff', //'#D3D3D3',   // #FFF   #ffd7f4
+                "fill-opacity": 0.01,    //"0.05",   // 0.1
+                stroke: '#CCC',
+                'stroke-width': 0.25,
+                'stroke-linejoin': 'round',
+                "opacity": 0.4
+            };
+
+
+            cvjsRoomPolygonHighlightAttributes = {
+                fill: '#a4d7f4',
+                "fill-opacity": "0.8",
+                stroke: '#a4d7f4',
+                'stroke-width': 0.75,
+                "opacity": 0.8
+            };
+
+            cvjsRoomPolygonSelectAttributes = {
+                fill: '#5BBEF6',
+                "fill-opacity": "0.8",
+                stroke: '#5BBEF6',
+                'stroke-width': 0.75,
+                "opacity": 0.8
+            };
+
+            //      Setting Space Object Modals Display to be based on a callback method - VisualQuery mode -
+            cvjs_setCallbackForModalDisplay(true, myCustomPopUpBody, populateMyCustomPopUpBody);
+
+
+            // Initialize CADViewer - needs the div name on the svg element on page that contains CADViewerJS and the location of the
+            // And we intialize with the Space Object Custom values
+            cvjs_InitCADViewer_highLight_popUp_app("floorPlan", ServerUrl + "app/", cvjsRoomPolygonBaseAttributes, cvjsRoomPolygonHighlightAttributes, cvjsRoomPolygonSelectAttributes, my_cvjsPopUpBody);
+
+            //		cvjs_InitCADViewer_app("floorPlan", ServerUrl+"app/");
+            //		//cvjs_InitCADViewerJS_app("floorPlan", "../app/");
+
+            // set the location to license key, typically the js folder in main app application folder ../app/js/
+            cvjs_setLicenseKeyPath(ServerUrl + "/app/cv/");
+            // alternatively, set the key directly, by pasting in the cvKey portion of the cvlicense.js file, note the JSON \" around all entities
+            //cvjs_setLicenseKeyDirect('{ \"cvKey\": \"00110010 00110010 00110000 00110010 00110001 00111001 00111001 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00110111 00110010 00110000 00110111 00110010 00110000 00110110 00110010 00110000 00110001 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00110111 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110111 00110001 00111001 00111001 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110111 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00111000 \" }');
+
+            cvjs_allowFileLoadToServer(true);
+
+            //		cvjs_setUrl_singleDoubleClick(1);
+            //		cvjs_encapsulateUrl_callback(true);
+
+            // NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES, FILES, SPACE OBJECTS
+            cvjs_setServerFileLocation_AbsolutePaths(ServerLocation + '/content/drawings/dwg/', ServerUrl + 'content/drawings/dwg/', "", "");
+            cvjs_setRedlinesAbsolutePath(ServerUrl + '/content/redlines/v7/', ServerLocation + '/content/redlines/v7/', false);
+            cvjs_setSpaceObjectsAbsolutePath(ServerUrl + '/content/spaceObjects/', ServerLocation + '/content/spaceObjects/');
+            cvjs_setInsertImageObjectsAbsolutePath(ServerUrl + '/content/inserted_image_objects/', ServerLocation + '/content/inserted_image_objects/')
+
+            // NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES, FILES, SPACE OBJECTS
+
+            // NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
+            cvjs_conversion_clearAXconversionParameters();
+
+            var dgn_workspace = cvjs_GetURLParameter("dgn_workspace");
+            console.log("dgn_workspace >" + cvjs_GetURLParameter("dgn_workspace") + "</end>  ");
+            if (dgn_workspace == "") {
+                console.log("no dgn_workspace parameter!!!");
+            }
+            else {
+                //			window.alert("WE GOT workspace"+dgn_workspace);
+                console.log("WE GOT workspace" + dgn_workspace);
+                cvjs_setDgnWorkSpace(dgn_workspace, "");
+            }
+
+            //		cvjs_conversion_addAXconversionParameter("model", "");
+            cvjs_conversion_addAXconversionParameter("last", "");
+
+            // USE THIS FOR PROCESSING AUTOCAD HANDLES
+            //        cvjs_conversion_addAXconversionParameter("hlall", "");
+
+            // USE THESE TO PROCESS LAYERS RM_ AND RM_TXT FOR INTERACTIVE HIGHLIGHT
+
+            //        cvjs_conversion_addAXconversionParameter("rl", "RM_");
+            //		cvjs_conversion_addAXconversionParameter("tl", "RM_TXT");
+
+            //        cvjs_conversion_addAXconversionParameter("lw", "0.1");
+            //		cvjs_conversion_addAXconversionParameter("lwmin", "0.4");
+
+
+
+            //        cvjs_conversion_addAXconversionParameter("rl", "RM$");
+            //		cvjs_conversion_addAXconversionParameter("tl", "RM$TXT");
+
+            // USE THIS TO CALCULATE AREA OF RL/TL PROCESSED SPACES
+            //      cvjs_conversion_addAXconversionParameter("la", "");
+
+            // NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
+            // Load file - needs the svg div name and name and path of file to load
+
+            cvjs_LoadDrawing("floorPlan", FileName);
+
+            // set maximum CADViewer canvas side
+            cvjs_resizeWindow_position("floorPlan");
+            // alternatively set a fixed CADViewer canvas size
+            //	cvjs_resizeWindow_fixedSize(800, 600, "floorPlan");
+
+            // NOTE
+            // we initialize the space icon size to 100%
+            cvjs_setGlobalSpaceImageObjectScaleFactor(1.0);
+
+            // here we clone icons to be able to move them into the canvas
+
+
+        });  // end ready()
+
+
+
+        $(window).resize(function () {
+            // set maximum CADViewer canvas side
+            cvjs_resizeWindow_position("floorPlan");
+            // alternatively set a fixed CADViewer canvas size
+            //	cvjs_resizeWindow_fixedSize(800, 600, "floorPlan");
+        });
+
+        /// NOTE: THESE METHODS BELOW ARE JS SCRIPT CALLBACK METHODS FROM CADVIEWER JS, THEY NEED TO BE IMPLEMENTED BUT CAN BE EMPTY
+
+        function cvjs_OnLoadEnd() {
+            // generic callback method, called when the drawing is loaded
+            // here you fill in your stuff, call DB, set up arrays, etc..
+            // this method MUST be retained as a dummy method! - if not implemeted -
+
+            cvjs_resetZoomPan("floorPlan");
+
+            var user_name = "Bob Smith";
+            var user_id = "user_1";
+
+            // set a value for redlines
+            cvjs_setCurrentStickyNoteValues_NameUserId(user_name, user_id);
+            cvjs_setCurrentRedlineValues_NameUserid(user_name, user_id);
+
+            // NOTE-NOTE:  cvjs_dragBackgroundToFront_SVG cannot be used with HLALL
+            // cvjs_dragBackgroundToFront_SVG("floorPlan");
+            //cvjs_initZeroWidthHandling("floorPlan", 1.0);
+
+            roomLayer1 = cvjs_clearLayer(roomLayer1);
+
+            cvjs_LayerOff("EC1 Space Names");
+            cvjs_LayerOff("EC1 Space Status Descs");
+            cvjs_LayerOff("EC1 Space Project");
+            cvjs_LayerOff("EC1 Space Function Descs");
+            cvjs_LayerOff("EC1 Space Type Descs");
+            cvjs_LayerOff("EC1 Tenant Names");
+            cvjs_LayerOff("EC1 UDA Design Capacity");
+            cvjs_LayerOff("EC1 UDA Is Secured");
+
+
+        }
+
+
+        function cvjs_OnLoadEndRedlines() {
+            // generic callback method, called when the redline is loaded
+            // here you fill in your stuff, hide specific users and lock specific users
+            // this method MUST be retained as a dummy method! - if not implemeted -
+
+            // I am hiding users added to the hide user list
+            cvjs_hideAllRedlines_HiddenUsersList();
+
+            // I am freezing users added to the lock user list
+            cvjs_lockAllRedlines_LockedUsersList();
+        }
+
+
+        // generic callback method, tells which FM object has been clicked
+        function cvjs_change_space() {
+
+        }
+
+        function cvjs_graphicalObjectCreated(graphicalObject) {
+
+            // do something with the graphics object created!
+            //		window.alert(graphicalObject);
+
+        }
+
+
+        function cvjs_popupTitleClick(myclick) {
+
+            window.alert(" cvjs_popupTitleClick: " + myclick);
+
+        }
+
+        function cvjs_ObjectSelected(rmid) {
+            // placeholder for method in tms_cadviewerjs_modal_1_0_14.js   - must be removed when in creation mode and using creation modal
+
+            // window.alert("object selected");
+        }
+
+
+        // Callback Method on Creation and Delete
+        function cvjs_graphicalObjectOnChange(type, graphicalObject, spaceID) {
+            // do something with the graphics object created!
+
+            //		window.alert(" cvjs_graphicalObjectOnChange: "+type+" "+graphicalObject+" "+spaceID+" indexSpace: "+graphicalObject.toLowerCase().indexOf("space"));
+            console.log(" cvjs_graphicalObjectOnChange: " + type + " " + graphicalObject + " " + spaceID + " indexSpace: " + graphicalObject.toLowerCase().indexOf("space"));
+
+            /*     UPDATE SERVER WITH REDLINES ON CHANGE
+                   if (graphicalObject.toLowerCase().indexOf('redline')>-1 && !type.toLowerCase().indexOf('click')==0 ){
+           //            cvjs_setStickyNoteSaveRedlineUrl(ServerLocation + "/content/redlines/v7/test"+Math.round(Math.random()*100)+".js");
+                       cvjs_setStickyNoteSaveRedlineUrl(ServerLocation + "/content/redlines/v7/test_fixed.js");
+                       cvjs_saveStickyNotesRedlines("floorPlan", false, "THIS IS PLACEHOLDER FOR CUSTOM STUFF TO SERVER");
+                   }
+           */
+
+            if (type == 'Create' && graphicalObject.toLowerCase().indexOf("space") > -1 && graphicalObject.toLowerCase().indexOf("circle") == -1) {
+
+                /*
+                * Return a JSON structure of all content of a space object clicked: <br>
+                * 	var jsonStructure =  	{	"path":   path, <br>
+                *								"tags": tags, <br>
+                *								"node": node, <br>
+                *								"area": area, <br>
+                *								"outerhtml": outerHTML, <br>
+                *								"occupancy": occupancy, <br>
+                *								"name": name, <br>
+                *								"type": type, <br>
+                *								"id": id, <br>
+                *								"defaultcolor": defaultcolor, <br>
+                *								"layer": layer, <br>
+                *								"group": group, <br>
+                *								"linked": linked, <br>
+                *								"attributes": attributes, <br>
+                *								"attributeStatus": attributeStatus, <br>
+                *								"displaySpaceObjects": displaySpaceObjects, <br>
+                *								"translate_x": translate_x, <br>
+                *								"translate_y": translate_y, <br>
+                *								"scale_x": scale_x ,<br>
+                *								"scale_y": scale_y ,<br>
+                *								"rotate": rotate, <br>
+                *								"transform": transform} <br>
+                * @return {Object} jsonSpaceObject - Object with the entire space objects content
+                */
+
+                myobject = cvjs_returnSpaceObjectID(spaceID);
+
+                // I can save this object into my database, and then use command
+                // cvjs_setSpaceObjectDirect(jsonSpaceObject)
+                // when I am recreating the content of the drawing at load
+
+                // for the fun of it, display the SVG geometry of the space:
+                console.log("This is the SVG path: " + myobject.path)
+
+            }
+
+
+            if (type == 'Delete' && graphicalObject.toLowerCase().indexOf("space") > -1) {
+                // remove this entry from my DB
+
+                window.alert("We have deleted: " + spaceID)
+            }
+
+
+            if (type == 'Move' && graphicalObject.toLowerCase().indexOf("space") > -1) {
+                // remove this entry from my DB
+                console.log("This object has been moved: " + spaceID)
+                myobject = cvjs_returnSpaceObjectID(spaceID);
+
+            }
+
+
+            if (type == 'Click') {
+                // remove this entry from my DB
+                console.log(graphicalObject + " has been clicked");
+
+            }
+
+        }
+
+
+        function myCustomPopUpBody(rmid) {
+
+            console.log("click on myCustomPopUpBody: " + rmid + " I now change the pop-up menu");
+            // make your own popup based on callback
+            var my_cvjsPopUpBody = "";
+
+            if (rmid == 120 || rmid == 121 || rmid == 122 || rmid == 123 || rmid == 124) {
+                my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Menu One<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
+                my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
+
+            } else {
+                my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Menu 1<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
+                my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu2();\">Custom<br>Menu 2<br><i class=\"glyphicon glyphicon-info-sign\"></i></div>";
+                my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
+
+            }
+            return my_cvjsPopUpBody;
+        }
+
+
+        function cvjs_callbackForModalDisplay(rmid, node) {
+
+            console.log("cvjs_callbackForModalDisplay: We can use this method to populate and update the modal if not read in completely!");
+            // populateMyCustomPopUpBody(rmid, node);
+        }
+
+        function populateMyCustomPopUpBody(rmid, node) {
+
+            console.log(" we actually have a second callback to change the pop-up menu (developed originally for Angular2) populateMyCustomPopUpBody: " + rmid + "  " + node);
+
+        }
+
+
+
+        /// NOTE: THESE METHODS ABOVE ARE JS SCRIPT CALLBACK METHODS FROM CADVIEWER JS, THEY NEED TO BE IMPLEMENTED BUT CAN BE EMPTY
+
+        /// NOTE: BELOW REDLINE SAVE LOAD CONTROLLERS
+
+        // This method is linked to the save redline icon in the imagemap
+        function cvjs_saveStickyNotesRedlinesUser() {
+
+            // there are two modes, user handling of redlines
+            // alternatively use the build in redline file manager
+
+            cvjs_openRedlineSaveModal("floorPlan");
+
+            // custom method startMethodRed to set the name and location of redline to save
+            // see implementation below
+            //startMethodRed();
+            // API call to save stickynotes and redlines
+            //cvjs_saveStickyNotesRedlines("floorPlan");
+        }
+
+
+        // This method is linked to the load redline icon in the imagemap
+        function cvjs_loadStickyNotesRedlinesUser() {
+
+            cvjs_openRedlineLoadModal("floorPlan");
+
+            // first the drawing needs to be cleared of stickynotes and redlines
+            //cvjs_deleteAllStickyNotes();
+            //cvjs_deleteAllRedlines();
+
+            // custom method startMethodRed to set the name and location of redline to load
+            // see implementation below
+            // startMethodRed();
+
+            // API call to load stickynotes and redlines
+            //cvjs_loadStickyNotesRedlines("floorPlan");
+        }
+
+        /// NOTE: ABOVE REDLINE SAVE LOAD CONTROLLERS
+
+
+
+
+        // Here we are writing a basic function that will be used in the PopUpMenu
+        // this is template on all the good stuff users can add
+        function my_own_clickmenu1() {
+            var id = cvjs_idObjectClicked();
+            //		var node = cvjs_NodeObjectClicked();
+            window.alert("Custom menu item 1: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings.  Clicked object ID is: " + id);
+        }
+
+        // Here we are writing a basic function that will be used in the PopUpMenu
+        // this is template on all the good stuff users can add
+        function my_own_clickmenu2() {
+            var id = cvjs_idObjectClicked();
+            //var node = cvjs_NodeObjectClicked();
+
+            window.alert("Custom menu item 2: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings. Clicked object ID is: " + id);
+            //window.alert("Custom menu item 2: Clicked object Node is: "+node);
+        }
+
+
+
+
+        /// NOTE: BELOW CUSTOM MODAL COMMANDS
+
+        // General settings method for Space Images, must be declared!!!!!
+        function cvjs_loadSpaceImage_UserConfiguration(floorplan_div) {
+
+            // When inserting a Space Image Object.
+            // The following items must be defined:
+
+            // location and name of SVG or bitmap file to insert
+            // cvjs_loadSpaceImage_Location
+            // ID of the Space for API access
+            // cvjs_loadSpaceImage_ID
+            // Type of the Space for modal highlight
+            // cvjs_loadSpaceImage_Type
+
+            cvjs_loadSpaceImage_Location = ServerUrl + "content/drawings/svg/" + $('#image_sensor_location').val();
+            cvjs_loadSpaceImage_ID = $('#image_ID').val();
+            cvjs_loadSpaceImage_Type = $('#image_Type').val();
+            cvjs_loadSpaceImage_Layer = "cvjs_SpaceLayer";
+
+        }
+
+        var roomLayer1;
+
+
+        function copy_group_object() {
+
+            newSpaceObjectId = $('#copy_new_id').val();
+            originSpaceObjectId = $('#copy_org_id').val();
+
+            cvjs_copyGroupObject(originSpaceObjectId, newSpaceObjectId);
+        }
+
+
+        function show_object_in_group() {
+
+            var currentNode_underbar = $('#group_id').val();
+            var second_group = $('#group_2').val();
+            var objectTag = $('#group_2_subid').val();
+
+            cvjs_showObjectInSpaceObjectGroup(currentNode_underbar, objectTag);
+
+        }
+
+
+        function hide_object_in_group() {
+
+            var currentNode_underbar = $('#group_id').val();
+            var second_group = $('#group_2').val();
+            var objectTag = $('#group_2_subid').val();
+
+            cvjs_hideObjectInSpaceObjectGroup(currentNode_underbar, objectTag);
+
+        }
+
+
+
+        function update_group_with_group() {
+
+            var currentNode_underbar = $('#group_id').val();
+            var second_group = $('#group_2').val();
+            var objectTag = $('#group_2_subid').val();
+            window.alert("here " + currentNode_underbar + " " + second_group);
+            cvjs_addObjectToSpaceObjectGroup(currentNode_underbar, second_group, objectTag, true);
+
+        }
+
+        function update_group_with_object() {
+
+            // pull the values from the table
+            var currentNode_underbar = $('#group_id').val();
+            var objectTag = $('#object_id').val();
+            var object_svg_path = $('#object_svg_path').val();
+            var object_css_style = $('#object_css_style').val();
+
+
+            // add to the object
+            try {
+                console.log(object_svg_path + "  " + object_css_style + " " + currentNode_underbar)
+                var baseGraphics = cvjs_makeGraphicsObjectOnCanvas('Path', object_svg_path);
+                console.log(baseGraphics);
+                baseGraphics.attr(JSON.parse(object_css_style));
+                console.log(baseGraphics);
+                cvjs_addGraphicsToSpaceObjectGroup(currentNode_underbar, baseGraphics, objectTag);
+            }
+            catch (err) {
+                console.log("create error: " + err);
+            }
+
+        }
+
+
+        function apply_group_id_styles() {
+
+            // grap content from side panel
+
+            // add to group
+
+        }
+
+        function hide_show_group_id() {
+
+            // grap content from side panel
+
+            // add to group
+
+        }
+
+
+
+        function highlight_space_object() {
+
+            roomLayer1 = cvjs_clearLayer(roomLayer1);
+            cvjs_highlightSpaceObjectIdDiv($('#sensor_to_highlight').val(), highlight_colorgrade_D_1, roomLayer1, "floorPlan");
+
+        }
+
+        function clear_space_highlight() {
+
+            cvjs_clearSpaceLayer();
+            roomLayer1 = cvjs_clearLayer(roomLayer1);
+        }
+
+
+        function highlight_all_spaces() {
+
+            var secondcolor = selectedColor.substring(0, 5);
+            secondcolor += "FF";
+            // window.alert(secondcolor);
+
+            var colortype = {
+                fill: selectedColor,
+                "fill-opacity": "0.8",
+                stroke: selectedColor,
+                'stroke-width': 1,
+                'stroke-opacity': "1",
+                'stroke-linejoin': 'round'
+            };
+
+            var spaceObjectIds = cvjs_getSpaceObjectIdList();
+            for (spc in spaceObjectIds) {
+                var rmid = spaceObjectIds[spc];
+                cvjs_highlightSpace(rmid, colortype);
+            }
+
+        }
+
+
+        function highlight_all_borders() {
+            var colortype = {
+                fill: '#fff',
+                "fill-opacity": 0.01,
+                stroke: selectedColor,
+                'stroke-width': 3.0,
+                'stroke-opacity': 1,
+                'stroke-linejoin': 'round'
+            };
+
+            var spaceObjectIds = cvjs_getSpaceObjectIdList();
+            for (spc in spaceObjectIds) {
+
+                var rmid = spaceObjectIds[spc];
+                cvjs_highlightSpace(rmid, colortype);
+            }
+        }
+
+        function highlight_space_type() {
+            var type = $('#image_Type').val();
+            var colortype = {
+                fill: selectedColor,
+                "fill-opacity": "0.8",
+                stroke: '#fe50d9',
+                'stroke-width': 1,
+                'stroke-opacity': "1",
+                'stroke-linejoin': 'round'
+            };
+
+            var spaceObjectIds = cvjs_getSpaceObjectIdList();
+            for (spc in spaceObjectIds) {
+                var spaceType = cvjs_getSpaceObjectTypefromId(spaceObjectIds[spc]);
+                var vqid = spaceObjectIds[spc];
+                console.log(spc + "  " + vqid + "  " + spaceType + "  " + spaceType.indexOf("Device"));
+                if (spaceType.indexOf(type) == 0)
+                    cvjs_highlightSpace(vqid, colortype);
+            }
+        }
+
+        function highlight_space_id() {
+            var spaceid = $('#space_id2').val();
+            var colortype = {
+                fill: selectedColor,
+                "fill-opacity": "0.8",
+                stroke: selectedColor,
+                'stroke-width': 1,
+                'stroke-opacity': "1",
+                'stroke-linejoin': 'round'
+            };
+
+            var spaceObjectIds = cvjs_getSpaceObjectIdList();
+            for (spc in spaceObjectIds) {
+                console.log(spaceid + "  " + spaceObjectIds[spc] + " " + (spaceid.indexOf(spaceObjectIds[spc]) == 0) + " " + ((spaceid.length == spaceObjectIds[spc].length)));
+                if (spaceid.indexOf(spaceObjectIds[spc]) == 0 && (spaceid.length == spaceObjectIds[spc].length))
+                    cvjs_highlightSpace(spaceObjectIds[spc], colortype);
+            }
+        }
+
+
+        function insert_from_type_id_image() {
+
+            cvjs_loadSpaceImage_Location = ServerUrl + "content/drawings/svg/" + $('#image_sensor_location').val();
+            cvjs_loadSpaceImage_ID = $('#image_ID').val();
+            cvjs_loadSpaceImage_Type = $('#image_Type').val();
+            cvjs_loadSpaceImage_Layer = "cvjs_SpaceLayer";
+            cvjs_addFixedSizeImageSpaceObject("floorPlan");
+            iconObjectCounter++;
+
+            // 6.3.92
+            $('#group_id').val("NODE_" + cvjs_currentMaxNodeId())
+        }
+
+
+        var iconObjectCounter = 1;
+
+        // Functions to drag elements
+        var lastXbeforeDrag = 0;
+        var lastYbeforeDrag = 0;
+
+        // locations of leftside device menu
+        var device_from_top_base = 250;
+        var height = 52;
+
+
+        var selectedColor = '#fb13a7';
+
+        function custom_ColorHex(pickcolor) {
+
+            selectedColor = "#" + pickcolor;
+            console.log("selectedColor" + selectedColor);
+
+        }
+
+
+        ///  HERE ARE ALL THE CUSTOM TEMPLATES TO DO STUFF ON THE CANVAS
+
+
+        /**
+         * Template start drag method for custom canvas
+         */
+
+        var generic_start_method_01 = function () {
+            console.log("generic_start_method_01");
+        }
+
+        /**
+         * Template move drag method for custom canvas
+         */
+        var generic_move_method_01 = function (dx, dy, x, y) {
+
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+            console.log("generic_move_method_01: dx=" + dx + " dy=" + dy + " x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
+        }
+
+        /**
+         * Template stop drag method for custom canvas
+         */
+        var generic_stop_method_01 = function () {
+
+            cvjs_removeCustomCanvasMethod();
+            console.log("REMOVE: generic_stop_method_01");
+        };
+
+        /**
+         * Template mouse-move method for custom canvas
+         */
+
+        var generic_mousemove_method_01 = function (e, x, y) {
+
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+
+            //cvjs_removeCustomCanvasMethod();
+            console.log("generic_mousemove_method_01: x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
+        }
+
+        /**
+         * Template mouse-down method for custom canvas
+         */
+
+        var generic_mousedown_method_01 = function (e, x, y) {
+
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+
+            //cvjs_removeCustomCanvasMethod();
+            console.log("generic_mousedown_method_01: x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
+
+        };
+
+        /**
+         * Template mouse-up method for custom canvas
+         */
+
+        var generic_mouseup_method_01 = function (e, x, y) {
+
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+
+            console.log("generic_mouseup_method_01: x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
+
+        };
+
+        /**
+         * Template double-click method for custom canvas
+         */
+
+        var generic_dblclick_method_01 = function (e, x, y) {
+            cvjs_removeCustomCanvasMethod();
+
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+            console.log("REMOVE: generic_dblclick_method_01: x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
         };
 
 
-		  cvjsRoomPolygonHighlightAttributes = {
-				  fill: '#a4d7f4',
-				  "fill-opacity": "0.8",
-				  stroke: '#a4d7f4',
-				  'stroke-width': 0.75,
-                  "opacity": 0.8   
-				};
-				
-		  cvjsRoomPolygonSelectAttributes = {
-				  fill: '#5BBEF6',
-				  "fill-opacity": "0.8",
-				  stroke: '#5BBEF6',
-				  'stroke-width': 0.75,
-                  "opacity": 0.8   
-				};
-                 
-//      Setting Space Object Modals Display to be based on a callback method - VisualQuery mode -
-        cvjs_setCallbackForModalDisplay(true, myCustomPopUpBody, populateMyCustomPopUpBody);
+        // SAMPLE TO CREATE RECTANGLE BY CLICK
 
-
-		// Initialize CADViewer - needs the div name on the svg element on page that contains CADViewerJS and the location of the
-		// And we intialize with the Space Object Custom values
-		cvjs_InitCADViewer_highLight_popUp_app("floorPlan", ServerUrl+"app/", cvjsRoomPolygonBaseAttributes, cvjsRoomPolygonHighlightAttributes, cvjsRoomPolygonSelectAttributes, my_cvjsPopUpBody );
-
-//		cvjs_InitCADViewer_app("floorPlan", ServerUrl+"app/");
-//		//cvjs_InitCADViewerJS_app("floorPlan", "../app/");
-		 
-		// set the location to license key, typically the js folder in main app application folder ../app/js/
-		 cvjs_setLicenseKeyPath(ServerUrl+"/app/cv/");
-		// alternatively, set the key directly, by pasting in the cvKey portion of the cvlicense.js file, note the JSON \" around all entities 	 
-		//cvjs_setLicenseKeyDirect('{ \"cvKey\": \"00110010 00110010 00110000 00110010 00110001 00111001 00111001 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00110111 00110010 00110000 00110111 00110010 00110000 00110110 00110010 00110000 00110001 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00110111 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110111 00110001 00111001 00111001 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110111 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00111000 \" }');		 
-		 
-		cvjs_allowFileLoadToServer(true);
-
-//		cvjs_setUrl_singleDoubleClick(1);
-//		cvjs_encapsulateUrl_callback(true);
-
-		// NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES, FILES, SPACE OBJECTS
-		cvjs_setServerFileLocation_AbsolutePaths(ServerLocation+'/content/drawings/dwg/', ServerUrl+'content/drawings/dwg/',"","");
-		cvjs_setRedlinesAbsolutePath(ServerUrl+'/content/redlines/v7/', ServerLocation+'/content/redlines/v7/', false);
-		cvjs_setSpaceObjectsAbsolutePath(ServerUrl+'/content/spaceObjects/', ServerLocation+'/content/spaceObjects/');
-        cvjs_setInsertImageObjectsAbsolutePath(ServerUrl+'/content/inserted_image_objects/', ServerLocation+'/content/inserted_image_objects/')
-
-        // NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES, FILES, SPACE OBJECTS
-
-		// NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
-		cvjs_conversion_clearAXconversionParameters();
-
-		var dgn_workspace = cvjs_GetURLParameter("dgn_workspace");
-		console.log("dgn_workspace >"+cvjs_GetURLParameter("dgn_workspace")+"</end>  ");
-		if (dgn_workspace==""){
-			console.log("no dgn_workspace parameter!!!");				
-		}
-		else{
-//			window.alert("WE GOT workspace"+dgn_workspace);
-			console.log("WE GOT workspace"+dgn_workspace);
-			cvjs_setDgnWorkSpace(dgn_workspace, "");
-		}
-
-//		cvjs_conversion_addAXconversionParameter("model", "");		
-        cvjs_conversion_addAXconversionParameter("last", "");		
-        
-        // USE THIS FOR PROCESSING AUTOCAD HANDLES        
-//        cvjs_conversion_addAXconversionParameter("hlall", "");		
-
-        // USE THESE TO PROCESS LAYERS RM_ AND RM_TXT FOR INTERACTIVE HIGHLIGHT 
-
-//        cvjs_conversion_addAXconversionParameter("rl", "RM_");		 
-//		cvjs_conversion_addAXconversionParameter("tl", "RM_TXT");	
-
-//        cvjs_conversion_addAXconversionParameter("lw", "0.1");		 
-//		cvjs_conversion_addAXconversionParameter("lwmin", "0.4");	
-
-
-
-//        cvjs_conversion_addAXconversionParameter("rl", "RM$");		 
-//		cvjs_conversion_addAXconversionParameter("tl", "RM$TXT");	
-
-        // USE THIS TO CALCULATE AREA OF RL/TL PROCESSED SPACES
-    //      cvjs_conversion_addAXconversionParameter("la", "");		
-		
-		// NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
-		// Load file - needs the svg div name and name and path of file to load
-	
-		cvjs_LoadDrawing("floorPlan", FileName );
-
-		// set maximum CADViewer canvas side
-	    cvjs_resizeWindow_position("floorPlan" );
-		// alternatively set a fixed CADViewer canvas size
-		//	cvjs_resizeWindow_fixedSize(800, 600, "floorPlan");		
-
-		// NOTE
-		// we initialize the space icon size to 100%
-		cvjs_setGlobalSpaceImageObjectScaleFactor(1.0);
-
-		// here we clone icons to be able to move them into the canvas
-		
-
-   });  // end ready()
-
-
-
-   $(window).resize(function() {
-		// set maximum CADViewer canvas side
-	    cvjs_resizeWindow_position("floorPlan" );
-		// alternatively set a fixed CADViewer canvas size
-		//	cvjs_resizeWindow_fixedSize(800, 600, "floorPlan");		
-   });
-	
-/// NOTE: THESE METHODS BELOW ARE JS SCRIPT CALLBACK METHODS FROM CADVIEWER JS, THEY NEED TO BE IMPLEMENTED BUT CAN BE EMPTY
-
-	function cvjs_OnLoadEnd(){
-			// generic callback method, called when the drawing is loaded
-			// here you fill in your stuff, call DB, set up arrays, etc..
-			// this method MUST be retained as a dummy method! - if not implemeted -
-
-			cvjs_resetZoomPan("floorPlan");
-
-			var user_name = "Bob Smith";
-			var user_id = "user_1";
-
-			// set a value for redlines
-			cvjs_setCurrentStickyNoteValues_NameUserId(user_name, user_id );
-			cvjs_setCurrentRedlineValues_NameUserid(user_name, user_id);
-            
-            // NOTE-NOTE:  cvjs_dragBackgroundToFront_SVG cannot be used with HLALL
-			// cvjs_dragBackgroundToFront_SVG("floorPlan");					
-			//cvjs_initZeroWidthHandling("floorPlan", 1.0);			
-
-			roomLayer1 = cvjs_clearLayer(roomLayer1);
-			
-			cvjs_LayerOff("EC1 Space Names");
-			cvjs_LayerOff("EC1 Space Status Descs");
-			cvjs_LayerOff("EC1 Space Project");
-			cvjs_LayerOff("EC1 Space Function Descs");
-			cvjs_LayerOff("EC1 Space Type Descs");
-			cvjs_LayerOff("EC1 Tenant Names");
-			cvjs_LayerOff("EC1 UDA Design Capacity");
-			cvjs_LayerOff("EC1 UDA Is Secured");
-            
-
-	}
-
-
-	function cvjs_OnLoadEndRedlines(){
-			// generic callback method, called when the redline is loaded
-			// here you fill in your stuff, hide specific users and lock specific users
-			// this method MUST be retained as a dummy method! - if not implemeted -
-
-			// I am hiding users added to the hide user list
-			cvjs_hideAllRedlines_HiddenUsersList();
-
-			// I am freezing users added to the lock user list
-			cvjs_lockAllRedlines_LockedUsersList();
-	}
-
-
-	// generic callback method, tells which FM object has been clicked
-	function cvjs_change_space(){
-
-	}
-
-	function cvjs_graphicalObjectCreated(graphicalObject){
-
-	// do something with the graphics object created!
-//		window.alert(graphicalObject);
-
-	}
-
-
-	function cvjs_popupTitleClick(myclick){
-	
-		window.alert(" cvjs_popupTitleClick: "+myclick);
-		
-	 }
-
-	function cvjs_ObjectSelected(rmid){
-	 	// placeholder for method in tms_cadviewerjs_modal_1_0_14.js   - must be removed when in creation mode and using creation modal
-    
-        // window.alert("object selected");
-    }
-
-
-	// Callback Method on Creation and Delete 
-	function cvjs_graphicalObjectOnChange(type, graphicalObject, spaceID){
-	  // do something with the graphics object created! 
-
-      //		window.alert(" cvjs_graphicalObjectOnChange: "+type+" "+graphicalObject+" "+spaceID+" indexSpace: "+graphicalObject.toLowerCase().indexOf("space"));
-        console.log(" cvjs_graphicalObjectOnChange: "+type+" "+graphicalObject+" "+spaceID+" indexSpace: "+graphicalObject.toLowerCase().indexOf("space"));
-
- /*     UPDATE SERVER WITH REDLINES ON CHANGE       
-        if (graphicalObject.toLowerCase().indexOf('redline')>-1 && !type.toLowerCase().indexOf('click')==0 ){
-//            cvjs_setStickyNoteSaveRedlineUrl(ServerLocation + "/content/redlines/v7/test"+Math.round(Math.random()*100)+".js");
-            cvjs_setStickyNoteSaveRedlineUrl(ServerLocation + "/content/redlines/v7/test_fixed.js");
-            cvjs_saveStickyNotesRedlines("floorPlan", false, "THIS IS PLACEHOLDER FOR CUSTOM STUFF TO SERVER");
+        var generic_canvas_flag_first_click_rectangle = false;
+        var generic_canvas_flag_rectangle = false;
+        var tPath_r;
+        var generic_make_rect_init_method = function () {
+            console.log("generic_make_rect_init_method");
+            generic_canvas_flag_first_click_rectangle = false;
+            generic_canvas_flag_rectangle = false;
         }
-*/
-
-		if (type == 'Create' && graphicalObject.toLowerCase().indexOf("space")>-1 && graphicalObject.toLowerCase().indexOf("circle")==-1){
-				
-            /*
-            * Return a JSON structure of all content of a space object clicked: <br>
-            * 	var jsonStructure =  	{	"path":   path, <br>
-            *								"tags": tags, <br>
-            *								"node": node, <br>
-            *								"area": area, <br>
-            *								"outerhtml": outerHTML, <br>
-            *								"occupancy": occupancy, <br>
-            *								"name": name, <br>
-            *								"type": type, <br>
-            *								"id": id, <br>
-            *								"defaultcolor": defaultcolor, <br>
-            *								"layer": layer, <br>
-            *								"group": group, <br>
-            *								"linked": linked, <br>
-            *								"attributes": attributes, <br>
-            *								"attributeStatus": attributeStatus, <br>
-            *								"displaySpaceObjects": displaySpaceObjects, <br>
-            *								"translate_x": translate_x, <br>
-            *								"translate_y": translate_y, <br>
-            *								"scale_x": scale_x ,<br>
-            *								"scale_y": scale_y ,<br>
-            *								"rotate": rotate, <br>
-            *								"transform": transform} <br>
-            * @return {Object} jsonSpaceObject - Object with the entire space objects content
-            */
-		
-			myobject = cvjs_returnSpaceObjectID(spaceID);
-			
-			// I can save this object into my database, and then use command 
-			// cvjs_setSpaceObjectDirect(jsonSpaceObject) 
-			// when I am recreating the content of the drawing at load
-			
-			// for the fun of it, display the SVG geometry of the space:			
-			console.log("This is the SVG path: "+myobject.path)
-				
-		}
-		
 
-		if (type == 'Delete' && graphicalObject.toLowerCase().indexOf("space")>-1 ){
-			// remove this entry from my DB
 
-			window.alert("We have deleted: "+spaceID)
-		}
+        var generic_make_rect_mousedown_method = function (e, x, y) {
+
+            try {
+                console.log("generic_make_rect_mousedown_method");
+
+                if (!generic_canvas_flag_first_click_rectangle) {
+                    var tPath_r = "M" + 0 + "," + 0;
+                    cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ stroke: "#b00000", fill: "none", 'stroke-width': 0.5 });
+                    generic_canvas_flag_first_click_rectangle = true;
+                    generic_canvas_flag_rectangle = false;
+                    console.log("rubberband");
+                }
+                else {
+                    console.log(generic_canvas_flag_first_click_rectangle + "  " + generic_canvas_flag_rectangle);
+                    if (generic_canvas_flag_rectangle) {
+                        generic_make_rect_stop_method();
+                    }
+                }
+            }
+            catch (err) { console.log(err) }
+            //console.log("mouse down ");
+        }
+
+
+        var generic_make_rect_mouseup_method = function () {
+
+            try {
+                console.log("generic_make_rect_mouseup_method");
+            }
+            catch (err) { console.log(err) }
+        }
+
+
+        var generic_make_rect_dblclick_method = function () {
+
+            try {
+                console.log("generic_make_rect_dblclick_method");
+            }
+            catch (err) { console.log(err) }
+        }
+
+
+        var generic_make_rect_mousemove_method = function (e, x, y) {
+
+            try {
+                if (generic_canvas_flag_first_click_rectangle) {
+                    cvjs_customCanvasMethod_globalScale();
+                    if (!generic_canvas_flag_rectangle) {
+                        cvjs_firstX = cvjs_SVG_x(x);
+                        cvjs_firstY = cvjs_SVG_y(y)
+                        cvjs_lastX = cvjs_firstX;
+                        cvjs_lastY = cvjs_firstY;
+                        generic_canvas_flag_rectangle = true;
+                    }
+                    else {
+                        // we cannot have the mouse directly on top of the rubberband path, then it will not respond
+                        var mousedelta = 2;
+                        cvjs_lastX = cvjs_SVG_x(x - mousedelta);
+                        cvjs_lastY = cvjs_SVG_y(y - mousedelta);
+                    }
+
+                    tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY + " Z";
+                    cvjs_RubberBand.attr({ 'path': tPath_r });
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+        var generic_make_rect_stop_method = function () {
+
+            // find the current highest node number
+            var Node_id = cvjs_currentMaxNodeId();
+            // increment and set current node underbar
+            Node_id++;
+            cvjs_currentNode_underbar = Node_underbar + Node_id;
+
+            var loadSpaceImage_ID = $('#image_ID').val();
+            var loadSpaceImage_Type = $('#image_Type').val();
+            var loadSpaceImage_Layer = "cvjs_SpaceLayer";
+
+            // create a group with space as main object
+            cvjs_createSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, loadSpaceImage_ID, loadSpaceImage_ID, loadSpaceImage_Type, cvjs_loadSpaceImage_Layer, "myGroup");
+
+            // make an equal rect, but with the proper color settings and controls
+            var grayBox = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ fill: '#808080', "fill-opacity": "1.0", stroke: '#000', 'stroke-opacity': "1.0", 'stroke-width': 0.5 });
+            cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, grayBox, "rect01");
+
+            cvjs_removeCustomCanvasMethod();
+        };
+
+        // END - SAMPLE TO CREATE RECTANGLE BY CLICK
+
+
+        // SAMPLE TO CREATE RECTANGLE BY DRAG
 
+        var generic_drag_rect_start = function () {
 
-		if (type == 'Move' && graphicalObject.toLowerCase().indexOf("space")>-1 ){
-			// remove this entry from my DB
-			console.log("This object has been moved: "+spaceID)		
-			myobject = cvjs_returnSpaceObjectID(spaceID);
-
-		}
-
-
-		if (type == 'Click'){
-			// remove this entry from my DB
-			console.log(graphicalObject+" has been clicked");		
-
-		}
-
-    }
-
-     
-	function myCustomPopUpBody(rmid){
-
-			console.log("click on myCustomPopUpBody: "+rmid+" I now change the pop-up menu");
-			// make your own popup based on callback
-			var my_cvjsPopUpBody = "";
-
-				if (rmid==120 || rmid==121 || rmid==122 || rmid==123 || rmid==124){
-					my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Menu One<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
-					my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
-
-				}else{
-					my_cvjsPopUpBody = "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu1();\">Custom<br>Menu 1<br><i class=\"glyphicon glyphicon-transfer\"></i></div>";
-					my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"my_own_clickmenu2();\">Custom<br>Menu 2<br><i class=\"glyphicon glyphicon-info-sign\"></i></div>";
-					my_cvjsPopUpBody += "<div class=\"cvjs_modal_1\" onclick=\"cvjs_zoomHere();\">Zoom<br>Here<br><i class=\"glyphicon glyphicon-zoom-in\"></i></div>";
-
-				}
-				return my_cvjsPopUpBody;
-	}
-
-
-	function cvjs_callbackForModalDisplay(rmid, node){
-
-		console.log("cvjs_callbackForModalDisplay: We can use this method to populate and update the modal if not read in completely!");
-		// populateMyCustomPopUpBody(rmid, node);
-	}
-
-	function populateMyCustomPopUpBody(rmid, node){
-
-		console.log(" we actually have a second callback to change the pop-up menu (developed originally for Angular2) populateMyCustomPopUpBody: "+rmid+"  "+node);
-
-	}
-
-
-
-/// NOTE: THESE METHODS ABOVE ARE JS SCRIPT CALLBACK METHODS FROM CADVIEWER JS, THEY NEED TO BE IMPLEMENTED BUT CAN BE EMPTY
-
-/// NOTE: BELOW REDLINE SAVE LOAD CONTROLLERS
-
-// This method is linked to the save redline icon in the imagemap
-function cvjs_saveStickyNotesRedlinesUser(){
-
-	// there are two modes, user handling of redlines
-	// alternatively use the build in redline file manager
-
-	cvjs_openRedlineSaveModal("floorPlan");
-
-	// custom method startMethodRed to set the name and location of redline to save
-	// see implementation below
-	//startMethodRed();
-	// API call to save stickynotes and redlines
-	//cvjs_saveStickyNotesRedlines("floorPlan");
-}
-
-
-// This method is linked to the load redline icon in the imagemap
-function cvjs_loadStickyNotesRedlinesUser(){
-
-	cvjs_openRedlineLoadModal("floorPlan");
-
-	// first the drawing needs to be cleared of stickynotes and redlines
-	//cvjs_deleteAllStickyNotes();
-	//cvjs_deleteAllRedlines();
-
-	// custom method startMethodRed to set the name and location of redline to load
-	// see implementation below
-	// startMethodRed();
-
-	// API call to load stickynotes and redlines
-	//cvjs_loadStickyNotesRedlines("floorPlan");
-}
-
-/// NOTE: ABOVE REDLINE SAVE LOAD CONTROLLERS
-
-
-
-
-	// Here we are writing a basic function that will be used in the PopUpMenu
-	// this is template on all the good stuff users can add
-	function my_own_clickmenu1(){
-		var id = cvjs_idObjectClicked();
-		//		var node = cvjs_NodeObjectClicked();
-		window.alert("Custom menu item 1: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings.  Clicked object ID is: "+id);
-	}
-
-	// Here we are writing a basic function that will be used in the PopUpMenu
-	// this is template on all the good stuff users can add
-	function my_own_clickmenu2(){
-		var id = cvjs_idObjectClicked();
-		//var node = cvjs_NodeObjectClicked();
-
-		window.alert("Custom menu item 2: Here developers can implement their own methods, the look and feel of the menu is controlled in the settings. Clicked object ID is: "+id);
-		//window.alert("Custom menu item 2: Clicked object Node is: "+node);
-	}
-
-
-
-
-/// NOTE: BELOW CUSTOM MODAL COMMANDS
-
-// General settings method for Space Images, must be declared!!!!!
-function cvjs_loadSpaceImage_UserConfiguration(floorplan_div){
-
-	// When inserting a Space Image Object.
-	// The following items must be defined:
-	
-	// location and name of SVG or bitmap file to insert
-	// cvjs_loadSpaceImage_Location 
-	// ID of the Space for API access
-	// cvjs_loadSpaceImage_ID
-	// Type of the Space for modal highlight 
-	// cvjs_loadSpaceImage_Type
-	
-	cvjs_loadSpaceImage_Location = ServerUrl+ "content/drawings/svg/" + $('#image_sensor_location').val();
-	cvjs_loadSpaceImage_ID = $('#image_ID').val();
-	cvjs_loadSpaceImage_Type = $('#image_Type').val();
-	cvjs_loadSpaceImage_Layer = "cvjs_SpaceLayer";
-	
-}
-
-var roomLayer1;
-
-
-function copy_group_object(){
-
-     newSpaceObjectId = $('#copy_new_id').val();
-     originSpaceObjectId = $('#copy_org_id').val();
- 
-    cvjs_copyGroupObject(originSpaceObjectId, newSpaceObjectId);
-}
-
-
-function show_object_in_group(){
-
-    var currentNode_underbar = $('#group_id').val();    
-    var second_group = $('#group_2').val();    
-    var objectTag = $('#group_2_subid').val();    
-
-    cvjs_showObjectInSpaceObjectGroup(currentNode_underbar, objectTag);
-
-}
-
-
-function hide_object_in_group(){
-
-    var currentNode_underbar = $('#group_id').val();    
-    var second_group = $('#group_2').val();    
-    var objectTag = $('#group_2_subid').val();    
-
-    cvjs_hideObjectInSpaceObjectGroup(currentNode_underbar, objectTag);
-    
-}
-
-
-
-function update_group_with_group(){
-
-    var currentNode_underbar = $('#group_id').val();    
-    var second_group = $('#group_2').val();    
-    var objectTag = $('#group_2_subid').val();    
-    window.alert("here "+currentNode_underbar+" "+second_group);    
-    cvjs_addObjectToSpaceObjectGroup(currentNode_underbar, second_group, objectTag, true);
-
-}
-
-function update_group_with_object(){
-
-    // pull the values from the table
-    var currentNode_underbar = $('#group_id').val();    
-    var objectTag = $('#object_id').val();    
-    var object_svg_path = $('#object_svg_path').val();    
-    var object_css_style = $('#object_css_style').val();    
-
-
-    // add to the object
-    try{
-        console.log(object_svg_path+"  "+object_css_style+" "+currentNode_underbar)
-        var baseGraphics = cvjs_makeGraphicsObjectOnCanvas('Path', object_svg_path);
-        console.log(baseGraphics);
-        baseGraphics.attr(JSON.parse(object_css_style));
-        console.log(baseGraphics);
-        cvjs_addGraphicsToSpaceObjectGroup(currentNode_underbar, baseGraphics, objectTag);
-    }
-    catch(err){ 
-        console.log("create error: "+err);
-    }
-
-}
-
-
-function apply_group_id_styles(){
-
-// grap content from side panel
-
-// add to group
-
-}
-
-function hide_show_group_id(){
-
-// grap content from side panel
-
-// add to group
-
-}
-
-
-
-function highlight_space_object(){
-
-	roomLayer1 = cvjs_clearLayer(roomLayer1);
-	cvjs_highlightSpaceObjectIdDiv( $('#sensor_to_highlight').val() , highlight_colorgrade_D_1 , roomLayer1, "floorPlan");
-
-}
-
-function clear_space_highlight(){
-
-	cvjs_clearSpaceLayer();
-	roomLayer1 = cvjs_clearLayer(roomLayer1);
-}
-
-
-function highlight_all_spaces(){
-	
-	var secondcolor = selectedColor.substring(0,5);
-	secondcolor+="FF";
-	// window.alert(secondcolor);
-
-	var colortype = {
-			fill: selectedColor,
-			"fill-opacity": "0.8",
-			stroke: selectedColor,
-			'stroke-width': 1,
-			'stroke-opacity': "1",
-			'stroke-linejoin': 'round'
-		};
-
-	var spaceObjectIds = cvjs_getSpaceObjectIdList();
-	for (spc in spaceObjectIds){		
-		var rmid = spaceObjectIds[spc];
-		cvjs_highlightSpace(rmid, colortype);
-	}
-
-}
-
-
-function highlight_all_borders(){	
-	var colortype = {
-		fill: '#fff',
-		"fill-opacity": 0.01,
-		stroke: selectedColor,    
-		'stroke-width': 3.0,
-		'stroke-opacity': 1,
-		'stroke-linejoin': 'round'
-		};
-
-	var spaceObjectIds = cvjs_getSpaceObjectIdList();
-	for (spc in spaceObjectIds){	
-	
-		var rmid = spaceObjectIds[spc];
-		cvjs_highlightSpace(rmid, colortype);
-	}
-}
-
-function highlight_space_type(){
-	var type = $('#image_Type').val();	
-	var colortype = {
-			fill: selectedColor,
-			"fill-opacity": "0.8",
-			stroke: '#fe50d9',
-			'stroke-width': 1,
-			'stroke-opacity': "1",
-			'stroke-linejoin': 'round'
-		};
-
-		var spaceObjectIds = cvjs_getSpaceObjectIdList();
-		for (spc in spaceObjectIds){	
-			var spaceType = cvjs_getSpaceObjectTypefromId(spaceObjectIds[spc]);
-			var vqid = spaceObjectIds[spc];
-			console.log(spc+"  "+ vqid + "  "+spaceType+ "  "+spaceType.indexOf("Device"));		
-			if (spaceType.indexOf(type)==0)
-				cvjs_highlightSpace(vqid, colortype);
-		}
-}
-
-function highlight_space_id(){
-	var spaceid = $('#space_id2').val();	
-	var colortype = {
-			fill: selectedColor,
-			"fill-opacity": "0.8",
-			stroke: selectedColor,
-			'stroke-width': 1,
-			'stroke-opacity': "1",
-			'stroke-linejoin': 'round'
-		};
-
-	var spaceObjectIds = cvjs_getSpaceObjectIdList();
-	for (spc in spaceObjectIds){	
-		console.log(spaceid+"  "+spaceObjectIds[spc]+" "+(spaceid.indexOf(spaceObjectIds[spc])==0)+" "+((spaceid.length == spaceObjectIds[spc].length)));
-		if (spaceid.indexOf(spaceObjectIds[spc])==0 && (spaceid.length == spaceObjectIds[spc].length) )
-			cvjs_highlightSpace(spaceObjectIds[spc], colortype);
-	}
-}
-
-
-function insert_from_type_id_image(){
-
-	cvjs_loadSpaceImage_Location = ServerUrl+ "content/drawings/svg/" + $('#image_sensor_location').val();
-	cvjs_loadSpaceImage_ID = $('#image_ID').val();
-	cvjs_loadSpaceImage_Type = $('#image_Type').val();
-	cvjs_loadSpaceImage_Layer = "cvjs_SpaceLayer";
-    cvjs_addFixedSizeImageSpaceObject("floorPlan");
-    iconObjectCounter++;
-
-    // 6.3.92
-    $('#group_id').val( "NODE_"+cvjs_currentMaxNodeId())    
-}
-
-
-var iconObjectCounter = 1;
-
-// Functions to drag elements
-var lastXbeforeDrag =0;
-var lastYbeforeDrag =0;
-
-// locations of leftside device menu
-var device_from_top_base = 250;
-var height = 52;
-
-
-var selectedColor = '#fb13a7';
-
-function custom_ColorHex(pickcolor){
-
-    selectedColor = "#"+pickcolor;
-    console.log("selectedColor"+selectedColor);
-
-}
-
-
-///  HERE ARE ALL THE CUSTOM TEMPLATES TO DO STUFF ON THE CANVAS 
-
-
-/**
- * Template start drag method for custom canvas
- */
-
- var generic_start_method_01 = function() {
-    console.log("generic_start_method_01");
-}
-
-/**
- * Template move drag method for custom canvas
- */
-var generic_move_method_01 = function(dx,dy,x,y) {
-
-    var svg_x = cvjs_SVG_x(x);
-    var svg_y = cvjs_SVG_y(y);
-    console.log("generic_move_method_01: dx="+dx+" dy="+dy+" x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-}
-
-/**
- * Template stop drag method for custom canvas
- */
-var generic_stop_method_01 = function() {
-
-    cvjs_removeCustomCanvasMethod();
-    console.log("REMOVE: generic_stop_method_01");
-};
-
-/**
- * Template mouse-move method for custom canvas
- */
-
-var generic_mousemove_method_01 = function(e,x,y) {
-
-    var svg_x = cvjs_SVG_x(x);
-    var svg_y = cvjs_SVG_y(y);
-    
-    //cvjs_removeCustomCanvasMethod();
-    console.log("generic_mousemove_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-}
-
-/**
- * Template mouse-down method for custom canvas
- */
-
-var generic_mousedown_method_01 = function(e,x,y) {
-
-    var svg_x = cvjs_SVG_x(x);
-    var svg_y = cvjs_SVG_y(y);
-    
-    //cvjs_removeCustomCanvasMethod();
-    console.log("generic_mousedown_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-
-};
-
-/**
- * Template mouse-up method for custom canvas
- */
-
- var generic_mouseup_method_01 = function(e,x,y) {
-
-    var svg_x = cvjs_SVG_x(x);
-    var svg_y = cvjs_SVG_y(y);
-    
-    console.log("generic_mouseup_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-
-};
-
-/**
- * Template double-click method for custom canvas
- */
-
-var generic_dblclick_method_01 = function(e,x,y) {
-    cvjs_removeCustomCanvasMethod();
-
-    var svg_x = cvjs_SVG_x(x);
-    var svg_y = cvjs_SVG_y(y);
-    console.log("REMOVE: generic_dblclick_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-};
-
-
-// SAMPLE TO CREATE RECTANGLE BY CLICK
-
-var generic_canvas_flag_first_click_rectangle = false;
-var generic_canvas_flag_rectangle= false;
-var tPath_r;
-var generic_make_rect_init_method = function(){
-    console.log("generic_make_rect_init_method");
-    generic_canvas_flag_first_click_rectangle = false;
-    generic_canvas_flag_rectangle= false;
-}
-
-
-var generic_make_rect_mousedown_method = function(e, x, y) {
-
-    try{
-        console.log("generic_make_rect_mousedown_method");
-
-        if (!generic_canvas_flag_first_click_rectangle){
-			var tPath_r = "M" + 0 + "," + 0;
-            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({stroke: "#b00000", fill : "none", 'stroke-width': 0.5});
             generic_canvas_flag_first_click_rectangle = true;
-            generic_canvas_flag_rectangle= false;
-            console.log("rubberband");
-        }
-        else{
-            console.log(generic_canvas_flag_first_click_rectangle+"  "+generic_canvas_flag_rectangle);            
-            if (generic_canvas_flag_rectangle){
-                generic_make_rect_stop_method();
-            }
-        }
-    }
-    catch(err){console.log(err)}
-    //console.log("mouse down ");
-}
+            generic_canvas_flag_rectangle = false;
 
-
-var generic_make_rect_mouseup_method = function() {
-
-    try{
-        console.log("generic_make_rect_mouseup_method");
-    }
-    catch(err){console.log(err)}
-}
-
-
-var generic_make_rect_dblclick_method = function() {
-
-    try{
-        console.log("generic_make_rect_dblclick_method");
-    }
-    catch(err){console.log(err)}
-}
-
-
-var generic_make_rect_mousemove_method = function(e, x, y) {
-   
-   try{
-        if (generic_canvas_flag_first_click_rectangle){
-            cvjs_customCanvasMethod_globalScale();        
-            if (!generic_canvas_flag_rectangle){
-                cvjs_firstX = cvjs_SVG_x(x);
-                cvjs_firstY = cvjs_SVG_y(y)
-                cvjs_lastX = cvjs_firstX;
-                cvjs_lastY = cvjs_firstY;
-                generic_canvas_flag_rectangle = true;
-            }
-            else{
-                // we cannot have the mouse directly on top of the rubberband path, then it will not respond
-                var mousedelta = 2;
-                cvjs_lastX = cvjs_SVG_x(x-mousedelta);
-                cvjs_lastY = cvjs_SVG_y(y-mousedelta);
-            }	
-            
-            tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;		
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY+" Z"; 
-            cvjs_RubberBand.attr({'path': tPath_r});
-        }
-    }
-    catch(err){
-        console.log(err);
-    } 
-}
-
-var generic_make_rect_stop_method = function() {
-
-   // find the current highest node number
-   var Node_id = cvjs_currentMaxNodeId();
-    // increment and set current node underbar
-	Node_id++;
-	cvjs_currentNode_underbar = Node_underbar+Node_id;
-    
-	var loadSpaceImage_ID = $('#image_ID').val();
-	var loadSpaceImage_Type = $('#image_Type').val();
-    var loadSpaceImage_Layer = "cvjs_SpaceLayer";
-
-    // create a group with space as main object
-    cvjs_createSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, loadSpaceImage_ID, loadSpaceImage_ID, loadSpaceImage_Type, cvjs_loadSpaceImage_Layer, "myGroup");   
-
-    // make an equal rect, but with the proper color settings and controls
-	var grayBox = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({fill: '#808080', "fill-opacity": "1.0", stroke: '#000', 'stroke-opacity': "1.0", 'stroke-width': 0.5 });
-	cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar,  grayBox, "rect01");
-
-    cvjs_removeCustomCanvasMethod();    
-};
-
-// END - SAMPLE TO CREATE RECTANGLE BY CLICK
-
-
-// SAMPLE TO CREATE RECTANGLE BY DRAG
-
-var generic_drag_rect_start = function() {
-
-    generic_canvas_flag_first_click_rectangle = true;
-    generic_canvas_flag_rectangle = false;
-
-    var tPath_r = "M" + 0 + "," + 0;
-    cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({stroke: "#b00000", fill : "none"});
-
-    console.log("generic_start_method_01");
-}
-
-/**
- * Template move drag method for custom canvas
- */
-var generic_drag_rect_move = function(dx,dy,x,y) {
-
-    try{
-        if (generic_canvas_flag_first_click_rectangle){
-            cvjs_customCanvasMethod_globalScale();        
-            if (!generic_canvas_flag_rectangle){
-                cvjs_firstX = cvjs_SVG_x(x);
-                cvjs_firstY = cvjs_SVG_y(y)
-                cvjs_lastX = cvjs_firstX;
-                cvjs_lastY = cvjs_firstY;
-                generic_canvas_flag_rectangle = true;
-            }
-            else{
-                // we cannot have the mouse directly on top of the rubberband path, then it will not respond
-                var mousedelta = 1;
-                cvjs_lastX = cvjs_SVG_x(x-mousedelta);
-                cvjs_lastY = cvjs_SVG_y(y-mousedelta);
-            }	
-            
-            var tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;		
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY+" Z"; 
-            cvjs_RubberBand.attr({'path': tPath_r});
-        }
-    }
-    catch(err){
-        console.log(err);
-    } 
-
-}
-
-/**
- * Template stop drag method for custom canvas
- */
-var generic_drag_rect_stop = function() {
-
-    cvjs_RubberBand.attr({fill: '#99ff99', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1"});
-    cvjs_removeCustomCanvasMethod();
-    console.log("REMOVE: generic_drag_rect_stop");
-};
-
-
-// END - SAMPLE TO CREATE RECTANGLE BY DRAG
-
-
-
-
-// SAMPLE TO DRAG RECTANGLE if overlapping space objects 
-
-var select_drag_rect_start = function() {
-
-    generic_canvas_flag_first_click_rectangle = true;
-    generic_canvas_flag_rectangle = false;
-
-    var tPath_r = "M" + 0 + "," + 0;
-    cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({fill: '#ff9999', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1"});
-
-    console.log("generic_start_method_01");
-}
-
-var select_drag_rect_move = function(dx,dy,x,y) {
-
-    try{
-        if (generic_canvas_flag_first_click_rectangle){
-            cvjs_customCanvasMethod_globalScale();        
-            if (!generic_canvas_flag_rectangle){
-                cvjs_firstX = cvjs_SVG_x(x);
-                cvjs_firstY = cvjs_SVG_y(y)
-                cvjs_lastX = cvjs_firstX;
-                cvjs_lastY = cvjs_firstY;
-                generic_canvas_flag_rectangle = true;
-            }
-            else{
-                // we cannot have the mouse directly on top of the rubberband path, then it will not respond
-                var mousedelta = 1;
-                cvjs_lastX = cvjs_SVG_x(x-mousedelta);
-                cvjs_lastY = cvjs_SVG_y(y-mousedelta);
-            }	
-            
-            var tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;		
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY+" Z"; 
-            cvjs_RubberBand.attr({'path': tPath_r});
-        }
-    }
-    catch(err){
-        console.log(err);
-    } 
-
-}
-
-
-var select_drag_rect_stop = function() {
-
-    cvjs_RubberBand.attr({'path': "M0,0"});
-    var mybox;
-    var overlap;
-    var selected_list = "";
-
-    // reorder x,  if not dragged left to right, top to buttom
-    var temp;
-    if (cvjs_firstX>cvjs_lastX){
-        temp = cvjs_firstX;
-        cvjs_firstX = cvjs_lastX;
-        cvjs_lastX = temp;
-    }
-    // reorder y,  if not dragged left to right, top to buttom
-    if (cvjs_firstY>cvjs_lastY){
-        temp = cvjs_firstY;
-        cvjs_firstY = cvjs_lastY;
-        cvjs_lastY = temp;
-    }
-
-    
-    // get all spaces
-    var spaceObjectIds = cvjs_getSpaceObjectIdList();
-    // loop over all spaces
-    for (var spc in spaceObjectIds){
-        // get the bounding box of the space
-        
-        mybox = cvjs_getSpaceObjectBoundingBox(spaceObjectIds[spc]);
-        // check if it operlaps with the drag rectangle
-        if (mybox == false) continue;
-
-        //console.log(cvjs_firstX+"  "+ cvjs_firstY+" "+ cvjs_lastX+ " "+ cvjs_lastY+"  "+spc);
-        //console.log(mybox.x+" "+ mybox.y+" "+ (mybox.x+mybox.width) + " "+ (mybox.y+mybox.height));
-
-        overlap= cvjs_rect_doOverlap( cvjs_firstX, cvjs_firstY, cvjs_lastX, cvjs_lastY, mybox.x, mybox.y, mybox.x+mybox.width, mybox.y+mybox.height);
- 
-        if (overlap) 
-            selected_list+= spaceObjectIds[spc]+";";
-    }
-
-    if (selected_list == "") selected_list = "None";
-
-    window.alert("Selected Objects: "+selected_list);
-    //cvjs_RubberBand.attr({fill: '#99ff99', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1"});
-    cvjs_removeCustomCanvasMethod();
-    console.log("REMOVE: generic_drag_rect_stop");
-};
-
-// END - SAMPLE TO DRAG RECTANGLE if overlapping space objects 
-
-
-
-
-// SAMPLE TO CREATE RECTANGLE w TEXT and ARRow BY CLICK
-
-var logic_flags = [false,false,false,false,false,false];
-var operation_type = "";
-var mybasewidth = 1;
-
-var generic_make_rect_arrow_init_method = function(){
-    console.log("generic_make_rect_init_method");
-    logic_flags = [false,false,false,false,false,false];
-    operation_type = "box";    
-}
-
-var tPath_r;
-
-var generic_make_rect_arrow_mousedown_method = function(e, x, y) {
-
-    try{
-        if ((operation_type.indexOf("arrow") ==0) && logic_flags[0] && logic_flags[1]){
-            generic_make_rect_arrow_stop_method2();
-        }
-
-        if ((operation_type.indexOf("box") ==0) && !logic_flags[0]){  // first box
             var tPath_r = "M" + 0 + "," + 0;
-            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({stroke: "#b00000", fill : "none"});
-            logic_flags[0] = true;
-            logic_flags[1]= false;
+            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ stroke: "#b00000", fill: "none" });
+
+            console.log("generic_start_method_01");
         }
-        if ((operation_type.indexOf("box") ==0) && logic_flags[0] && logic_flags[1]){
-            generic_make_rect_arrow_stop_method1();
-        }
-   }
-    catch(err){console.log(err)}
-    //console.log("mouse down ");
-}
 
+        /**
+         * Template move drag method for custom canvas
+         */
+        var generic_drag_rect_move = function (dx, dy, x, y) {
 
-var generic_make_rect_arrow_mouseup_method = function() {
+            try {
+                if (generic_canvas_flag_first_click_rectangle) {
+                    cvjs_customCanvasMethod_globalScale();
+                    if (!generic_canvas_flag_rectangle) {
+                        cvjs_firstX = cvjs_SVG_x(x);
+                        cvjs_firstY = cvjs_SVG_y(y)
+                        cvjs_lastX = cvjs_firstX;
+                        cvjs_lastY = cvjs_firstY;
+                        generic_canvas_flag_rectangle = true;
+                    }
+                    else {
+                        // we cannot have the mouse directly on top of the rubberband path, then it will not respond
+                        var mousedelta = 1;
+                        cvjs_lastX = cvjs_SVG_x(x - mousedelta);
+                        cvjs_lastY = cvjs_SVG_y(y - mousedelta);
+                    }
 
-    try{
-        console.log("generic_make_rect_mouseup_method");
-    }
-    catch(err){console.log(err)}
-}
-
-
-var generic_make_rect_arrow_dblclick_method = function() {
-
-    try{
-        console.log("generic_make_rect_dblclick_method");
-    }
-    catch(err){console.log(err)}
-}
-
-
-var generic_make_rect_arrow_mousemove_method = function(e, x, y) {
-   
-   try{
-        if ((operation_type.indexOf("box") ==0) && logic_flags[0]){
-            cvjs_customCanvasMethod_globalScale();        
-            if (!logic_flags[1]){
-                cvjs_firstX = cvjs_SVG_x(x);
-                cvjs_firstY = cvjs_SVG_y(y)
-                cvjs_lastX = cvjs_firstX;
-                cvjs_lastY = cvjs_firstY;
-                logic_flags[1] = true;
+                    var tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY + " Z";
+                    cvjs_RubberBand.attr({ 'path': tPath_r });
+                }
             }
-            else{
-                // we cannot have the mouse directly on top of the rubberband path, then it will not respond
-                var mousedelta = 1;
-                cvjs_lastX = cvjs_SVG_x(x-mousedelta);
-                cvjs_lastY = cvjs_SVG_y(y-mousedelta);
-            }	
-            
-            tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;		
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
-            tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY+" Z"; 
-            cvjs_RubberBand.attr({'path': tPath_r});
+            catch (err) {
+                console.log(err);
+            }
+
+        }
+
+        /**
+         * Template stop drag method for custom canvas
+         */
+        var generic_drag_rect_stop = function () {
+
+            cvjs_RubberBand.attr({ fill: '#99ff99', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1" });
+            cvjs_removeCustomCanvasMethod();
+            console.log("REMOVE: generic_drag_rect_stop");
+        };
+
+
+        // END - SAMPLE TO CREATE RECTANGLE BY DRAG
+
+
+
+
+        // SAMPLE TO DRAG RECTANGLE if overlapping space objects
+
+        var select_drag_rect_start = function () {
+
+            generic_canvas_flag_first_click_rectangle = true;
+            generic_canvas_flag_rectangle = false;
+
+            var tPath_r = "M" + 0 + "," + 0;
+            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ fill: '#ff9999', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1" });
+
+            console.log("generic_start_method_01");
+        }
+
+        var select_drag_rect_move = function (dx, dy, x, y) {
+
+            try {
+                if (generic_canvas_flag_first_click_rectangle) {
+                    cvjs_customCanvasMethod_globalScale();
+                    if (!generic_canvas_flag_rectangle) {
+                        cvjs_firstX = cvjs_SVG_x(x);
+                        cvjs_firstY = cvjs_SVG_y(y)
+                        cvjs_lastX = cvjs_firstX;
+                        cvjs_lastY = cvjs_firstY;
+                        generic_canvas_flag_rectangle = true;
+                    }
+                    else {
+                        // we cannot have the mouse directly on top of the rubberband path, then it will not respond
+                        var mousedelta = 1;
+                        cvjs_lastX = cvjs_SVG_x(x - mousedelta);
+                        cvjs_lastY = cvjs_SVG_y(y - mousedelta);
+                    }
+
+                    var tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY + " Z";
+                    cvjs_RubberBand.attr({ 'path': tPath_r });
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+
         }
 
 
-        if ((operation_type.indexOf("arrow") ==0) && logic_flags[0]){
-            cvjs_customCanvasMethod_globalScale();        
+        var select_drag_rect_stop = function () {
 
-            logic_flags[1] = true;
-            var mousedelta = 1;
-            cvjs_lastX = cvjs_SVG_x(x-mousedelta);
-            cvjs_lastY = cvjs_SVG_y(y-mousedelta);
+            cvjs_RubberBand.attr({ 'path': "M0,0" });
+            var mybox;
+            var overlap;
+            var selected_list = "";
 
-            tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;		
-            tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
-            cvjs_RubberBand.attr({'path': tPath_r});
+            // reorder x,  if not dragged left to right, top to buttom
+            var temp;
+            if (cvjs_firstX > cvjs_lastX) {
+                temp = cvjs_firstX;
+                cvjs_firstX = cvjs_lastX;
+                cvjs_lastX = temp;
+            }
+            // reorder y,  if not dragged left to right, top to buttom
+            if (cvjs_firstY > cvjs_lastY) {
+                temp = cvjs_firstY;
+                cvjs_firstY = cvjs_lastY;
+                cvjs_lastY = temp;
+            }
+
+
+            // get all spaces
+            var spaceObjectIds = cvjs_getSpaceObjectIdList();
+            // loop over all spaces
+            for (var spc in spaceObjectIds) {
+                // get the bounding box of the space
+
+                mybox = cvjs_getSpaceObjectBoundingBox(spaceObjectIds[spc]);
+                // check if it operlaps with the drag rectangle
+                if (mybox == false) continue;
+
+                //console.log(cvjs_firstX+"  "+ cvjs_firstY+" "+ cvjs_lastX+ " "+ cvjs_lastY+"  "+spc);
+                //console.log(mybox.x+" "+ mybox.y+" "+ (mybox.x+mybox.width) + " "+ (mybox.y+mybox.height));
+
+                overlap = cvjs_rect_doOverlap(cvjs_firstX, cvjs_firstY, cvjs_lastX, cvjs_lastY, mybox.x, mybox.y, mybox.x + mybox.width, mybox.y + mybox.height);
+
+                if (overlap)
+                    selected_list += spaceObjectIds[spc] + ";";
+            }
+
+            if (selected_list == "") selected_list = "None";
+
+            window.alert("Selected Objects: " + selected_list);
+            //cvjs_RubberBand.attr({fill: '#99ff99', "fill-opacity": "0.5", stroke: '#ff9999', 'stroke-opacity': "1"});
+            cvjs_removeCustomCanvasMethod();
+            console.log("REMOVE: generic_drag_rect_stop");
+        };
+
+        // END - SAMPLE TO DRAG RECTANGLE if overlapping space objects
+
+
+
+
+        // SAMPLE TO CREATE RECTANGLE w TEXT and ARRow BY CLICK
+
+        var logic_flags = [false, false, false, false, false, false];
+        var operation_type = "";
+        var mybasewidth = 1;
+
+        var generic_make_rect_arrow_init_method = function () {
+            console.log("generic_make_rect_init_method");
+            logic_flags = [false, false, false, false, false, false];
+            operation_type = "box";
         }
-    }
-    catch(err){
-        console.log(err);
-    } 
-}
-
-var randomNr;
 
-var generic_make_rect_arrow_stop_method1 = function() {
+        var tPath_r;
+
+        var generic_make_rect_arrow_mousedown_method = function (e, x, y) {
+
+            try {
+                if ((operation_type.indexOf("arrow") == 0) && logic_flags[0] && logic_flags[1]) {
+                    generic_make_rect_arrow_stop_method2();
+                }
+
+                if ((operation_type.indexOf("box") == 0) && !logic_flags[0]) {  // first box
+                    var tPath_r = "M" + 0 + "," + 0;
+                    cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ stroke: "#b00000", fill: "none" });
+                    logic_flags[0] = true;
+                    logic_flags[1] = false;
+                }
+                if ((operation_type.indexOf("box") == 0) && logic_flags[0] && logic_flags[1]) {
+                    generic_make_rect_arrow_stop_method1();
+                }
+            }
+            catch (err) { console.log(err) }
+            //console.log("mouse down ");
+        }
+
+
+        var generic_make_rect_arrow_mouseup_method = function () {
+
+            try {
+                console.log("generic_make_rect_mouseup_method");
+            }
+            catch (err) { console.log(err) }
+        }
+
+
+        var generic_make_rect_arrow_dblclick_method = function () {
+
+            try {
+                console.log("generic_make_rect_dblclick_method");
+            }
+            catch (err) { console.log(err) }
+        }
+
+
+        var generic_make_rect_arrow_mousemove_method = function (e, x, y) {
+
+            try {
+                if ((operation_type.indexOf("box") == 0) && logic_flags[0]) {
+                    cvjs_customCanvasMethod_globalScale();
+                    if (!logic_flags[1]) {
+                        cvjs_firstX = cvjs_SVG_x(x);
+                        cvjs_firstY = cvjs_SVG_y(y)
+                        cvjs_lastX = cvjs_firstX;
+                        cvjs_lastY = cvjs_firstY;
+                        logic_flags[1] = true;
+                    }
+                    else {
+                        // we cannot have the mouse directly on top of the rubberband path, then it will not respond
+                        var mousedelta = 1;
+                        cvjs_lastX = cvjs_SVG_x(x - mousedelta);
+                        cvjs_lastY = cvjs_SVG_y(y - mousedelta);
+                    }
+
+                    tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_firstX + "," + cvjs_firstY + " Z";
+                    cvjs_RubberBand.attr({ 'path': tPath_r });
+                }
+
+
+                if ((operation_type.indexOf("arrow") == 0) && logic_flags[0]) {
+                    cvjs_customCanvasMethod_globalScale();
+
+                    logic_flags[1] = true;
+                    var mousedelta = 1;
+                    cvjs_lastX = cvjs_SVG_x(x - mousedelta);
+                    cvjs_lastY = cvjs_SVG_y(y - mousedelta);
+
+                    tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+                    tPath_r += "L" + cvjs_lastX + "," + cvjs_lastY;
+                    cvjs_RubberBand.attr({ 'path': tPath_r });
+                }
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+        var randomNr;
+
+        var generic_make_rect_arrow_stop_method1 = function () {
+
+            // find the current highest node number
+            var Node_id = cvjs_currentMaxNodeId();
+            // increment and set current node underbar
+            Node_id++;
+            cvjs_currentNode_underbar = Node_underbar + Node_id;
+            randomNr = Math.floor(Math.random() * Math.floor(100000)); window.alert("randomNr " + randomNr);
 
-    // find the current highest node number
-    var Node_id = cvjs_currentMaxNodeId();
-    // increment and set current node underbar
-	Node_id++;
-	cvjs_currentNode_underbar = Node_underbar+Node_id;
-    randomNr = Math.floor(Math.random() * Math.floor(100000)); window.alert("randomNr "+randomNr);
+            cvjs_RubberBand.attr({ fill: 'none', "fill-opacity": "0.5", stroke: '#0000b0', 'stroke-opacity': "1" });
+            // create a group with space as main object
+            cvjs_createSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, "API" + randomNr, "API" + randomNr, "Generic", "myLayer", "myGroup");
 
-	cvjs_RubberBand.attr({fill: 'none', "fill-opacity": "0.5", stroke: '#0000b0', 'stroke-opacity': "1"});
-	// create a group with space as main object
-    cvjs_createSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, "API"+randomNr, "API"+randomNr, "Generic", "myLayer", "myGroup");   
+            // create a new border object as separate graphics - we use the rubberband as our graphics variable
+            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth });
+            cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, "rect01");
 
-	// create a new border object as separate graphics - we use the rubberband as our graphics variable
-	cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth});
-	cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar,  cvjs_RubberBand, "rect01");
+            // create the text string add add to graphics group
+            var myText = cvjs_makeTextObjectOnCanvas(cvjs_firstX + (cvjs_lastX - cvjs_firstX) / 10.0, cvjs_lastY - (cvjs_lastY - cvjs_firstY) / 5.0, "API" + randomNr).attr({ fill: '#000', "fill-opacity": "1", stroke: '#000', 'font-size': (Math.abs(cvjs_lastY - cvjs_firstY) / 2.0) });
+            cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, myText, "text01");
 
-    // create the text string add add to graphics group
-    var myText = cvjs_makeTextObjectOnCanvas(cvjs_firstX+(cvjs_lastX-cvjs_firstX)/10.0, cvjs_lastY - (cvjs_lastY-cvjs_firstY)/5.0, "API"+randomNr).attr({fill: '#000', "fill-opacity": "1", stroke: '#000', 'font-size' : (Math.abs(cvjs_lastY-cvjs_firstY)/2.0) });
-	cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar,  myText, "text01");
+            // we change to arrow, and directly make the mouse draggable
+            operation_type = "arrow";
+            logic_flags[0] = true;
+            logic_flags[1] = false;
 
-    // we change to arrow, and directly make the mouse draggable
-    operation_type = "arrow";
-    logic_flags[0] = true;
-    logic_flags[1]= false;  
+            // set rubberband to middle of box side
+            cvjs_firstX = (cvjs_firstX + cvjs_lastX) / 2.0;
+            cvjs_firstY = cvjs_lastY;
+            // make new rubberband
+            tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
+            cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({ stroke: "#b00000", fill: "none" });
+        };
 
-    // set rubberband to middle of box side
-    cvjs_firstX = (cvjs_firstX+cvjs_lastX)/2.0;
-    cvjs_firstY = cvjs_lastY;
-	// make new rubberband 
-    tPath_r = "M" + cvjs_firstX + "," + cvjs_firstY;
-    cvjs_RubberBand = cvjs_makeGraphicsObjectOnCanvas('Path', tPath_r).attr({stroke: "#b00000", fill : "none"});
-};
 
 
+        var generic_make_rect_arrow_stop_method2 = function () {
 
-var generic_make_rect_arrow_stop_method2 = function() {
+            cvjs_RubberBand.attr({ fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth });
+            // we create an arrow object and add to space object
 
-    cvjs_RubberBand.attr({fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth});
-	// we create an arrow object and add to space object
+            // here we have to add the graphical object to our already created object
+            cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, "arrow-line01");
 
-    // here we have to add the graphical object to our already created object
-	cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, cvjs_RubberBand, "arrow-line01");
-	
-	// create an arrow
-	var angleInDegrees = ( Math.atan2((cvjs_lastY-cvjs_firstY),(cvjs_lastX-cvjs_firstX)) / Math.PI * 180.0);
-	var scaleTriangle = mybasewidth;  // same as stroke-width
-	var triangle_design= -5.0*scaleTriangle+","+5.5*scaleTriangle+" "+0.0*scaleTriangle+","+-4.5*scaleTriangle+" "+5.0*scaleTriangle+","+5.5*scaleTriangle;
-	var mysin = Math.sin(angleInDegrees/180*Math.PI);
-	var mycos = Math.cos(angleInDegrees/180*Math.PI);
-	var Ttrans = 'r' + (angleInDegrees - 270)+'T' + (cvjs_lastX+ mycos*scaleTriangle) +"," + cvjs_lastY ;
-    var Triangle = cvjs_makeGraphicsObjectOnCanvas('Polyline', triangle_design);
-    Triangle.attr({fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth});
-	Triangle.attr({
-		fill: "#000",
-		transform: Ttrans
-	});
+            // create an arrow
+            var angleInDegrees = (Math.atan2((cvjs_lastY - cvjs_firstY), (cvjs_lastX - cvjs_firstX)) / Math.PI * 180.0);
+            var scaleTriangle = mybasewidth;  // same as stroke-width
+            var triangle_design = -5.0 * scaleTriangle + "," + 5.5 * scaleTriangle + " " + 0.0 * scaleTriangle + "," + -4.5 * scaleTriangle + " " + 5.0 * scaleTriangle + "," + 5.5 * scaleTriangle;
+            var mysin = Math.sin(angleInDegrees / 180 * Math.PI);
+            var mycos = Math.cos(angleInDegrees / 180 * Math.PI);
+            var Ttrans = 'r' + (angleInDegrees - 270) + 'T' + (cvjs_lastX + mycos * scaleTriangle) + "," + cvjs_lastY;
+            var Triangle = cvjs_makeGraphicsObjectOnCanvas('Polyline', triangle_design);
+            Triangle.attr({ fill: 'none', "fill-opacity": "1", stroke: '#000', 'stroke-opacity': "1", 'stroke-width': mybasewidth });
+            Triangle.attr({
+                fill: "#000",
+                transform: Ttrans
+            });
 
-	// here we add an arrow to the object
-	cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, Triangle, "arrow01");
+            // here we add an arrow to the object
+            cvjs_addGraphicsToSpaceObjectGroup(cvjs_currentNode_underbar, Triangle, "arrow01");
 
-    cvjs_graphicalObjectCreated('CustomObject');
-	cvjs_graphicalObjectOnChange('Create', 'CustomObject',  "API"+randomNr);
+            cvjs_graphicalObjectCreated('CustomObject');
+            cvjs_graphicalObjectOnChange('Create', 'CustomObject', "API" + randomNr);
 
-    cvjs_removeCustomCanvasMethod();    
-};
+            cvjs_removeCustomCanvasMethod();
+        };
 
-// END OF DRAG
+        // END OF DRAG
 
 
 
-// CLICK TO SELECT HANDLES
+        // CLICK TO SELECT HANDLES
 
 
-// NOTE  - for Handles to be processed in DWG conversion, the conversion parameter -hlall  must be set:
-        // USE THIS FOR PROCESSING AUTOCAD HANDLES        
-// include this:         cvjs_conversion_addAXconversionParameter("hlall", "");		
+        // NOTE  - for Handles to be processed in DWG conversion, the conversion parameter -hlall  must be set:
+        // USE THIS FOR PROCESSING AUTOCAD HANDLES
+        // include this:         cvjs_conversion_addAXconversionParameter("hlall", "");
 
-// USE THESE TO PROCESS LAYERS RM_ AND RM_TXT FOR INTERACTIVE HIGHLIGHT 
-// optional:       cvjs_conversion_addAXconversionParameter("rl", "RM_");		 
-// optional:		cvjs_conversion_addAXconversionParameter("tl", "RM_TXT");	
+        // USE THESE TO PROCESS LAYERS RM_ AND RM_TXT FOR INTERACTIVE HIGHLIGHT
+        // optional:       cvjs_conversion_addAXconversionParameter("rl", "RM_");
+        // optional:		cvjs_conversion_addAXconversionParameter("tl", "RM_TXT");
 
-var  selected_handles = [];
-var  handle_selector = false;
-var  current_selected_handle = "";
+        var selected_handles = [];
+        var handle_selector = false;
+        var current_selected_handle = "";
 
-var generic_handles_init_method_01 = function(){
-    selected_handles = [];
-    // we want to send click object to back!!!!!!
-    // so we can click on Handle Objects
-    cvjs_sendCustomCanvasToBack("floorPlan");
-    handle_selector = true;
-}
+        var generic_handles_init_method_01 = function () {
+            selected_handles = [];
+            // we want to send click object to back!!!!!!
+            // so we can click on Handle Objects
+            cvjs_sendCustomCanvasToBack("floorPlan");
+            handle_selector = true;
+        }
 
-/**
- * Template mouse-move method for custom canvas
- */
+        /**
+         * Template mouse-move method for custom canvas
+         */
 
-var generic_handles_mousemove_method_01 = function(e,x,y) {
+        var generic_handles_mousemove_method_01 = function (e, x, y) {
 
-var svg_x = cvjs_SVG_x(x);
-var svg_y = cvjs_SVG_y(y);
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
 
-//cvjs_removeCustomCanvasMethod();
-// console.log("generic_mousemove_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-}
+            //cvjs_removeCustomCanvasMethod();
+            // console.log("generic_mousemove_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
+        }
 
 
-/**
- * Template mouse-down method for custom canvas
- */
+        /**
+         * Template mouse-down method for custom canvas
+         */
 
- var generic_handles_mousedown_method_01 = function(e,x,y) {
+        var generic_handles_mousedown_method_01 = function (e, x, y) {
 
-var svg_x = cvjs_SVG_x(x);
-var svg_y = cvjs_SVG_y(y);
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
 
-// cvjs_removeCustomCanvasMethod();
-// onsole.log("generic_mousedown_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
+            // cvjs_removeCustomCanvasMethod();
+            // onsole.log("generic_mousedown_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
 
-};
+        };
 
-/**
-* Template mouse-up method for custom canvas
-*/
+        /**
+        * Template mouse-up method for custom canvas
+        */
 
-var generic_handles_mouseup_method_01 = function(e,x,y) {
+        var generic_handles_mouseup_method_01 = function (e, x, y) {
 
-var svg_x = cvjs_SVG_x(x);
-var svg_y = cvjs_SVG_y(y);
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
 
-// console.log("generic_mouseup_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
+            // console.log("generic_mouseup_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
 
-};
+        };
 
-/**
-* Template double-click method for custom canvas
-*/
+        /**
+        * Template double-click method for custom canvas
+        */
 
-var generic_handles_dblclick_method_01 = function(e,x,y) {
-cvjs_removeCustomCanvasMethod();
-handle_selector = false;
+        var generic_handles_dblclick_method_01 = function (e, x, y) {
+            cvjs_removeCustomCanvasMethod();
+            handle_selector = false;
 
-var mystring = "";
-for (var spc in selected_handles){
-    // we find all handles
-    mystring+= selected_handles[spc].handle+";";
-    // we need to clean out highlighted handles
-    cvjs_mouseout_handleObjectStyles(selected_handles[spc].id, selected_handles[spc].handle);
-}
+            var mystring = "";
+            for (var spc in selected_handles) {
+                // we find all handles
+                mystring += selected_handles[spc].handle + ";";
+                // we need to clean out highlighted handles
+                cvjs_mouseout_handleObjectStyles(selected_handles[spc].id, selected_handles[spc].handle);
+            }
 
-window.alert(mystring);
+            window.alert(mystring);
 
-var svg_x = cvjs_SVG_x(x);
-var svg_y = cvjs_SVG_y(y);
-console.log("REMOVE: generic_dblclick_method_01: x="+x+" y="+y+" svg_x="+svg_x+"  svg_y="+svg_y);
-};
+            var svg_x = cvjs_SVG_x(x);
+            var svg_y = cvjs_SVG_y(y);
+            console.log("REMOVE: generic_dblclick_method_01: x=" + x + " y=" + y + " svg_x=" + svg_x + "  svg_y=" + svg_y);
+        };
 
 
-// END - SAMPLE TO DRAG RECTANGLE over HANDLES
+        // END - SAMPLE TO DRAG RECTANGLE over HANDLES
 
-// HANDLING OF MOUSE OPERATION
+        // HANDLING OF MOUSE OPERATION
 
 
-// ENABLE ALL API EVENT HANDLES FOR AUTOCAD Handles
+        // ENABLE ALL API EVENT HANDLES FOR AUTOCAD Handles
 
-var selected_handles = [];
-var handle_selector = false;
-var current_selected_handle = "";
+        var selected_handles = [];
+        var handle_selector = false;
+        var current_selected_handle = "";
 
 
-function cvjs_mousedown(id, handle, entity){
+        function cvjs_mousedown(id, handle, entity) {
 
-}
+        }
 
-function cvjs_click(id, handle, entity){
+        function cvjs_click(id, handle, entity) {
 
 
-    console.log("mysql click "+id+"  "+handle);
-    // if we click on an object, then we add to the handle list
-    if (handle_selector){
-        selected_handles.push({id,handle});
-        current_selected_handle = handle;
-    }
+            console.log("mysql click " + id + "  " + handle);
+            // if we click on an object, then we add to the handle list
+            if (handle_selector) {
+                selected_handles.push({ id, handle });
+                current_selected_handle = handle;
+            }
 
-	// tell to update the Scroll bar 
-	//vqUpdateScrollbar(id, handle);
-	// window.alert("We have clicked an entity: "+entity.substring(4)+"\r\nThe AutoCAD Handle id: "+handle+"\r\nThe svg id is: "+id+"\r\nHighlight SQL pane entry");
-}
+            // tell to update the Scroll bar
+            //vqUpdateScrollbar(id, handle);
+            // window.alert("We have clicked an entity: "+entity.substring(4)+"\r\nThe AutoCAD Handle id: "+handle+"\r\nThe svg id is: "+id+"\r\nHighlight SQL pane entry");
+        }
 
-function cvjs_dblclick(id, handle, entity){
+        function cvjs_dblclick(id, handle, entity) {
 
-	console.log("mysql dblclick "+id+"  "+handle);
-	window.alert("We have double clicked entity with AutoCAD Handle: "+handle+"\r\nThe svg id is: "+id);
-}
+            console.log("mysql dblclick " + id + "  " + handle);
+            window.alert("We have double clicked entity with AutoCAD Handle: " + handle + "\r\nThe svg id is: " + id);
+        }
 
-function cvjs_mouseout(id, handle, entity){
+        function cvjs_mouseout(id, handle, entity) {
 
-    console.log("mysql mouseout "+id+"  "+handle);
-    
-    if (current_selected_handle == handle){
-        // do nothing
-    }
-    else{
-        cvjs_mouseout_handleObjectStyles(id, handle);
-    }
-}
+            console.log("mysql mouseout " + id + "  " + handle);
 
-function cvjs_mouseover(id, handle, entity){
+            if (current_selected_handle == handle) {
+                // do nothing
+            }
+            else {
+                cvjs_mouseout_handleObjectStyles(id, handle);
+            }
+        }
 
-	console.log("mysql mouseover "+id+"  "+handle+"  "+jQuery("#"+id).css("color"))
-	//cvjs_mouseover_handleObjectPopUp(id, handle);	
-}
+        function cvjs_mouseover(id, handle, entity) {
 
-function cvjs_mouseleave(id, handle, entity){
+            console.log("mysql mouseover " + id + "  " + handle + "  " + jQuery("#" + id).css("color"))
+            //cvjs_mouseover_handleObjectPopUp(id, handle);
+        }
 
-	console.log("mysql mouseleave "+id+"  "+handle+"  "+jQuery("#"+id).css("color"));
-}
+        function cvjs_mouseleave(id, handle, entity) {
 
+            console.log("mysql mouseleave " + id + "  " + handle + "  " + jQuery("#" + id).css("color"));
+        }
 
-function cvjs_mouseenter(id, handle, entity){
-//	cvjs_mouseenter_handleObjectStyles("#a0a000", 4.0, 1.0, id, handle);
-//	cvjs_mouseenter_handleObjectStyles("#ffcccb", 5.0, 0.7, true, id, handle);
 
+        function cvjs_mouseenter(id, handle, entity) {
+            //	cvjs_mouseenter_handleObjectStyles("#a0a000", 4.0, 1.0, id, handle);
+            //	cvjs_mouseenter_handleObjectStyles("#ffcccb", 5.0, 0.7, true, id, handle);
 
-	cvjs_mouseenter_handleObjectStyles("#F00", 2.0, 1.0, true, id, handle);
-	
-}
 
-// END OF MOUSE OPERATION
+            cvjs_mouseenter_handleObjectStyles("#F00", 2.0, 1.0, true, id, handle);
 
-</script>	
+        }
+
+        // END OF MOUSE OPERATION
+
+    </script>
 
 </head>
   <body bgcolor="white" style="margin:0" >
@@ -2742,7 +2742,7 @@ var no_colorgrade_C_reading = {
 	<td>
 	<!--This is the CADViewer floorplan div declaration -->
 
-		<div id="floorPlan"  style="border:2px none; width:1800;height:1400;">
+		<div id="floorPlan"  class="cadviewer-bootstrap cadviewer-core-styles"  style="border:2px none; width:1800;height:1400;">
 		</div>
 	<!--End of CADViewer declaration -->
 	</td>

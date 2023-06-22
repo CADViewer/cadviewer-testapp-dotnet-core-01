@@ -1,0 +1,5 @@
+First in LoadFile:https://localhost:44374/content/drawings/dwg/filenames.rw,none,serverfilelist
+LoadFile:https://localhost:44374/content/drawings/dwg/filenames.rw
+before check loadtype:serverfilelist loadtype.IndexO=-1  updated filePath https://localhost:44374/content/drawings/dwg/filenames.rw
+after ServerUrl match check: filePath: https://localhost:44374/content/drawings/dwg/filenames.rw
+Error: file does not exist 

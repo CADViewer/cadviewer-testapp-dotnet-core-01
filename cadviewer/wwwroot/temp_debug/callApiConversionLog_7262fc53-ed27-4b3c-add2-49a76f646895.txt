@@ -1,0 +1,38 @@
+total parameters: 9
+0,f","paramValue":"pdf"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+1,last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+2,extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+3,RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+4,TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+5,LA","paramValue":""},{"paramName":"HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+6,HLALL","paramValue":""},{"paramName":"A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+7,A4","paramValue":""},{"paramName":"landscape","paramValue":""}
+8,landscape","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F114756.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/pdf\114756\hq17_.pdf"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="pdf"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL -A4 -landscape
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_01_112.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/pdf\114756\hq17_.pdf"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="pdf"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL -A4 -landscape
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_01_112.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/pdf\114756\hq17_.pdf"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="pdf"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL -A4 -landscape
+output>>Unrecognized Default Unicode Language
+getAutoCADVersion
+===========================================================================
+                         AutoXchange 2024 V24.01.112  64-bit
+           Copyright (c) 2017-2023 Tailor Made Software, Ltd.
+                            All Rights Reserved
+
+       Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License Key Expired
+Valid License Not Found
+
+Thank you for trying this demo of AutoXChange 2024
+Please contact sales@tailormade.com to purchase
+
+
+Elapsed Time: 0.144 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg output format: pdfXX
+PDF response: {"completedAction":"pdf_creation","errorCode":"E0","converter":"AutoXchange AX2019","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg","contentResponse":"file","contentStreamData":"https://localhost:44374/converters/files/pdf/114756/hq17_.pdf"}

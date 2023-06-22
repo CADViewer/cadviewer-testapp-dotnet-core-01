@@ -34,6 +34,16 @@ namespace cadviewer
             services.AddMvc(option => option.EnableEndpointRouting = false);
 
 
+
+            services.AddCors(option => option.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
+
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -57,6 +67,13 @@ namespace cadviewer
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+
+
+
+            // Enable Cors
+            app.UseCors("MyPolicy");
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

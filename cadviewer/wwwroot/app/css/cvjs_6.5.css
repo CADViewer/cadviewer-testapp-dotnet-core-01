@@ -7,6 +7,47 @@
     border: 4px dotted red;
 }
 
+
+
+.cvjs_coordinateX_menu{
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: none;
+	margin: 0;
+	margin-top:4px;
+	position: absolute;
+	left:12px;
+	cursor: pointer;
+	text-align:left;
+	vertical-align:top;
+	width: 230px;
+	z-index: 980;
+
+}
+
+.cvjs_coordinateY_menu{
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	position: absolute;
+	font-weight: none;
+	margin: 0;
+	margin-top:4px;
+	left:230px;
+	cursor: pointer;
+	text-align:left;
+	vertical-align:top;
+	width: 210px;
+	z-index: 980;
+
+}
+
+
+
+
+
+
 #cvjs_tool_tip{
 	 position : absolute;
 	 border : 1px solid gray;
@@ -353,6 +394,8 @@ map area{
 	font-size: 16px;
 
 }
+
+
 
 .measurement_modal-body {
 	background-color: "#AAAAAA";
@@ -1002,7 +1045,6 @@ input[type=text3] {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #FFFFFFF;
 
 }
 
@@ -1023,7 +1065,6 @@ input[type=text3_red] {
 	color:#000000;
 	font-size: 13px;
 	line-height: 1;
-	background: #FFFFFFF;
 
 }
 
@@ -1613,7 +1654,7 @@ input[type=button_layer] {
 	color:#FFF;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -1635,7 +1676,7 @@ input[type=button_layer] {
 	color:#FFF;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -1657,7 +1698,7 @@ input[type=button_layer] {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -1679,7 +1720,7 @@ input[type=button_layer] {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -1701,7 +1742,7 @@ input[type=button_layer] {
 	color:#FFF;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -1723,7 +1764,7 @@ input[type=button_layer] {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -2088,7 +2129,7 @@ table.info_messageModal_2Table td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -2109,7 +2150,7 @@ table.info_messageModal_2Table td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -2131,7 +2172,7 @@ table.info_messageModal_2Table td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 }
 
 
@@ -2236,7 +2277,7 @@ table.info_messageModal_2Table td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -2244,13 +2285,31 @@ table.info_messageModal_2Table td {
 
 
 
+/* 6.5.15i */
 
+.cvjs_calibrateSnap{
+	width: 100px; 
+	display: inline-block;
+	position: absolute; 
+	left : 10px;
+	bottom : 6px    /* 6.5.14a */
+
+}
+
+.cvjs_calibrateSnapSelect{
+	width: 140px; 
+	display: inline-block;
+	position: absolute;
+	left : 140px;
+	bottom : 6px    /* 6.5.14a */
+
+}
 
 
 .calibrateModal{
    	z-index:1000;
 	width: 360px; 
-	height: 220px;
+	height: 260px;
 	border-radius: 3px;
 	background-color: #FFFFFF;
 	border: 2px solid gray;
@@ -2331,7 +2390,7 @@ table.calibrateModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	
 
 }
 
@@ -2355,7 +2414,7 @@ table.calibrateModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -2487,7 +2546,7 @@ table.measurementModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	
 	 position: absolute;
     	 right: 10px;
@@ -2512,7 +2571,7 @@ table.measurementModalTable td {
 	color:#FFF;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	left: 304px;
 	top: 32px;
@@ -2540,7 +2599,7 @@ table.measurementModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	
 	 position: absolute;
     	 right: 10px;
@@ -2696,7 +2755,7 @@ table.printModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	top: 65px;
 	left: 390px;
@@ -2938,7 +2997,7 @@ table.thicknessModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 }
 
 
@@ -2959,7 +3018,7 @@ table.thicknessModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -3026,7 +3085,7 @@ table.documentPageChangeModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 }
 
 
@@ -3047,7 +3106,7 @@ table.documentPageChangeModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -3138,7 +3197,7 @@ table.collabStartModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 }
 
 
@@ -3162,7 +3221,7 @@ table.collabStartModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -3550,7 +3609,7 @@ table.publishPDFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 
 	position: absolute;
@@ -3577,7 +3636,7 @@ table.publishPDFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 
 	position: absolute;
@@ -3612,7 +3671,7 @@ table.publishPDFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	position: absolute;
     	left: 460px;
@@ -3755,7 +3814,7 @@ table.publishPDFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -3782,7 +3841,7 @@ table.publishPDFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	top: 148px;
 	right: 20px;
@@ -4548,7 +4607,7 @@ table.backgroundModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	 
 }
 
@@ -4571,7 +4630,7 @@ table.backgroundModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	
 }
@@ -4594,7 +4653,7 @@ table.backgroundModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	
 }
@@ -4689,7 +4748,7 @@ table.redlinetextModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	
 	 position: absolute;
     	 right: 10px;
@@ -4792,7 +4851,7 @@ table.linethicknessModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	top: 40px;
 	left: 180px;
@@ -4885,7 +4944,7 @@ table.linethicknessModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 
 	position: absolute;
@@ -5616,8 +5675,6 @@ select_file_image\" id=\"select_file
     vertical-align: middle;
     border-top: 1px #999 solid;
 	font-size: 14px;	
-    background: # #f7f7f7; /* 99FF99; */
-    background-color: # #f7f7f7; /* 99FF99; */
 }
 
 
@@ -5628,7 +5685,6 @@ select_file_image\" id=\"select_file
     text-align: center;
     vertical-align: middle;
     border-top: 0px #999 solid;
-    background-color: # #f7f7f7; /* 99FF99; */
 	font-size: 14px;	
 	color: #999;
 }
@@ -6038,7 +6094,7 @@ table.mergeDXFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	position: absolute;
     	left: 460px;
@@ -6064,7 +6120,7 @@ table.mergeDXFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	
 }
@@ -6087,7 +6143,7 @@ table.mergeDXFModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 	
 }
@@ -6598,7 +6654,7 @@ table.settingsModalTable td {
 	color:#000000;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	left: 270px;
 	top: 32px;
@@ -6621,7 +6677,7 @@ table.settingsModalTable td {
 	color:#FFF;
 	font-size: 12px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 	position: absolute;
 	left: 326px;
 	top: 30px;
@@ -6668,6 +6724,45 @@ table.settingsModalTable td {
 	left : 10px;
 	bottom : 36px    /* 6.5.14a 6 -> 26 */
 }
+
+
+/* 6.5.15n */
+.cvjs_measurementHorizontal{
+	width: 90px; 
+	display: inline-block;
+	position: absolute; 
+	left : 10px;
+	top : 60px;    
+	font-size: 13px;
+}
+
+.cvjs_measurementDisplayHorizontal{
+	display: inline-block;
+	position: absolute; 
+	left : 86px;
+	top : 58px    ;
+	font-size: 13px;
+}
+
+.cvjs_measurementVertical{
+	width: 90px; 
+	display: inline-block;
+	position: absolute; 
+	left : 230px;
+	top : 60px;    
+	font-size: 13px;
+}
+
+.cvjs_measurementDisplayVertical{
+	display: inline-block;
+	position: absolute; 
+	left : 290px;
+	top : 58px;    
+	font-size: 13px;
+}
+
+
+
 
 
 
@@ -6717,7 +6812,7 @@ table.settingsModalTable td {
 	color:#000000;
 	font-size: 18px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
@@ -6776,7 +6871,7 @@ table.settingsModalTable td {
 	color:#000000;
 	font-size: 18px;
 	line-height: 1;
-	background: #D28A8E0;
+	 
 
 }
 
