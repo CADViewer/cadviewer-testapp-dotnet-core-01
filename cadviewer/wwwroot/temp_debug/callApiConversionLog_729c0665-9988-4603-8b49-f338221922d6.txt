@@ -1,0 +1,42 @@
+total parameters: 7
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+1,last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+2,extents","paramValue":""},{"paramName":"RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+3,RL","paramValue":"RM_"},{"paramName":"TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+4,TL","paramValue":"RM_TXT"},{"paramName":"LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+5,LA","paramValue":""},{"paramName":"HLALL","paramValue":""}
+6,HLALL","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F133805.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F133805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_01_112.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F133805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_01_112.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F133805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents "-RL="RM_"" "-TL="RM_TXT"" -LA -HLALL
+output>>getAutoCADVersion
+===========================================================================
+                         AutoXchange 2024 V24.01.112  64-bit
+           Copyright (c) 2017-2023 Tailor Made Software, Ltd.
+                            All Rights Reserved
+
+       Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License Key Expired
+Valid License Not Found
+
+Thank you for trying this demo of AutoXChange 2023
+Please contact sales@tailormade.com to purchase
+
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\hq17_.dwg
+Default SHX File Not Found: isocp.shx
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F133805.svg
+Cannot find SHX File, Using Default TrueType Font instead: simplex.shx
+
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F133805.svg
+OpenMemoryFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F133805.svg
+
+Elapsed Time: 0.262 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg output format: svgXX
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2017","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/hq17_.dwg","contentResponse":"stream","contentStreamData":"https://localhost:44374/CADViewer/getFile?remainOnServer=0&fileTag=F133805&Type=svg"}
