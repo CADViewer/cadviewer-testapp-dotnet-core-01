@@ -1,5 +1,0 @@
-total parameters: 3
-0,f","paramValue":"svg"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""}
-1,last","paramValue":""},{"paramName":"extents","paramValue":""}
-2,extents","paramValue":""}
-WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F572704.dwg

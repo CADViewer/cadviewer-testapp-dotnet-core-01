@@ -1,3 +1,0 @@
-Save to:converters/files/print/342352/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00.svg
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/342352/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00.svg
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/342352/E15C03D6-8B3D-6D2A-DF50-3A099DEBDD00.svg

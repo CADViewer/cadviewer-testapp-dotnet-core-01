@@ -1,6 +1,0 @@
-First in LoadFile:/content/customInsertSpaceObjectMenu//images/danger.png,none,menufile
-LoadFile:content/customInsertSpaceObjectMenu//images/danger.png
-loadtype:menufile  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/danger.png
-before check loadtype:menufile loadtype.IndexO=-1  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/danger.png
-after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/danger.png
-returning  png c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/danger.png

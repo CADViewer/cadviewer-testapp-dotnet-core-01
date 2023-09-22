@@ -1,6 +1,0 @@
-First in LoadFile:/content/customInsertSpaceObjectMenu//images/door_allstates01.svg,none,menufile
-LoadFile:content/customInsertSpaceObjectMenu//images/door_allstates01.svg
-loadtype:menufile  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/door_allstates01.svg
-before check loadtype:menufile loadtype.IndexO=-1  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/door_allstates01.svg
-after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/door_allstates01.svg
-returning  svg c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/customInsertSpaceObjectMenu//images/door_allstates01.svg

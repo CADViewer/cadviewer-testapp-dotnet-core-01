@@ -1,0 +1,37 @@
+total parameters: 3
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""}
+1,last","paramValue":""},{"paramName":"extents","paramValue":""}
+2,extents","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F993789.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st floor electrical.dwg
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st%20floor%20electrical.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F993789.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_07_120.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st%20floor%20electrical.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F993789.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/AX2024_W64_24_07_120.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st%20floor%20electrical.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F993789.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/" "-f="svg"" -last -extents
+output>>===========================================================================
+                         AutoXchange 2024 V24.07.120  64-bit
+           Copyright (c) 2017-2023 Tailor Made Software, Ltd.
+                            All Rights Reserved
+
+       Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License Key Expired
+Unsupported license version. Please contact sales@tailormade.com for an upgrade.
+License Expired
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\content\drawings\dwg\1st floor electrical.dwg
+Default SHX File Not Found: isocp.shx
+Unresolved XRef: 1st floor plan
+Resovled XRef Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\content\drawings\dwg\1st floor plan.dwg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F993789.svg
+    tmpFile: 
+Cannot find SHX File, Using Default TrueType Font instead: romand.shx
+
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F993789.svg
+OpenMemoryFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F993789.svg
+
+Elapsed Time: 0.4 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st floor electrical.dwg output format: svgXX
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2017","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/1st floor electrical.dwg","contentResponse":"stream","contentStreamData":"https://localhost:44374/CADViewer/getFile?remainOnServer=0&fileTag=F993789&Type=svg"}

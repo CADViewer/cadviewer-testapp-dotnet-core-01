@@ -1,3 +1,0 @@
-Save to:converters/files/print/573937/Asbestos_drawing_01.svg
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/573937/Asbestos_drawing_01.svg
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/573937/Asbestos_drawing_01.svg

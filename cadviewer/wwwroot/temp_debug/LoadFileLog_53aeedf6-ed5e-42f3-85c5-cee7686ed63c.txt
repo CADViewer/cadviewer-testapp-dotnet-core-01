@@ -1,4 +1,0 @@
-First in LoadFile:https://localhost:5001//app/cv/cv-pro/menu_config/cadviewer_viewonly_nofileload_01.xml,,menufile
-LoadFile:https://localhost:5001//app/cv/cv-pro/menu_config/cadviewer_viewonly_nofileload_01.xml
-before check loadtype:menufile loadtype.IndexO=-1  updated filePath https://localhost:5001//app/cv/cv-pro/menu_config/cadviewer_viewonly_nofileload_01.xml
-after ServerUrl match check: filePath: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//app/cv/cv-pro/menu_config/cadviewer_viewonly_nofileload_01.xml

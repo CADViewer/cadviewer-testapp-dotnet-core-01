@@ -97,22 +97,41 @@ namespace cadviewer.Controllers
                 System.IO.File.Delete(localPath);
             }
 
-            
+
             if (fileType == "svg")
             {
                 //HttpContext.Response.Headers.Add("Content-Type", "image/svg+xml");
-            }
-            else
-                if (fileType == "svgz")
-            {
-                HttpContext.Response.Headers.Add("Content-Encoding", "gzip");
-                HttpContext.Response.Headers.Add("Content-Type", "image/svg+xml");
-            }
-            else
-                HttpContext.Response.Headers.Add("Content-Type", "text/plain");
+                return (temp.GetString(bytes));
 
-            
-            return (temp.GetString(bytes));
+            }
+            else
+            {
+                if (fileType == "svgz")
+                {
+                    HttpContext.Response.Headers.Add("Content-Encoding", "gzip");
+                    HttpContext.Response.Headers.Add("Content-Type", "image/svg+xml");
+
+                    //return ("this is svgz");
+
+                    return (temp.GetString(bytes));
+
+                    // this will not work!
+
+                }
+                else
+                {
+                    HttpContext.Response.Headers.Add("Content-Type", "text/plain");
+                    return (temp.GetString(bytes));
+                }
+            }
+
+
+            /*  test
+            */
+
+
+
+//            
 
         }
 
@@ -148,12 +167,16 @@ namespace cadviewer.Controllers
                 string callbackMethod = _config.GetValue<string>("CADViewer:callbackMethod");
                 bool cvjs_debug = _config.GetValue<bool>("CADViewer:cvjs_debug");
     
-                string[] myoutput = new String[1];
-                string absFilePath = "";
+                //string[] myoutput = new String[1];
 
+                // 
+                string[] myoutput;
+                myoutput = new string[1] { "" };
+
+
+                string absFilePath = "";
                 bool cvjs_svgz_compress = _config.GetValue<bool>("CADViewer:cvjs_svgz_compress");
-         
-                
+                    
 
                 Console.WriteLine("callApiConversion cvjs_debug:"+cvjs_debug+"  YYY");
 
@@ -279,6 +302,86 @@ namespace cadviewer.Controllers
 
                 myoutput[0] = "WriteFile: " + writeFile;
                 System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
+
+
+                // copy the .ashx  c# code
+
+
+                if (contentLocation.IndexOf(".svg") > -1)
+                {
+                    // 2023-09-21
+                    // IF content location is .svg or .svgz then
+                    // copy over to /files/xxx.svg
+                    // the callback method should have the format of the input file
+                    // do the callback and return  
+
+                    string outputFormatSVG = contentLocation.Substring(contentLocation.LastIndexOf(".") + 1);
+
+
+
+                    if (contentLocation.IndexOf("http") == 0)
+                    {  // URL
+
+                        if (contentLocation.IndexOf(ServerUrl) == 0)    // we are on same server, so OK
+                        {
+                            contentLocation = ServerLocation + contentLocation.Substring(ServerUrl.Length);
+                            localFlag = 1;
+                            //File.Copy(contentLocation, writeFile, true);
+                            System.IO.File.Copy(contentLocation, writeFile, true);
+
+                        }
+                        else
+                        {
+                            using (WebClient wc = new WebClient())
+                            {
+                                wc.DownloadFile(contentLocation, writeFile);
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        // flat file
+
+                        if (contentLocation.IndexOf(ServerLocation) == 0)    // we are on same server, so OK
+                        {
+                            localFlag = 1;
+                            System.IO.File.Copy(contentLocation, writeFile, true);
+                            //File.Copy(contentLocation, writeFile, true);
+                        }
+
+
+                    }
+
+                    // svg / svgz files
+
+
+                    string CVresponseSVG = "{\"completedAction\":\"svg_creation\",\"errorCode\":\"E0\",\"converter\":\"AutoXchange AX2024\",\"version\":\"V1.00\",\"userLabel\":\"fromCADViewerJS\",\"contentLocation\":\"" + contentLocation + "\",\"contentResponse\":\"stream\",\"contentStreamData\":\"" + callbackMethod + "?remainOnServer=0&fileTag=" + tempFileName + "&Type=" + outputFormatSVG + "\"}";
+
+                    myoutput[0] = "SVG response: " + CVresponseSVG;
+                    System.IO.File.AppendAllLines(absFilePath, myoutput);
+
+
+                    // send callback message and terminate
+                    Console.WriteLine(CVresponseSVG);
+
+
+                    // do the callback and exit
+                    return Json(CVresponseSVG);
+
+
+
+                }
+
+
+                // copy the .ashx c# code
+
+
+
+
 
 
 

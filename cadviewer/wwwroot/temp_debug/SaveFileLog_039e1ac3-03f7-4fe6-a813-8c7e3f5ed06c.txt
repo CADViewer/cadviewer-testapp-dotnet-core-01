@@ -1,4 +1,0 @@
-Save to:converters/files/print/958682//getFile?remainOnServer=0&fileTag=F938416&Type=svg.html
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/958682//getFile?remainOnServer=0&fileTag=F938416&Type=svg.html
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/958682//getFile?remainOnServer=0&fileTag=F938416&Type=svg.html
-WriteAllText Error:Felaktig syntax för filnamn, katalognamn eller volymetikett. : 'c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\print\958682\getFile?remainOnServer=0&fileTag=F938416&Type=svg.html'

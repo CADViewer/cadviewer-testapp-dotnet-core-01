@@ -1,0 +1,6 @@
+total parameters: 3
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""}
+1,last","paramValue":""},{"paramName":"extents","paramValue":""}
+2,extents","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F716303.svg
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2024","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/content/drawings/dwg/LI_1077929_04.svg","contentResponse":"stream","contentStreamData":"https://localhost:44374/CADViewer/getFile?remainOnServer=0&fileTag=HelloF716303&Type=svg"}

@@ -1,3 +1,0 @@
-Save to:converters/files/print/258003/https://localhost:5001//content/drawings/dwg/.html
-loadtype:serverfolder  updated filePath c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/258003/https://localhost:5001//content/drawings/dwg/.html
-after filePath check:c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/print/258003/https://localhost:5001//content/drawings/dwg/.html
