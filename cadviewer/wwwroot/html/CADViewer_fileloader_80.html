@@ -73,7 +73,8 @@
 
 
 	// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
-	var FileName = ServerUrl + "/content/drawings/dwg/Asbestos_drawing_01.dwg";		
+	//var FileName = ServerUrl + "/content/drawings/dwg/Asbestos_drawing_01.dwg";		
+    var FileName = ServerUrl + "/content/drawings/dwg/FloorPlan_Office3.dwg";
 
 
 
@@ -263,7 +264,8 @@
 		// settings of Converter Path, Controller and Converter Name are done in the XXXHandlerSettings.js files
 
 		cvjs_conversion_clearAXconversionParameters();
-		cvjs_conversion_addAXconversionParameter("last", "");		 
+//		cvjs_conversion_addAXconversionParameter("model", "");		 
+        cvjs_conversion_addAXconversionParameter("last", "");
         cvjs_conversion_addAXconversionParameter("extents", "");
 //		cvjs_conversion_addAXconversionParameter("firstlayout", "");
 
