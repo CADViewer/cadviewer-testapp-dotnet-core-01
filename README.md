@@ -7,7 +7,7 @@ The repository contains a full setup of CADViewer with CAD Converters and script
 
 1: CADViewer script library  - in its preferred folder structure
 
-2: AutoXchange AX2023 Converter and DWG Merge 2023 Converter - in their preferred folder structure
+2: AutoXchange AX2025 Converter and DWG Merge 2023 Converter - in their preferred folder structure
 
 3: All structures for file-conversion, sample drawings, redlines, etc. 
 
@@ -30,31 +30,37 @@ Read the sections on installing and handling [Fonts](https://tailormade.com/ax20
 
 2: If different from default install folder, then locate ***appsettings.json*** and modify paths and urls to match your server settings.   
 
-        {
-        "Logging": {
-        "LogLevel": {
-        "Default": "Warning"
-        }
-        },
-        "AllowedHosts": "*",
-        "CADViewer": {
-        "ServerLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/",
-        "ServerUrl": "https://localhost:5001/",
-        "fileLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/",
-        "fileLocationUrl": "https://localhost:5001/converters/files/",
-        "converterLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/",
-        "ax2020_executable": "AX2023_W64_23_10_105.exe",
-        "cvjs_debug": true,
-        "cvjs_svgz_compress": false,
-        "licenseLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/",
-        "xpathLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2023/windows/",
-        "callbackMethod": "/CADViewer/getFile",
-        "MailServer": "smtp.dreamhost.com",
-        "MailServerPort": 465,
-        "MailUserName": "testing@cadviewer.com",
-        "MailPassword": "xxx"
-        }
-        }
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "CADViewer": {
+    "ServerLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/",
+    "ServerUrl": "https://localhost:44374/",
+    "ServerUrlGUI": "https://localhost:44374/",
+    "ServerUrlcommandline": "https://localhost:5001/",
+    "fileLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/",
+    "fileLocationUrl": "https://localhost:44374/converters/files/",
+    "fileLocationUrlGUI": "https://localhost:44374/converters/files/",
+    "fileLocationUrcommandline": "https://localhost:5001/converters/files/",
+    "converterLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/",
+    "ax2020_executable": "AX2025_W64_25_04_138.exe",
+    "cvjs_debug": true,
+    "cvjs_svgz_compress": false,
+    "licenseLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/",
+    "xpathLocation": "c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/",
+    "callbackMethod": "https://localhost:44374/CADViewer/getFile",
+    "callbackMethodURL": "https://localhost:44374/CADViewer/getFile",
+    "callbackMethodcommandline": "https://localhost:5001/CADViewer/getFile",
+    "MailServer": "smtp.dreamhost.com",
+    "MailServerPort": 465,
+    "MailUserName": "testing@cadviewer.com",
+    "MailPassword": "xxx"
+  }
+}
 
 **NOTE**:  If running from Visual Studio, the default URL is localhost:44374, if running from the command-line with ***dotnet*** command the default URL is localhost:5001 .
 
@@ -140,7 +146,7 @@ c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\
                                                             │    ├── css
                                                             │    └── user_resources	
                                                             ├── converters
-                                                            │    ├── ax2023
+                                                            │    ├── ax2025
                                                             │    │     ├── windows 
                                                             │    │     │      └── fonts
                                                             │    │     └── linux
