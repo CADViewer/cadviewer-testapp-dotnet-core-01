@@ -1,0 +1,35 @@
+total parameters: 4
+0,f","paramValue":"svg"},{"paramName":"last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"model","paramValue":""}
+1,last","paramValue":""},{"paramName":"extents","paramValue":""},{"paramName":"model","paramValue":""}
+2,extents","paramValue":""},{"paramName":"model","paramValue":""}
+3,model","paramValue":""}
+WriteFile: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F265805.dwg
+XXX c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg
+"-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F265805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/" "-f="svg"" -last -extents -model
+c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/AX2025_W64_25_04_138.exe  "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F265805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/" "-f="svg"" -last -extents -model
+New The command:  c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/AX2025_W64_25_04_138.exe "-i="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg"" "-o="c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/files/F265805.svg"" "-lpath=c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot/converters/ax2024/windows/" "-f="svg"" -last -extents -model
+output>>===========================================================================
+                       AutoXchange 2025 V25.04.138  64-bit
+           Copyright (c) 2017-2024 Tailor Made Software, Ltd.
+                          All Rights Reserved
+
+       Portions Copyright (c) 1997-2016, Tailor Made Software, Ltd.
+===========================================================================
+License Key Expired
+Unsupported license version. Please contact sales@tailormade.com for an upgrade.
+DWG Import requires Version 6 license with DWG Import permission
+SVG Export requires Version 6 license with SVG Export permission
+License Expired
+Input file: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\\content\drawings\dwg\Asbestos_drawing_01.dwg
+Output File Name: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F265805.svg
+
+OpenFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F265805.svg
+OpenMemoryFile: c:\cadviewer-testapp-dotnet-core-01\cadviewer\cadviewer\wwwroot\converters\files\F265805.svg
+
+Elapsed Time: 1.714 seconds
+
+error>>(none)
+ExitCode: 0
+Conversion done 
+Content location: c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg output format: svgXX
+SVG response: {"completedAction":"svg_creation","errorCode":"E0","converter":"AutoXchange AX2017","version":"V1.00","userLabel":"fromCADViewerJS","contentLocation":"c:/cadviewer-testapp-dotnet-core-01/cadviewer/cadviewer/wwwroot//content/drawings/dwg/Asbestos_drawing_01.dwg","contentResponse":"stream","contentStreamData":"https://localhost:44374/CADViewer/getFile?remainOnServer=0&fileTag=F265805&Type=svg"}
